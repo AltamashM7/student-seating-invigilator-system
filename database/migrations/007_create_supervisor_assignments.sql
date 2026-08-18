@@ -10,6 +10,9 @@ CREATE TABLE IF NOT EXISTS supervisor_assignments (
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
+  CONSTRAINT uq_supervisor_assignments_supervisor_exam
+    UNIQUE (supervisor_id, exam_id),
+
   CONSTRAINT fk_supervisor_assignments_supervisor
     FOREIGN KEY (supervisor_id)
     REFERENCES supervisors(id),
@@ -31,3 +34,6 @@ CREATE INDEX idx_supervisor_assignments_exam
 
 CREATE INDEX idx_supervisor_assignments_classroom
   ON supervisor_assignments (classroom_id);
+
+CREATE INDEX idx_supervisor_assignments_exam_classroom
+  ON supervisor_assignments (exam_id, classroom_id);

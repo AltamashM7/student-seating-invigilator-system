@@ -5,6 +5,7 @@ const session = require('express-session');
 const classroomsRoutes = require('./src/modules/classrooms/classrooms.routes');
 const examsRoutes = require('./src/modules/exams/exams.routes');
 const assignmentsRoutes = require('./src/modules/assignments/assignments.routes');
+const searchRoutes = require('./src/modules/search/search.routes');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api/admin/exams', examsRoutes);
 
 // Player 3 owned modules
 app.use('/api/admin/assignments', assignmentsRoutes);
+app.use('/api/search', searchRoutes);
 
 app.get('/health', (req, res) => res.json({ success: true, data: { status: 'ok' } }));
 

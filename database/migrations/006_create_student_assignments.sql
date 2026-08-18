@@ -10,6 +10,12 @@ CREATE TABLE IF NOT EXISTS student_assignments (
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
+  CONSTRAINT uq_student_assignments_seat
+    UNIQUE (exam_id, classroom_id, seat_number),
+
+  CONSTRAINT uq_student_assignments_student_exam
+    UNIQUE (student_id, exam_id),
+
   CONSTRAINT fk_student_assignments_student
     FOREIGN KEY (student_id)
     REFERENCES students(id),
@@ -31,3 +37,6 @@ CREATE INDEX idx_student_assignments_exam
 
 CREATE INDEX idx_student_assignments_classroom
   ON student_assignments (classroom_id);
+
+CREATE INDEX idx_student_assignments_exam_classroom
+  ON student_assignments (exam_id, classroom_id);
