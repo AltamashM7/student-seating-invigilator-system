@@ -4,6 +4,7 @@ const session = require('express-session');
 
 const classroomsRoutes = require('./src/modules/classrooms/classrooms.routes');
 const examsRoutes = require('./src/modules/exams/exams.routes');
+const assignmentsRoutes = require('./src/modules/assignments/assignments.routes');
 
 const app = express();
 
@@ -19,6 +20,9 @@ app.use(
 // Player 2 owned modules
 app.use('/api/admin/classrooms', classroomsRoutes);
 app.use('/api/admin/exams', examsRoutes);
+
+// Player 3 owned modules
+app.use('/api/admin/assignments', assignmentsRoutes);
 
 app.get('/health', (req, res) => res.json({ success: true, data: { status: 'ok' } }));
 
