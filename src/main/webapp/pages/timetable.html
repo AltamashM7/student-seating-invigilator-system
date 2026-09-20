@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Examination Timetable</title><link rel="stylesheet" href="../assets/css/main.css"></head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><a href="../index.html">Home</a></header>
+<main class="content"><h1>Examination Timetable</h1><div class="toolbar"><button id="listButton">List View</button><button id="calendarButton" class="secondary">Calendar View</button></div>
+<section id="listView" class="panel table-wrap"><table><thead><tr><th>Date</th><th>Course</th><th>Time</th><th>Room(s)</th><th>Status</th></tr></thead><tbody id="timetableRows"></tbody></table></section>
+<section id="calendarView" class="cards" hidden></section>
+</main>
+<script src="../assets/js/api.js"></script><script src="../assets/js/timetable.js"></script>
+</body></html>

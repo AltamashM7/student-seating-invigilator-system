@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
+<div class="layout">
+    <nav class="sidebar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-user.html">Create User</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="courses.html">Courses</a>
+        <a href="import-students.html">CSV Import</a>
+        <a href="exams.html">Exams</a>
+        <a href="../timetable.html">Timetable</a>
+    </nav>
+    <main class="content">
+        <h1>Administrator Dashboard</h1>
+        <p class="muted">S1-S4 examination setup and scheduling.</p>
+        <section class="cards">
+            <article class="card"><h3>Accounts</h3><p>Create admin or faculty accounts.</p><a href="create-user.html">Open</a></article>
+            <article class="card"><h3>Master Data</h3><p>Manage rooms, courses and student imports.</p><a href="rooms.html">Open</a></article>
+            <article class="card"><h3>Exam Schedule</h3><p>Create exams and check timetable conflicts.</p><a href="exams.html">Open</a></article>
+        </section>
+    </main>
+</div>
+<script src="../../assets/js/api.js"></script>
+<script src="../../assets/js/guard.js"></script>
+<script>requireRole('ADMIN');</script>
+</body>
+</html>

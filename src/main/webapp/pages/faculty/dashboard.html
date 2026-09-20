@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
+<div class="layout">
+    <nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="../timetable.html">Examination Timetable</a></nav>
+    <main class="content">
+        <h1>Faculty Dashboard</h1>
+        <section class="cards">
+            <article class="card"><h3>Examination Schedule</h3><p>View the current examination timetable.</p><a href="../timetable.html">View timetable</a></article>
+        </section>
+    </main>
+</div>
+<script src="../../assets/js/api.js"></script>
+<script src="../../assets/js/guard.js"></script>
+<script>requireRole('FACULTY');</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Courses</title><link rel="stylesheet" href="../../assets/css/main.css"></head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
+<div class="layout"><nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="rooms.html">Rooms</a><a href="courses.html">Courses</a><a href="import-students.html">CSV Import</a></nav>
+<main class="content"><h1>Courses</h1>
+<section class="panel"><form id="courseForm" class="grid-form"><input id="courseId" type="hidden"><label>Course Code<input id="code" required></label><label>Course Name<input id="name" required></label><label>Department<select id="departmentId" required></select></label><label>Semester<input id="semester" type="number" min="1" max="8" required></label><div class="full"><p id="message" class="form-message"></p><button type="submit">Save Course</button> <button type="button" class="secondary" onclick="resetCourseForm()">Clear</button></div></form></section>
+<section class="panel table-wrap"><table><thead><tr><th>Code</th><th>Name</th><th>Department</th><th>Semester</th><th>Actions</th></tr></thead><tbody id="courseRows"></tbody></table></section>
+</main></div>
+<script src="../../assets/js/api.js"></script><script src="../../assets/js/guard.js"></script><script src="../../assets/js/courses.js"></script>
+</body></html>

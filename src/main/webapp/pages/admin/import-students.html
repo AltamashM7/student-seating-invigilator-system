@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CSV Import</title><link rel="stylesheet" href="../../assets/css/main.css"></head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
+<div class="layout"><nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="rooms.html">Rooms</a><a href="courses.html">Courses</a><a href="import-students.html">CSV Import</a></nav>
+<main class="content"><h1>Student CSV Import</h1>
+<section class="panel"><p>Required columns: <code>roll_number,name,email,department_code,semester,course_code</code></p><form id="importForm" class="stack-form"><label>CSV File<input id="file" type="file" accept=".csv,text/csv" required></label><button type="submit">Import</button></form></section>
+<section id="result" class="panel" hidden></section>
+</main></div>
+<script src="../../assets/js/api.js"></script><script src="../../assets/js/guard.js"></script><script src="../../assets/js/import-students.js"></script>
+</body></html>

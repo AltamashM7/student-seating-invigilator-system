@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Rooms</title><link rel="stylesheet" href="../../assets/css/main.css"></head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
+<div class="layout"><nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="rooms.html">Rooms</a><a href="courses.html">Courses</a><a href="import-students.html">CSV Import</a></nav>
+<main class="content"><h1>Rooms</h1>
+<section class="panel"><form id="roomForm" class="grid-form"><input id="roomId" type="hidden"><label>Room Number<input id="roomNumber" required></label><label>Capacity<input id="capacity" type="number" min="1" max="500" required></label><div class="full"><p id="message" class="form-message"></p><button type="submit">Save Room</button> <button type="button" class="secondary" onclick="resetForm()">Clear</button></div></form></section>
+<section class="panel table-wrap"><table><thead><tr><th>Room</th><th>Capacity</th><th>Generated Seats</th><th>Actions</th></tr></thead><tbody id="roomRows"></tbody></table></section>
+</main></div>
+<script src="../../assets/js/api.js"></script><script src="../../assets/js/guard.js"></script><script src="../../assets/js/rooms.js"></script>
+</body></html>

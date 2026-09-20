@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Exams</title><link rel="stylesheet" href="../../assets/css/main.css"></head>
+<body>
+<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
+<div class="layout"><nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="exams.html">Exams</a><a href="../timetable.html">Timetable</a></nav>
+<main class="content"><h1>Exam Scheduling</h1>
+<section class="panel"><form id="examForm" class="grid-form"><input id="examId" type="hidden"><label>Course<select id="courseId" required></select></label><label>Date<input id="examDate" type="date" required></label><label>Start Time<input id="startTime" type="time" required></label><label>End Time<input id="endTime" type="time" required></label><label>Status<select id="status"><option>DRAFT</option><option>SCHEDULED</option></select></label><label>Rooms<select id="roomIds" multiple size="5" required></select></label><div class="full" id="conflicts"></div><div class="full"><button type="submit">Save Exam</button> <button type="button" class="secondary" onclick="resetExamForm()">Clear</button></div></form></section>
+<section class="panel table-wrap"><table><thead><tr><th>Course</th><th>Date</th><th>Time</th><th>Rooms</th><th>Status</th><th>Actions</th></tr></thead><tbody id="examRows"></tbody></table></section>
+</main></div>
+<script src="../../assets/js/api.js"></script><script src="../../assets/js/guard.js"></script><script src="../../assets/js/exams.js"></script>
+</body></html>
