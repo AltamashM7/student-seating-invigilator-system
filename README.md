@@ -1,12 +1,43 @@
-Week 3 Tasks:
-Define room and course data models, CSV import template, duplicate-handling rules
-Build room/seat auto-generation, course CRUD, and CSV bulk-import APIs
-Build room/course management screens and CSV bulk-import UI with error reporting
-Test room/seat generation, CSV import edge cases, and bulk enrollment performance
+# Exam Seating and Invigilation Planner
 
+First-evaluation build covering Sprint S1 to S4.
 
-Week 4 Tasks
-Define exam session model, timetable conflict rules, and exam state workflow
-Build exam CRUD, student-level and room-level conflict detection, timetable API
-Build exam creation form, calendar/list timetable views, inline conflict warnings
-Test exam state transitions and conflict-detection engine against constructed scenarios
+## Stack
+- Java 17
+- Core Java Servlets
+- JDBC
+- MySQL
+- HTML, CSS and vanilla JavaScript
+- Apache Tomcat 10.1+
+
+## Database setup
+```bash
+mysql -u root -p < database/schema.sql
+mysql -u root -p < database/seed.sql
+```
+
+The default admin account is:
+- username: `admin`
+- password: `Admin@123`
+
+Change it after the first login.
+
+## Database connection
+The application reads these environment variables when present:
+- `DB_URL`
+- `DB_USER`
+- `DB_PASSWORD`
+
+Defaults are suitable for a local MySQL installation using database `exam_seating`, user `root`, and an empty password.
+
+## Build
+```bash
+mvn clean package
+```
+
+Deploy `target/exam-seating.war` to Tomcat and open:
+
+`http://localhost:8080/exam-seating/`
+
+## Scope
+This branch set intentionally stops after S4: authentication, master data, CSV import, exam scheduling, timetable views, and student/room conflict detection. Seating allocation and invigilator assignment are later-sprint work.
