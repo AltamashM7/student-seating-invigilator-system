@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Exams</title><link rel="stylesheet" href="../../assets/css/main.css"></head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
-<div class="layout"><nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="exams.html">Exams</a><a href="../timetable.html">Timetable</a></nav>
-<main class="content"><h1>Exam Scheduling</h1>
-<section class="panel"><form id="examForm" class="grid-form"><input id="examId" type="hidden"><label>Course<select id="courseId" required></select></label><label>Date<input id="examDate" type="date" required></label><label>Start Time<input id="startTime" type="time" required></label><label>End Time<input id="endTime" type="time" required></label><label>Status<select id="status"><option>DRAFT</option><option>SCHEDULED</option></select></label><label>Rooms<select id="roomIds" multiple size="5" required></select></label><div class="full" id="conflicts"></div><div class="full"><button type="submit">Save Exam</button> <button type="button" class="secondary" onclick="resetExamForm()">Clear</button></div></form></section>
-<section class="panel table-wrap"><table><thead><tr><th>Course</th><th>Date</th><th>Time</th><th>Rooms</th><th>Status</th><th>Actions</th></tr></thead><tbody id="examRows"></tbody></table></section>
-</main></div>
-<script src="../../assets/js/api.js"></script><script src="../../assets/js/guard.js"></script><script src="../../assets/js/exams.js"></script>
-</body></html>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Exam Scheduling | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
+</head>
+<body data-shell="admin" data-resource="" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Exam Scheduling</div><div class="page-heading"><div><h1 id="pageTitle">Exam Scheduling</h1><p>Plan examinations, review conflicts and open the associated seating chart.</p></div></div>
+<div class="toolbar"><button id="newExam" type="button">Create exam</button><a href="seating.html" class="button secondary">Open seating</a></div><p id="message" role="status" hidden></p>
+<details id="examEditor" class="editor"><summary id="examEditorTitle">Create an exam</summary><div class="editor-body"><p class="helper-text">Draft inputs are editable before seating history exists. Published examinations retain their recorded details.</p>
+<form id="examForm" class="grid-form"><input id="id" type="hidden"><label>Academic year<select id="academicYearId" required></select></label><label>Course offering<select id="courseId" required></select></label><label>Date<input id="examDate" type="date" required></label><label>Start time<input id="startTime" type="time" required></label><label>End time<input id="endTime" type="time" required></label><label>Status<select id="status"><option value="DRAFT">Draft</option><option value="SCHEDULED">Scheduled</option></select></label>
+<fieldset class="full panel"><legend>Rooms</legend><label>Find a room<input id="roomSearch" type="search" placeholder="Search room number…" autocomplete="off"></label><p id="roomSelection" class="helper-text" role="status">Select one or more rooms.</p><div id="roomChoices" class="room-picker"></div></fieldset><label class="check-label full"><input id="spacingRequired" type="checkbox">Leave every alternate column empty for horizontal spacing</label><p class="helper-text full">Spacing reduces usable capacity. Accessible-seat availability is checked when generating the seating plan.</p>
+<div class="full toolbar"><button id="saveExam" type="submit">Save exam</button><button type="button" id="clearButton" class="secondary">Cancel editing</button></div></form></div></details>
+<section class="panel"><div class="panel-heading"><h2>Examinations</h2><button id="refreshExams" type="button" class="secondary">Refresh</button></div><div class="list-toolbar"><label class="search-field">Search<input type="search" id="recordSearch" placeholder="Search course, date or room…" autocomplete="off"></label><label>Academic year<select id="examYearFilter"><option value="">All academic years</option></select></label><label>Status<select id="statusFilter"><option value="">All statuses</option><option>DRAFT</option><option>SCHEDULED</option><option>COMPLETED</option><option>CANCELLED</option></select></label><label class="page-size">Per page<select id="pageSize"><option>25</option><option>50</option><option>100</option></select></label></div><div class="table-wrap"><table><thead><tr><th>Course</th><th>Academic year</th><th>Date / time</th><th>Rooms</th><th>Status</th><th>Actions</th></tr></thead><tbody id="examRows"></tbody></table></div><div class="list-meta"><span id="recordCount" role="status">Loading records…</span><div class="pager"><button id="previousPage" class="secondary" type="button">Previous</button><button id="nextPage" class="secondary" type="button">Next</button></div></div></section>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/exams.js?v=20261004-ui3"></script>
+</body>
+</html>
