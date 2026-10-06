@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+
+
 @WebServlet("/api/timetable")
 public class TimetableServlet extends HttpServlet {
     private final ExamDao examDao = new ExamDao();
