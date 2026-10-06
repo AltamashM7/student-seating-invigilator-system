@@ -1,6 +1,6 @@
 # S2 Account Rules
 
-## Password policy
+## Password Policy
 - Minimum 8 characters
 - At least one uppercase letter
 - At least one lowercase letter
