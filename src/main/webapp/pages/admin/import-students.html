@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CSV Import</title><link rel="stylesheet" href="../../assets/css/main.css"></head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
-<div class="layout"><nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="rooms.html">Rooms</a><a href="courses.html">Courses</a><a href="import-students.html">CSV Import</a></nav>
-<main class="content"><h1>Student CSV Import</h1>
-<section class="panel"><p>Required columns: <code>roll_number,name,email,department_code,semester,course_code</code></p><form id="importForm" class="stack-form"><label>CSV File<input id="file" type="file" accept=".csv,text/csv" required></label><button type="submit">Import</button></form></section>
-<section id="result" class="panel" hidden></section>
-</main></div>
-<script src="../../assets/js/api.js"></script><script src="../../assets/js/guard.js"></script><script src="../../assets/js/import-students.js"></script>
-</body></html>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Import Students | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
+</head>
+<body data-shell="admin" data-resource="" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Import Students</div><div class="page-heading"><div><h1 id="pageTitle">Import Students</h1><p>Import student records and course enrollments from a CSV file.</p></div></div>
+<section class="import-steps"><article class="card"><small>01 · Prepare</small><h3>Sample CSV</h3><p>12 new students, 2 workshop courses and 24 enrollment rows.</p><p><a href="../../assets/data/evaluator-import.csv" download>Download sample CSV</a></p></article><article class="card"><small>02 · Review</small><h3>Required records</h3><p>Sample requirements: academic year 2026-27, CSE FY divisions A/B and course offerings CSE103/CSE104.</p></article><article class="card"><small>03 · Import</small><h3>Import summary</h3><p>New students, added enrollments, duplicates and row errors are reported separately.</p></article></section>
+<section class="panel"><h2>CSV upload</h2><form id="importForm" class="stack-form"><label>CSV file<input id="file" name="file" type="file" accept=".csv,text/csv" required></label><p id="fileSummary" class="helper-text" role="status">Choose a file to preview its first rows.</p><div id="preview" class="table-wrap" hidden></div><button id="importButton" type="submit">Import students</button></form></section><section id="result" class="panel" role="status" hidden></section>
+<details class="editor"><summary>File format and import rules</summary><div class="editor-body"><p><a href="../../assets/data/student_import_template.csv" download>Download format template</a></p><p class="helper-text">One row per student/course enrollment. Reimporting the sample reports duplicates. Use unpublished courses without generated seating for new enrollments.</p><div class="table-wrap"><code>roll_number,name,email,department_code,semester,course_code,academic_year,division,requires_accessible</code></div><p class="helper-text">Requires accessible: true or false. Plain comma-separated fields only; quoted commas are unsupported. Academic year, division and course offering must already exist.</p></div></details>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/import-students.js?v=20261004-ui3"></script>
+</body>
+</html>
