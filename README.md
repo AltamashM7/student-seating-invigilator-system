@@ -7,7 +7,7 @@ First-evaluation build covering Sprint S1 to S4.
 - Core Java Servlets
 - JDBC
 - MySQL
-- HTML, CSS and vanilla JavaScript
+- HTML5, CSS and vanilla JavaScript
 - Apache Tomcat 10.1+
 
 ## Database setup
