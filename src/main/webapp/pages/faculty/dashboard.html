@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Dashboard</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Faculty Dashboard | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
 </head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
-<div class="layout">
-    <nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="../timetable.html">Examination Timetable</a></nav>
-    <main class="content">
-        <h1>Faculty Dashboard</h1>
-        <section class="cards">
-            <article class="card"><h3>Examination Schedule</h3><p>View the current examination timetable.</p><a href="../timetable.html">View timetable</a></article>
-        </section>
-    </main>
-</div>
-<script src="../../assets/js/api.js"></script>
-<script src="../../assets/js/guard.js"></script>
-<script>requireRole('FACULTY');</script>
+<body data-shell="faculty" data-resource="" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Faculty / Faculty Dashboard</div><div class="page-heading"><div><h1 id="pageTitle">Faculty Dashboard</h1><p>Published examination information for faculty.</p></div></div><section class="cards"><article class="card"><h3>Examination timetable</h3><p>Search courses, rooms and dates in the published schedule.</p><p><a href="../timetable.html">View timetable</a></p></article></section><p class="helper-text">Invigilation duty allocation is currently unavailable.</p>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/faculty.js?v=20261004-ui3"></script>
 </body>
 </html>

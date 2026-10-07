@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Examination Timetable</title><link rel="stylesheet" href="../assets/css/main.css"></head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><a href="../index.html">Home</a></header>
-<main class="content"><h1>Examination Timetable</h1><div class="toolbar"><button id="listButton">List View</button><button id="calendarButton" class="secondary">Calendar View</button></div>
-<section id="listView" class="panel table-wrap"><table><thead><tr><th>Date</th><th>Course</th><th>Time</th><th>Room(s)</th><th>Status</th></tr></thead><tbody id="timetableRows"></tbody></table></section>
-<section id="calendarView" class="cards" hidden></section>
-</main>
-<script src="../assets/js/api.js"></script><script src="../assets/js/timetable.js"></script>
-</body></html>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Examination Timetable | Exam Planner</title>
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../assets/css/ui.css?v=20261004-ui3">
+</head>
+<body data-shell="public" data-resource="" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  
+  <main id="main" class="public-content" tabindex="-1">
+<div class="breadcrumbs">Student portal / Examination Timetable</div><div class="page-heading"><div><h1 id="pageTitle">Examination Timetable</h1><p>Search published examinations by course or room, and check the selected academic year.</p></div></div>
+<p id="message" role="status" hidden></p><div class="list-toolbar"><label>Academic year<select id="academicYear"></select></label><label class="search-field">Search examinations<input id="recordSearch" type="search" placeholder="Search course, date or room…" autocomplete="off"></label><label class="page-size">Per page<select id="pageSize"><option>25</option><option>50</option><option>100</option></select></label></div><div class="toolbar"><div class="segmented" aria-label="Timetable view"><button id="listButton" type="button" aria-pressed="true">List</button><button id="calendarButton" type="button" aria-pressed="false">By date</button></div><button id="printTimetable" type="button" class="secondary">Print timetable</button></div>
+<section id="listView" class="panel table-wrap"><table><thead><tr><th>Academic year</th><th>Date</th><th>Course</th><th>Time</th><th>Rooms</th><th>Status</th></tr></thead><tbody id="timetableRows"></tbody></table></section><section id="calendarView" class="cards" hidden></section><div class="list-meta"><span id="recordCount" role="status">Loading records…</span><div class="pager"><button id="previousPage" class="secondary" type="button">Previous</button><button id="nextPage" class="secondary" type="button">Next</button></div></div>
+  </main>
+  <footer class="public-footer">Exam Planner · Published examination information</footer>
+  <script src="../assets/js/api.js?v=20261004-ui3"></script><script src="../assets/js/app-ui.js?v=20261004-ui3"></script>
+  
+  <script src="../assets/js/timetable.js?v=20261004-ui3"></script>
+</body>
+</html>

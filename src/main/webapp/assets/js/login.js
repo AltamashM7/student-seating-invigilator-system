@@ -1,20 +1,15 @@
-document.getElementById('loginForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const message = document.getElementById('message');
-    message.textContent = '';
-
-    try {
-        const data = await apiRequest('api/auth/login', {
-            method: 'POST',
-            body: formBody({
-                username: document.getElementById('username').value,
-                password: document.getElementById('password').value
-            })
-        });
-        location.href = data.role === 'ADMIN'
-            ? 'pages/admin/dashboard.html'
-            : 'pages/faculty/dashboard.html';
-    } catch (error) {
-        message.textContent = error.message;
-    }
+const loginNode=id=>document.getElementById(id);
+loginNode('togglePassword').addEventListener('click',()=>{
+    const show=loginNode('password').type==='password';
+    loginNode('password').type=show?'text':'password';
+    loginNode('togglePassword').textContent=show?'Hide':'Show';
+    loginNode('togglePassword').setAttribute('aria-pressed',String(show));
+});
+loginNode('loginForm').addEventListener('submit',event=>{
+    event.preventDefault();AppUI.busy(loginNode('loginButton'),async()=>{
+        try {
+            const data=await apiRequest(AppUI.url('api/auth/login'),{method:'POST',body:formBody({username:loginNode('username').value,password:loginNode('password').value})});
+            location.href=AppUI.url(data.role==='ADMIN'?'pages/admin/dashboard.html':'pages/faculty/dashboard.html');
+        } catch(error){AppUI.message(loginNode('message'),error.message);}
+    },'Signing in…');
 });

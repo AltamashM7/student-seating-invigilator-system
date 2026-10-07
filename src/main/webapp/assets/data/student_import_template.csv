@@ -1,0 +1,2 @@
+roll_number,name,email,department_code,semester,course_code,academic_year,division,requires_accessible
+CSE26FY001,Aarav Sharma,aarav.sharma@example.test,CSE,1,CSE101,2026-27,A,false

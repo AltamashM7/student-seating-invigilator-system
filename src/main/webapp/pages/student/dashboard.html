@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student View</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Student Portal | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
 </head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><a href="../../index.html">Staff login</a></header>
-<main class="content">
-    <h1>Student View</h1>
-    <section class="cards">
-        <article class="card"><h3>Examination Timetable</h3><p>View scheduled examinations.</p><a href="../timetable.html">View timetable</a></article>
-        <article class="card"><h3>Seating Search</h3><p>Room and seat lookup will be enabled when the seating-allocation sprint is implemented.</p></article>
-    </section>
-</main>
+<body data-shell="public" data-resource="" data-student-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  
+  <main id="main" class="public-content" tabindex="-1">
+<section class="hero"><div class="hero-copy"><p class="eyebrow">Student examination portal</p><h1>Examination Seating</h1><p>View examination schedules and published seating arrangements.</p><a href="../../pages/timetable.html" class="button secondary" data-timetable-link>Examination timetable</a></div><section class="panel finder"><h2>Seat lookup</h2><p class="helper-text">Search published seating by roll number and academic year.</p><form id="searchForm" class="stack-form"><label>Academic year<select id="academicYear" required></select></label><label>Roll number<input id="rollNumber" name="rollNumber" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="For example, CSE26Y1A001…"></label><button id="searchButton" type="submit">Search seating</button></form><p id="message" role="status" hidden></p><p class="helper-text">Only published seating arrangements are displayed.</p></section></section><section id="studentResults" hidden><div class="result-header"><div><p class="eyebrow">Published seating</p><h2 id="studentName">Examination seating</h2></div><button id="printResults" class="secondary" type="button">Print details</button></div><div id="results" class="result-grid"></div></section><section id="examPreview"><div class="section-heading"><div><h2>Examination schedule</h2></div><a data-timetable-link href="../../pages/timetable.html">View full timetable</a></div><div class="list-toolbar"><label class="search-field">Search published exams<input id="previewSearch" type="search" placeholder="Search course or room…" autocomplete="off"></label></div><p id="previewCount" class="helper-text" role="status"></p><div id="upcomingExams" class="exam-preview"></div></section>
+  </main>
+  <footer class="public-footer">Exam Planner · Published examination information</footer>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261004-ui3"></script>
+  
+  <script src="../../assets/js/student-home.js?v=20261004-ui3"></script>
 </body>
 </html>

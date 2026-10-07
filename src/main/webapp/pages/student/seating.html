@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Seat Lookup | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
+</head>
+<body data-shell="public" data-resource="" data-student-page="seating">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  
+  <main id="main" class="public-content" tabindex="-1">
+<section class="hero"><div class="hero-copy"><p class="eyebrow">Student examination portal</p><h1>Examination Seating</h1><p>View examination schedules and published seating arrangements.</p><a href="../timetable.html" class="button secondary" data-timetable-link>Examination timetable</a></div><section class="panel finder"><h2>Seat lookup</h2><p class="helper-text">Search published seating by roll number and academic year.</p><form id="searchForm" class="stack-form"><label>Academic year<select id="academicYear" required></select></label><label>Roll number<input id="rollNumber" name="rollNumber" required maxlength="30" autocomplete="off" spellcheck="false" placeholder="For example, CSE26Y1A001…"></label><button id="searchButton" type="submit">Search seating</button></form><p id="message" role="status" hidden></p><p class="helper-text">Only published seating arrangements are displayed.</p></section></section><section id="studentResults" hidden><div class="result-header"><div><p class="eyebrow">Published seating</p><h2 id="studentName">Examination seating</h2></div><button id="printResults" class="secondary" type="button">Print details</button></div><div id="results" class="result-grid"></div></section>
+  </main>
+  <footer class="public-footer">Exam Planner · Published examination information</footer>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261004-ui3"></script>
+  
+  <script src="../../assets/js/student-home.js?v=20261004-ui3"></script>
+</body>
+</html>

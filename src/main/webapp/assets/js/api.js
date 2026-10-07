@@ -15,6 +15,10 @@ async function apiRequest(url, options = {}) {
     return data;
 }
 
+function esc(value) {
+    return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
 function formBody(values) {
     const body = new URLSearchParams();
     Object.entries(values).forEach(([key, value]) => {

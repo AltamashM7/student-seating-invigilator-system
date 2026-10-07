@@ -1,60 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Administrator Accounts | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
 </head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
-<div class="layout">
-    <nav class="sidebar"><a href="dashboard.html">Dashboard</a><a href="create-user.html">Create User</a></nav>
-    <main class="content">
-        <h1>Create User</h1>
-        <section class="panel">
-            <form id="userForm" class="grid-form">
-                <label>Name<input id="name" required></label>
-                <label>Email<input id="email" type="email" required></label>
-                <label>Username<input id="username" required></label>
-                <label>Password<input id="password" type="password" required></label>
-                <label>Role<select id="role"><option value="FACULTY">Faculty</option><option value="ADMIN">Administrator</option></select></label>
-                <label id="employeeWrap">Employee Code<input id="employeeCode"></label>
-                <div class="full"><p id="message" class="form-message"></p><button type="submit">Create Account</button></div>
-            </form>
-        </section>
-    </main>
-</div>
-<script src="../../assets/js/api.js"></script>
-<script src="../../assets/js/guard.js"></script>
-<script>
-requireRole('ADMIN');
-const role = document.getElementById('role');
-const employeeWrap = document.getElementById('employeeWrap');
-role.addEventListener('change', () => employeeWrap.style.display = role.value === 'FACULTY' ? 'grid' : 'none');
-document.getElementById('userForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const message = document.getElementById('message');
-    message.className = 'form-message';
-    try {
-        await apiRequest('../../api/auth/register', {
-            method: 'POST',
-            body: formBody({
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                username: document.getElementById('username').value,
-                password: document.getElementById('password').value,
-                role: role.value,
-                employeeCode: document.getElementById('employeeCode').value
-            })
-        });
-        message.classList.add('success');
-        message.textContent = 'Account created';
-        event.target.reset();
-    } catch (error) {
-        message.textContent = error.message;
-    }
-});
-</script>
+<body data-shell="admin" data-resource="" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Administrator Accounts</div><div class="page-heading"><div><h1 id="pageTitle">Administrator Accounts</h1><p>Create administrator accounts and reset account passwords.</p></div></div>
+<p class="helper-text">Faculty profiles and login accounts are managed in <a href="faculty.html">Faculty</a>.</p>
+<details class="editor" open><summary>Create an administrator</summary><div class="editor-body"><form id="userForm" class="grid-form"><label>Name<input id="name" autocomplete="name" required maxlength="100"></label><label>Email<input id="email" type="email" autocomplete="email" required></label><label>Username<input id="username" autocomplete="off" spellcheck="false" required maxlength="50"></label><label>Initial password<input id="password" type="password" autocomplete="new-password" required minlength="8"></label><p class="helper-text full">Use 8 or more characters with uppercase, lowercase and a number.</p><p id="message" class="full" role="status" hidden></p><button type="submit">Create account</button></form></div></details>
+<details class="editor" id="resetAccount"><summary>Reset an account password</summary><div class="editor-body"><p class="helper-text">Match the existing account username and registered email. This action requires an administrator.</p><form id="adminResetForm" class="grid-form"><label>Account username<input id="resetUsername" autocomplete="off" required></label><label>Registered email<input id="resetEmail" type="email" autocomplete="off" required></label><label>New password<input id="newPassword" type="password" autocomplete="new-password" required minlength="8"></label><button type="submit">Reset account password</button><p id="resetMessage" class="full" role="status" hidden></p></form></div></details>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/accounts.js?v=20261004-ui3"></script>
 </body>
 </html>

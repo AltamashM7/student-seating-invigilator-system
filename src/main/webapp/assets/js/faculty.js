@@ -1,0 +1,1 @@
+requireRole('FACULTY');

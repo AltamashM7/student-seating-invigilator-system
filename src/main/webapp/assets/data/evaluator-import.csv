@@ -1,0 +1,25 @@
+roll_number,name,email,department_code,semester,course_code,academic_year,division,requires_accessible
+DEMO26CSE001,Harsh Patil,demo26cse001@example.test,CSE,1,CSE103,2026-27,A,true
+DEMO26CSE001,Harsh Patil,demo26cse001@example.test,CSE,1,CSE104,2026-27,A,true
+DEMO26CSE002,Sakshi Pawar,demo26cse002@example.test,CSE,1,CSE103,2026-27,A,false
+DEMO26CSE002,Sakshi Pawar,demo26cse002@example.test,CSE,1,CSE104,2026-27,A,false
+DEMO26CSE003,Akash Shinde,demo26cse003@example.test,CSE,1,CSE103,2026-27,A,false
+DEMO26CSE003,Akash Shinde,demo26cse003@example.test,CSE,1,CSE104,2026-27,A,false
+DEMO26CSE004,Vaishnavi More,demo26cse004@example.test,CSE,1,CSE103,2026-27,A,false
+DEMO26CSE004,Vaishnavi More,demo26cse004@example.test,CSE,1,CSE104,2026-27,A,false
+DEMO26CSE005,Niraj Jadhav,demo26cse005@example.test,CSE,1,CSE103,2026-27,A,false
+DEMO26CSE005,Niraj Jadhav,demo26cse005@example.test,CSE,1,CSE104,2026-27,A,false
+DEMO26CSE006,Sanika Kadam,demo26cse006@example.test,CSE,1,CSE103,2026-27,A,false
+DEMO26CSE006,Sanika Kadam,demo26cse006@example.test,CSE,1,CSE104,2026-27,A,false
+DEMO26CSE007,Abhishek Nair,demo26cse007@example.test,CSE,1,CSE103,2026-27,B,true
+DEMO26CSE007,Abhishek Nair,demo26cse007@example.test,CSE,1,CSE104,2026-27,B,true
+DEMO26CSE008,Prajakta Iyer,demo26cse008@example.test,CSE,1,CSE103,2026-27,B,false
+DEMO26CSE008,Prajakta Iyer,demo26cse008@example.test,CSE,1,CSE104,2026-27,B,false
+DEMO26CSE009,Saurabh Shah,demo26cse009@example.test,CSE,1,CSE103,2026-27,B,false
+DEMO26CSE009,Saurabh Shah,demo26cse009@example.test,CSE,1,CSE104,2026-27,B,false
+DEMO26CSE010,Rutuja Rao,demo26cse010@example.test,CSE,1,CSE103,2026-27,B,false
+DEMO26CSE010,Rutuja Rao,demo26cse010@example.test,CSE,1,CSE104,2026-27,B,false
+DEMO26CSE011,Tejas Bhat,demo26cse011@example.test,CSE,1,CSE103,2026-27,B,false
+DEMO26CSE011,Tejas Bhat,demo26cse011@example.test,CSE,1,CSE104,2026-27,B,false
+DEMO26CSE012,Mitali Singh,demo26cse012@example.test,CSE,1,CSE103,2026-27,B,false
+DEMO26CSE012,Mitali Singh,demo26cse012@example.test,CSE,1,CSE104,2026-27,B,false
