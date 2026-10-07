@@ -23,3 +23,4 @@ The database checks whether a student belongs to both the new exam course and an
 
 ## Why are seating allocation and invigilator assignment missing?
 They belong to later master-plan sprints. The first evaluation implementation is intentionally bounded to S1-S4.
+ 
