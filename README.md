@@ -78,11 +78,11 @@ For the original S1-S4 database, back it up, stop the old application and run **
 
 ## Team browser demo
 
-The interactive training copy is available at **https://altamashm7.github.io/student-seating-invigilator-system/**. It uses the current interface with a separate JavaScript simulator under `demo/`. Sample changes are stored in each browser; the demo login is simulated. The real Java/Tomcat/MySQL application above remains the project implementation.
+The interactive training copy is available at **https://exam-seating-planner.pages.dev/**. It uses the current interface with a separate JavaScript simulator under `demo/`. Sample changes are stored in each browser; the demo login is simulated. The real Java/Tomcat/MySQL application above remains the project implementation.
 
-Demo accounts: `admin` / `Admin@123`, or `cse.faculty1` / `Faculty@123`. Open **Demo guide** for practice steps. **Reset sample data** restores the original fictional records and accounts. Use fictional data and demo passwords.
+Demo accounts: `admin` / `Admin@123`, or `cse.faculty1` / `Faculty@123`. Open **User guide** for practice steps. **Reset sample data** restores the original fictional records and accounts. Use fictional data and demo passwords.
 
-To preview locally, run `python -m http.server 33081 --bind 127.0.0.1` from the repository root and open `http://127.0.0.1:33081/demo/`. After changing the webapp UI, run `python scripts/build-pages-demo.py`. Run `node scripts/test-pages-demo.mjs` to check the simulator. Publish only the contents of `demo/` to the `gh-pages` branch, configured as the Pages source at `/`.
+To preview locally, run `python -m http.server 33081 --bind 127.0.0.1` from the repository root and open `http://127.0.0.1:33081/demo/`. After changing the webapp UI, run `python scripts/build-pages-demo.py`. Run `node scripts/test-pages-demo.mjs` to check the simulator. Publish with `wrangler pages deploy demo --project-name exam-seating-planner --branch main`. The existing GitHub Pages copy uses the contents of `demo/` on the `gh-pages` branch, configured as the Pages source at `/`.
 
 ## Verification
 

@@ -12,13 +12,18 @@ for file in source.rglob('*'):
     destination.parent.mkdir(parents=True,exist_ok=True)
     if file.suffix=='.html':
         text=file.read_text(encoding='utf-8')
+        text=text.replace('app-ui.js?v=20261013-s7r2','app-ui.js?v=20261013-guide4')
         prefix='../'*len(relative.parts[:-1])
         text=text.replace('</head>',f'  <link rel="stylesheet" href="{prefix}demo.css?v=1">\n</head>')
         api=re.search(r'<script src="[^"]*assets/js/api\.js[^\"]*"></script>',text)
         if not api: raise ValueError(f'Missing API script: {relative}')
-        insert=api.group(0)+f'<script src="{prefix}engine.js?v=1"></script><script src="{prefix}runtime.js?v=2"></script>'
+        insert=api.group(0)+f'<script src="{prefix}engine.js?v=1"></script><script src="{prefix}runtime.js?v=3"></script>'
         text=text[:api.start()]+insert+text[api.end():]
         destination.write_text(text,encoding='utf-8')
+    elif relative.as_posix()=='assets/js/app-ui.js':
+        text=file.read_text(encoding='utf-8')
+        text=text.replace('const AppUI = (() => {', "const AppUI = (() => {\n    // Pages hosts may redirect .html links to extensionless URLs.\n    const pagePath = /\\.html$|\\/$/.test(location.pathname) ? location.pathname : location.pathname + '.html';")
+        destination.write_text(text.replace('location.pathname.endsWith','pagePath.endsWith'),encoding='utf-8')
     else: shutil.copyfile(file,destination)
 (output/'.nojekyll').touch()
 print('Built team demo from the current webapp; Java source was not changed.')
