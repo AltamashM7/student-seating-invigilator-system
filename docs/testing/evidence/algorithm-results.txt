@@ -1,0 +1,18 @@
+PASS all students allocated
+PASS accommodation first
+PASS worked example deterministic roll ordering
+PASS unique assigned seats
+PASS preserve manual assignment
+PASS horizontal spacing uses odd columns
+PASS capacity shortfall rejected
+PASS missing accessible seats rejected
+PASS duplicate pinned seat rejected
+PASS invalid accommodation pin rejected
+PASS spacing pin rejected
+PASS unknown student pin rejected
+PASS duplicate student input rejected
+PASS duplicate seat input rejected
+PASS empty input
+PASS 2000-student load, unique full allocation (1365 ms)
+PASS input permutation does not change allocation
+RESULT 17 checks passed
