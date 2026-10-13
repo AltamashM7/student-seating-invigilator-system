@@ -1,5 +1,6 @@
 target/
 .local-runtime/
+.wrangler/
 handoff/*.zip
 __pycache__/
 *.log
