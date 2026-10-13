@@ -16,7 +16,7 @@ for file in source.rglob('*'):
         text=text.replace('</head>',f'  <link rel="stylesheet" href="{prefix}demo.css?v=1">\n</head>')
         api=re.search(r'<script src="[^"]*assets/js/api\.js[^\"]*"></script>',text)
         if not api: raise ValueError(f'Missing API script: {relative}')
-        insert=api.group(0)+f'<script src="{prefix}engine.js?v=1"></script><script src="{prefix}runtime.js?v=1"></script>'
+        insert=api.group(0)+f'<script src="{prefix}engine.js?v=1"></script><script src="{prefix}runtime.js?v=2"></script>'
         text=text[:api.start()]+insert+text[api.end():]
         destination.write_text(text,encoding='utf-8')
     else: shutil.copyfile(file,destination)

@@ -88,7 +88,7 @@
   function init() {
     const bar = document.createElement('aside');
     bar.className = 'demo-bar';bar.setAttribute('aria-label', 'Team demo controls');
-    bar.innerHTML = `<div><strong>Team demo</strong><span id="demoStorageStatus">Sample data saved in this browser · Simulated login</span></div><nav aria-label="Demo help"><a href="${new URL('guide.html', root).href}">Demo guide</a><button id="demoReset" type="button" class="secondary">Reset sample data</button></nav>`;
+    bar.innerHTML = `<div><span id="demoStorageStatus">Sample data saved in this browser</span></div><nav aria-label="Demo help"><a href="${new URL('guide.html', root).href}">Demo guide</a><button id="demoReset" type="button" class="secondary">Reset sample data</button></nav>`;
     document.body.prepend(bar);
     document.getElementById('demoReset').addEventListener('click', async event => {
       if (!confirm('Restore the original sample records and demo accounts in this browser? Your practice changes will be removed.')) return;
