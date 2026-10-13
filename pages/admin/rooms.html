@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Rooms | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
+  <link rel="stylesheet" href="../../demo.css?v=1">
+</head>
+<body data-shell="admin" data-resource="rooms" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Rooms</div><div class="page-heading"><div><h1 id="pageTitle">Rooms</h1><p>Manage physical capacity, seat layout and accessible entry.</p></div></div>
+    <div class="toolbar"><label>Academic year<select id="academicYear" name="academicYear"></select></label><button id="newRecord" type="button">Add room</button></div>
+    <p id="notice" role="status" hidden></p>
+    <details class="editor" id="editor"><summary id="editorTitle">Add room</summary><div class="editor-body"><p class="helper-text" id="editorHelp"></p><form id="recordForm"><div id="fields" class="grid-form"></div><div class="toolbar form-actions"><button id="saveButton" type="submit">Save room</button><button id="clearButton" type="button" class="secondary">Cancel editing</button></div></form></div></details>
+    <section class="panel"><div class="panel-heading"><h2>Rooms list</h2><button id="refreshButton" type="button" class="secondary">Refresh</button></div>
+    <div class="list-toolbar"><label class="search-field">Search<input type="search" id="recordSearch" placeholder="Search names, codes or details…" autocomplete="off"></label><label>Sort by<select id="sortBy"></select></label><label class="page-size">Per page<select id="pageSize"><option>25</option><option>50</option><option>100</option></select></label></div>
+    <div class="table-wrap"><table><thead><tr id="tableHead"></tr></thead><tbody id="tableRows"></tbody></table></div><div class="list-meta"><span id="recordCount" role="status">Loading records…</span><div class="pager"><button id="previousPage" class="secondary" type="button">Previous</button><button id="nextPage" class="secondary" type="button">Next</button></div></div></section>
+    <details class="editor" id="accessibility"><summary>Configure individual accessible seats</summary><div class="editor-body"><p class="helper-text">Configure before assigning the room to an examination. Both room entry and the seat must be accessible.</p><form id="accessibilityForm" class="grid-form"><label>Room<select id="accessibilityRoom"></select></label><label>Seat<select id="seatId" required></select></label><label class="check-label"><input id="seatAccessible" type="checkbox">Accessible seat</label><button type="submit">Save seat accessibility</button></form><p id="seatNotice" role="status" hidden></p></div></details>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../engine.js?v=1"></script><script src="../../runtime.js?v=1"></script><script src="../../assets/js/app-ui.js?v=20261013-s7r2"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/admin.js?v=20261004-ui3"></script>
+</body>
+</html>
