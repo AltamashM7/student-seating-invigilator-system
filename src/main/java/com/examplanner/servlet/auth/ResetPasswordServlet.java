@@ -18,6 +18,9 @@ public class ResetPasswordServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if(request.getSession(false)==null || !"ADMIN".equals(request.getSession(false).getAttribute("role"))) {
+            JsonUtil.send(response,403,JsonUtil.message("error","Contact an administrator to reset your password")); return;
+        }
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -39,6 +42,7 @@ public class ResetPasswordServlet extends HttpServlet {
             }
             JsonUtil.send(response, 200, "{\"success\":true}");
         } catch (SQLException e) {
+            log("Password reset failed", e);
             JsonUtil.send(response, 500, JsonUtil.message("error", "Database error"));
         }
     }

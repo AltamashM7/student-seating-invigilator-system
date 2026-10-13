@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "preserved": [
+    "student",
+    "course",
+    "enrollment",
+    "exam",
+    "room",
+    "seats",
+    "exam-room link"
+  ],
+  "annualPlacement": "2026-27 / study year 3 / division A / semester 5",
+  "courseOfferingCreated": true,
+  "seatCoordinatesAndAccessibilityDerived": true,
+  "placementQuery": "OLD001\tOLD301\t3\tA\t5\t1\t1",
+  "seatQuery": "S001\t1\t1\t1\nS002\t1\t2\t1"
+}

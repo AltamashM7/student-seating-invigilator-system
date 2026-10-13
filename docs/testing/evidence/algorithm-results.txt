@@ -1,0 +1,42 @@
+PASS all students allocated
+PASS accommodation first
+PASS worked example deterministic roll ordering
+PASS unique assigned seats
+PASS accessible seats are reserved while ordinary capacity is sufficient
+PASS ordinary students use extra accessible seats only as capacity fallback
+PASS preserve manual assignment
+PASS horizontal spacing uses odd columns
+PASS capacity shortfall rejected
+PASS missing accessible seats rejected
+PASS duplicate pinned seat rejected
+PASS invalid accommodation pin rejected
+PASS preserved regular pin cannot silently displace an accommodation student
+PASS full replacement restores accommodation capacity
+PASS multiple accommodation students cannot share one qualifying seat
+PASS partial last row respects coordinates and accessibility with spacing
+PASS spacing pin rejected
+PASS unknown student pin rejected
+PASS duplicate student input rejected
+PASS duplicate seat input rejected
+PASS empty input
+PASS 2000-student load, unique full allocation (279 ms)
+PASS input permutation does not change allocation
+RESULT 23 checks passed
+PASS move produces exactly one changed assignment
+PASS swap produces both changed assignments
+PASS validation does not mutate the saved assignment input
+PASS unenrolled student rejected
+PASS unassigned student rejected
+PASS seat outside examination rejected
+PASS invalid source seat rejected
+PASS no-op reassignment rejected
+PASS move into occupied seat rejected
+PASS swap into empty seat rejected
+PASS accommodation student's inaccessible target rejected
+PASS swap protects the other student's accessibility
+PASS move to reserved spacing column rejected
+PASS swap protects the other student's spacing
+PASS swap with unenrolled occupant rejected
+PASS duplicate destination occupants rejected
+PASS accessible move in spaced layout succeeds
+RESULT 17 manual rule checks passed

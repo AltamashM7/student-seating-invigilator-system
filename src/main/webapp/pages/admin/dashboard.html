@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Dashboard | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
 </head>
-<body>
-<header class="topbar"><strong>Exam Planner</strong><span><span data-user-name></span> · <a href="#" onclick="logout()">Logout</a></span></header>
-<div class="layout">
-    <nav class="sidebar">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="create-user.html">Create User</a>
-        <a href="rooms.html">Rooms</a>
-        <a href="courses.html">Courses</a>
-        <a href="import-students.html">CSV Import</a>
-        <a href="exams.html">Exams</a>
-        <a href="../timetable.html">Timetable</a>
-    </nav>
-    <main class="content">
-        <h1>Administrator Dashboard</h1>
-        <p class="muted">S1-S4 examination setup and scheduling.</p>
-        <section class="cards">
-            <article class="card"><h3>Accounts</h3><p>Create admin or faculty accounts.</p><a href="create-user.html">Open</a></article>
-            <article class="card"><h3>Master Data</h3><p>Manage rooms, courses and student imports.</p><a href="rooms.html">Open</a></article>
-            <article class="card"><h3>Exam Schedule</h3><p>Create exams and check timetable conflicts.</p><a href="exams.html">Open</a></article>
-        </section>
-    </main>
-</div>
-<script src="../../assets/js/api.js"></script>
-<script src="../../assets/js/guard.js"></script>
-<script>requireRole('ADMIN');</script>
+<body data-shell="admin" data-resource="dashboard" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Dashboard</div><div class="page-heading"><div><h1 id="pageTitle">Dashboard</h1><p>Academic records, student counts and examination administration.</p></div></div>
+<div class="toolbar"><label>Academic year<select id="academicYear"></select></label></div><p id="notice" role="status" hidden></p>
+<section class="cards" id="summary" aria-label="Academic totals"></section>
+<nav class="quick-links" aria-label="Quick actions"><a href="students.html?new=1">Add a student</a><a href="exams.html?new=1">Create an exam</a><a href="seating.html">Review seating</a><a href="import-students.html">Import a CSV</a></nav>
+<section class="panel"><div class="panel-heading"><h2>Student counts</h2><span class="muted">Student counts by academic-year placement</span></div><label class="search-field">Search department or division<input id="dashboardSearch" type="search" placeholder="Search CSE, SY or division A…" autocomplete="off"></label><p class="helper-text" id="countSummary" role="status"></p><h3>By department and study year</h3><div class="table-wrap"><table><thead><tr><th scope="col">Department / study year</th><th scope="col">Students</th></tr></thead><tbody id="yearCounts"></tbody></table></div>
+<details class="editor" open><summary>Division breakdown</summary><div class="editor-body table-wrap"><table><thead><tr><th>Department</th><th>Study year</th><th>Division</th><th>Students</th></tr></thead><tbody id="divisionCounts"></tbody></table></div></details></section>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../assets/js/app-ui.js?v=20261013-s7r2"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/admin.js?v=20261004-ui3"></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+PASS: representative populated S1-S4 database upgraded successfully. Existing student, course, enrollment, exam, room and seat records preserved. Study year 3 derived from semester 5; annual placement and course offering created.
+roll_number	course_code	study_year	division	placement_year	academic_year_id	exam_year
+OLD001	OLD301	3	A	3	1	1
+seat_number	seat_row	seat_column	is_accessible
+S001	1	1	1
+S002	1	2	1

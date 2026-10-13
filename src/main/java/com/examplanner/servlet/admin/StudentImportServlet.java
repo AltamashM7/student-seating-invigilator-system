@@ -1,63 +1,30 @@
 package com.examplanner.servlet.admin;
-
 import com.examplanner.dao.StudentImportDao;
-import com.examplanner.util.JsonUtil;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import com.examplanner.dao.StudentImportDao.CsvRow;
+import com.examplanner.util.*;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.*;
+import jakarta.servlet.http.*;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 @WebServlet("/api/admin/import/students")
-@MultipartConfig(maxFileSize = 2 * 1024 * 1024)
+@MultipartConfig(maxFileSize=2*1024*1024,maxRequestSize=3*1024*1024)
 public class StudentImportServlet extends HttpServlet {
-    private final StudentImportDao importDao = new StudentImportDao();
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
-        Part file = request.getPart("file");
-        if (file == null || file.getSize() == 0) {
-            JsonUtil.send(response, 400, JsonUtil.message("error", "CSV file is required"));
-            return;
-        }
-
-        List<String[]> rows = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8))) {
-            String line;
-            boolean first = true;
-            while ((line = reader.readLine()) != null) {
-                if (first) {
-                    first = false;
-                    continue;
-                }
-                if (!line.isBlank()) rows.add(line.split(",", -1));
-            }
-        }
-
-        try {
-            StudentImportDao.ImportResult result = importDao.importRows(rows);
-            StringBuilder errors = new StringBuilder("[");
-            for (int i = 0; i < result.errors.size(); i++) {
-                if (i > 0) errors.append(',');
-                errors.append(JsonUtil.quote(result.errors.get(i)));
-            }
-            errors.append(']');
-            String json = "{\"imported\":" + result.imported + ",\"duplicates\":" + result.duplicates
-                    + ",\"invalid\":" + result.errors.size() + ",\"errors\":" + errors + "}";
-            JsonUtil.send(response, 200, json);
-        } catch (SQLException e) {
-            JsonUtil.send(response, 500, JsonUtil.message("error", "Database error"));
-        }
-    }
+ protected void doPost(HttpServletRequest r,HttpServletResponse s) throws IOException,ServletException {
+  try {
+   Part file=r.getPart("file"); if(file==null||file.getSize()==0) throw new IllegalArgumentException("CSV file is required");
+   List<CsvRow> rows=new ArrayList<>(); boolean legacy;
+   try(BufferedReader reader=new BufferedReader(new InputStreamReader(file.getInputStream(),StandardCharsets.UTF_8))) {
+    String header=reader.readLine(); if(header==null) throw new IllegalArgumentException("Header is required"); header=header.replace("\uFEFF","").trim();
+    legacy="roll_number,name,email,department_code,semester,course_code".equals(header);
+    if(!legacy&&!"roll_number,name,email,department_code,semester,course_code,academic_year,division,requires_accessible".equals(header)) throw new IllegalArgumentException("CSV header does not match the template");
+    String line; int n=1; while((line=reader.readLine())!=null) { n++; if(!line.isBlank()) rows.add(new CsvRow(n,line.split(",",-1))); }
+   }
+   if(rows.isEmpty()) throw new IllegalArgumentException("CSV has no data rows");
+   JsonUtil.send(s,200,JsonUtil.json(new StudentImportDao().importRows(rows,legacy)));
+  } catch(IllegalArgumentException | IllegalStateException e) { JsonUtil.send(s,400,JsonUtil.message("error",e.getMessage())); }
+  catch(SQLException e) { log("CSV import database failure",e); JsonUtil.send(s,500,JsonUtil.message("error","Database error; earlier valid rows may have committed; retrying detects duplicates")); }
+ }
 }

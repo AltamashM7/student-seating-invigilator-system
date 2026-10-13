@@ -1,0 +1,9133 @@
+{
+  "years": [
+    {
+      "id": 1,
+      "label": "2026-27",
+      "startYear": 2026,
+      "isCurrent": true
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "code": "CSE",
+      "name": "Computer Science and Engineering"
+    },
+    {
+      "id": 3,
+      "code": "ENTC",
+      "name": "Electronics and Telecommunication"
+    },
+    {
+      "id": 2,
+      "code": "IT",
+      "name": "Information Technology"
+    }
+  ],
+  "divisions": [
+    {
+      "id": 1,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 1,
+      "code": "A"
+    },
+    {
+      "id": 2,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 1,
+      "code": "B"
+    },
+    {
+      "id": 3,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 2,
+      "code": "A"
+    },
+    {
+      "id": 4,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 2,
+      "code": "B"
+    },
+    {
+      "id": 5,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 3,
+      "code": "A"
+    },
+    {
+      "id": 6,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 3,
+      "code": "B"
+    },
+    {
+      "id": 7,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 4,
+      "code": "A"
+    },
+    {
+      "id": 8,
+      "academicYearId": 1,
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "studyYear": 4,
+      "code": "B"
+    },
+    {
+      "id": 9,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 1,
+      "code": "A"
+    },
+    {
+      "id": 10,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 1,
+      "code": "B"
+    },
+    {
+      "id": 11,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 2,
+      "code": "A"
+    },
+    {
+      "id": 12,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 2,
+      "code": "B"
+    },
+    {
+      "id": 13,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 3,
+      "code": "A"
+    },
+    {
+      "id": 14,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 3,
+      "code": "B"
+    },
+    {
+      "id": 15,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 4,
+      "code": "A"
+    },
+    {
+      "id": 16,
+      "academicYearId": 1,
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "studyYear": 4,
+      "code": "B"
+    },
+    {
+      "id": 17,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 1,
+      "code": "A"
+    },
+    {
+      "id": 18,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 1,
+      "code": "B"
+    },
+    {
+      "id": 19,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 2,
+      "code": "A"
+    },
+    {
+      "id": 20,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 2,
+      "code": "B"
+    },
+    {
+      "id": 21,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 3,
+      "code": "A"
+    },
+    {
+      "id": 22,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 3,
+      "code": "B"
+    },
+    {
+      "id": 23,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 4,
+      "code": "A"
+    },
+    {
+      "id": 24,
+      "academicYearId": 1,
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "studyYear": 4,
+      "code": "B"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "code": "CSE101",
+      "name": "Programming Fundamentals",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 2,
+      "code": "CSE102",
+      "name": "Engineering Mathematics",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 25,
+      "code": "CSE103",
+      "name": "Computer Workshop",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 26,
+      "code": "CSE104",
+      "name": "Computational Thinking",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 3,
+      "code": "CSE201",
+      "name": "Data Structures",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 3,
+      "studyYear": 2,
+      "offered": 1
+    },
+    {
+      "id": 4,
+      "code": "CSE202",
+      "name": "Database Management Systems",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 3,
+      "studyYear": 2,
+      "offered": 1
+    },
+    {
+      "id": 5,
+      "code": "CSE301",
+      "name": "Operating Systems",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 5,
+      "studyYear": 3,
+      "offered": 1
+    },
+    {
+      "id": 6,
+      "code": "CSE302",
+      "name": "Computer Networks",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 5,
+      "studyYear": 3,
+      "offered": 1
+    },
+    {
+      "id": 7,
+      "code": "CSE401",
+      "name": "Distributed Systems",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 7,
+      "studyYear": 4,
+      "offered": 1
+    },
+    {
+      "id": 8,
+      "code": "CSE402",
+      "name": "Software Testing",
+      "departmentId": 1,
+      "departmentCode": "CSE",
+      "semester": 7,
+      "studyYear": 4,
+      "offered": 1
+    },
+    {
+      "id": 17,
+      "code": "ENTC101",
+      "name": "Basic Electronics",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 18,
+      "code": "ENTC102",
+      "name": "Engineering Physics",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 19,
+      "code": "ENTC201",
+      "name": "Digital Electronics",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 3,
+      "studyYear": 2,
+      "offered": 1
+    },
+    {
+      "id": 20,
+      "code": "ENTC202",
+      "name": "Circuit Analysis",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 3,
+      "studyYear": 2,
+      "offered": 1
+    },
+    {
+      "id": 21,
+      "code": "ENTC301",
+      "name": "Signals and Systems",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 5,
+      "studyYear": 3,
+      "offered": 1
+    },
+    {
+      "id": 22,
+      "code": "ENTC302",
+      "name": "Microcontrollers",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 5,
+      "studyYear": 3,
+      "offered": 1
+    },
+    {
+      "id": 23,
+      "code": "ENTC401",
+      "name": "Wireless Communication",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 7,
+      "studyYear": 4,
+      "offered": 1
+    },
+    {
+      "id": 24,
+      "code": "ENTC402",
+      "name": "Embedded Systems",
+      "departmentId": 3,
+      "departmentCode": "ENTC",
+      "semester": 7,
+      "studyYear": 4,
+      "offered": 1
+    },
+    {
+      "id": 9,
+      "code": "IT101",
+      "name": "Introduction to Computing",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 10,
+      "code": "IT102",
+      "name": "Applied Mathematics",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 1,
+      "studyYear": 1,
+      "offered": 1
+    },
+    {
+      "id": 11,
+      "code": "IT201",
+      "name": "Web Technology",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 3,
+      "studyYear": 2,
+      "offered": 1
+    },
+    {
+      "id": 12,
+      "code": "IT202",
+      "name": "Object Oriented Programming",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 3,
+      "studyYear": 2,
+      "offered": 1
+    },
+    {
+      "id": 13,
+      "code": "IT301",
+      "name": "Information Security",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 5,
+      "studyYear": 3,
+      "offered": 1
+    },
+    {
+      "id": 14,
+      "code": "IT302",
+      "name": "Data Communication",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 5,
+      "studyYear": 3,
+      "offered": 1
+    },
+    {
+      "id": 15,
+      "code": "IT401",
+      "name": "Cloud Computing",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 7,
+      "studyYear": 4,
+      "offered": 1
+    },
+    {
+      "id": 16,
+      "code": "IT402",
+      "name": "Data Analytics",
+      "departmentId": 2,
+      "departmentCode": "IT",
+      "semester": 7,
+      "studyYear": 4,
+      "offered": 1
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "roomNumber": "R101",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 2,
+      "roomNumber": "R102",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 3,
+      "roomNumber": "R103",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 4,
+      "roomNumber": "R104",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 5,
+      "roomNumber": "R105",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 6,
+      "roomNumber": "R106",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 7,
+      "roomNumber": "R107",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    },
+    {
+      "id": 8,
+      "roomNumber": "R108",
+      "capacity": 30,
+      "seatColumns": 6,
+      "isAccessible": true
+    }
+  ],
+  "seats": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 2,
+      "roomId": 1,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 3,
+      "roomId": 1,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 4,
+      "roomId": 1,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 5,
+      "roomId": 1,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 6,
+      "roomId": 1,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 7,
+      "roomId": 1,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 8,
+      "roomId": 1,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 9,
+      "roomId": 1,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 10,
+      "roomId": 1,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 11,
+      "roomId": 1,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 12,
+      "roomId": 1,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 13,
+      "roomId": 1,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 14,
+      "roomId": 1,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 15,
+      "roomId": 1,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 16,
+      "roomId": 1,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 17,
+      "roomId": 1,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 18,
+      "roomId": 1,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 19,
+      "roomId": 1,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 20,
+      "roomId": 1,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 21,
+      "roomId": 1,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 22,
+      "roomId": 1,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 23,
+      "roomId": 1,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 24,
+      "roomId": 1,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 25,
+      "roomId": 1,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 26,
+      "roomId": 1,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 27,
+      "roomId": 1,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 28,
+      "roomId": 1,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 29,
+      "roomId": 1,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 30,
+      "roomId": 1,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 31,
+      "roomId": 2,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 32,
+      "roomId": 2,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 33,
+      "roomId": 2,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 34,
+      "roomId": 2,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 35,
+      "roomId": 2,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 36,
+      "roomId": 2,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 37,
+      "roomId": 2,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 38,
+      "roomId": 2,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 39,
+      "roomId": 2,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 40,
+      "roomId": 2,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 41,
+      "roomId": 2,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 42,
+      "roomId": 2,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 43,
+      "roomId": 2,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 44,
+      "roomId": 2,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 45,
+      "roomId": 2,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 46,
+      "roomId": 2,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 47,
+      "roomId": 2,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 48,
+      "roomId": 2,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 49,
+      "roomId": 2,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 50,
+      "roomId": 2,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 51,
+      "roomId": 2,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 52,
+      "roomId": 2,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 53,
+      "roomId": 2,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 54,
+      "roomId": 2,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 55,
+      "roomId": 2,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 56,
+      "roomId": 2,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 57,
+      "roomId": 2,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 58,
+      "roomId": 2,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 59,
+      "roomId": 2,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 60,
+      "roomId": 2,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 61,
+      "roomId": 3,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 62,
+      "roomId": 3,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 63,
+      "roomId": 3,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 64,
+      "roomId": 3,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 65,
+      "roomId": 3,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 66,
+      "roomId": 3,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 67,
+      "roomId": 3,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 68,
+      "roomId": 3,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 69,
+      "roomId": 3,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 70,
+      "roomId": 3,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 71,
+      "roomId": 3,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 72,
+      "roomId": 3,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 73,
+      "roomId": 3,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 74,
+      "roomId": 3,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 75,
+      "roomId": 3,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 76,
+      "roomId": 3,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 77,
+      "roomId": 3,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 78,
+      "roomId": 3,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 79,
+      "roomId": 3,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 80,
+      "roomId": 3,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 81,
+      "roomId": 3,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 82,
+      "roomId": 3,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 83,
+      "roomId": 3,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 84,
+      "roomId": 3,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 85,
+      "roomId": 3,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 86,
+      "roomId": 3,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 87,
+      "roomId": 3,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 88,
+      "roomId": 3,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 89,
+      "roomId": 3,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 90,
+      "roomId": 3,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 91,
+      "roomId": 4,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 92,
+      "roomId": 4,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 93,
+      "roomId": 4,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 94,
+      "roomId": 4,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 95,
+      "roomId": 4,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 96,
+      "roomId": 4,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 97,
+      "roomId": 4,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 98,
+      "roomId": 4,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 99,
+      "roomId": 4,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 100,
+      "roomId": 4,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 101,
+      "roomId": 4,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 102,
+      "roomId": 4,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 103,
+      "roomId": 4,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 104,
+      "roomId": 4,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 105,
+      "roomId": 4,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 106,
+      "roomId": 4,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 107,
+      "roomId": 4,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 108,
+      "roomId": 4,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 109,
+      "roomId": 4,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 110,
+      "roomId": 4,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 111,
+      "roomId": 4,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 112,
+      "roomId": 4,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 113,
+      "roomId": 4,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 114,
+      "roomId": 4,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 115,
+      "roomId": 4,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 116,
+      "roomId": 4,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 117,
+      "roomId": 4,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 118,
+      "roomId": 4,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 119,
+      "roomId": 4,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 120,
+      "roomId": 4,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 121,
+      "roomId": 5,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 122,
+      "roomId": 5,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 123,
+      "roomId": 5,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 124,
+      "roomId": 5,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 125,
+      "roomId": 5,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 126,
+      "roomId": 5,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 127,
+      "roomId": 5,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 128,
+      "roomId": 5,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 129,
+      "roomId": 5,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 130,
+      "roomId": 5,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 131,
+      "roomId": 5,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 132,
+      "roomId": 5,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 133,
+      "roomId": 5,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 134,
+      "roomId": 5,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 135,
+      "roomId": 5,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 136,
+      "roomId": 5,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 137,
+      "roomId": 5,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 138,
+      "roomId": 5,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 139,
+      "roomId": 5,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 140,
+      "roomId": 5,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 141,
+      "roomId": 5,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 142,
+      "roomId": 5,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 143,
+      "roomId": 5,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 144,
+      "roomId": 5,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 145,
+      "roomId": 5,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 146,
+      "roomId": 5,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 147,
+      "roomId": 5,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 148,
+      "roomId": 5,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 149,
+      "roomId": 5,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 150,
+      "roomId": 5,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 151,
+      "roomId": 6,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 152,
+      "roomId": 6,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 153,
+      "roomId": 6,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 154,
+      "roomId": 6,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 155,
+      "roomId": 6,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 156,
+      "roomId": 6,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 157,
+      "roomId": 6,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 158,
+      "roomId": 6,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 159,
+      "roomId": 6,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 160,
+      "roomId": 6,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 161,
+      "roomId": 6,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 162,
+      "roomId": 6,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 163,
+      "roomId": 6,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 164,
+      "roomId": 6,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 165,
+      "roomId": 6,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 166,
+      "roomId": 6,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 167,
+      "roomId": 6,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 168,
+      "roomId": 6,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 169,
+      "roomId": 6,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 170,
+      "roomId": 6,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 171,
+      "roomId": 6,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 172,
+      "roomId": 6,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 173,
+      "roomId": 6,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 174,
+      "roomId": 6,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 175,
+      "roomId": 6,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 176,
+      "roomId": 6,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 177,
+      "roomId": 6,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 178,
+      "roomId": 6,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 179,
+      "roomId": 6,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 180,
+      "roomId": 6,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 181,
+      "roomId": 7,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 182,
+      "roomId": 7,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 183,
+      "roomId": 7,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 184,
+      "roomId": 7,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 185,
+      "roomId": 7,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 186,
+      "roomId": 7,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 187,
+      "roomId": 7,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 188,
+      "roomId": 7,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 189,
+      "roomId": 7,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 190,
+      "roomId": 7,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 191,
+      "roomId": 7,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 192,
+      "roomId": 7,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 193,
+      "roomId": 7,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 194,
+      "roomId": 7,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 195,
+      "roomId": 7,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 196,
+      "roomId": 7,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 197,
+      "roomId": 7,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 198,
+      "roomId": 7,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 199,
+      "roomId": 7,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 200,
+      "roomId": 7,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 201,
+      "roomId": 7,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 202,
+      "roomId": 7,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 203,
+      "roomId": 7,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 204,
+      "roomId": 7,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 205,
+      "roomId": 7,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 206,
+      "roomId": 7,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 207,
+      "roomId": 7,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 208,
+      "roomId": 7,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 209,
+      "roomId": 7,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 210,
+      "roomId": 7,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    },
+    {
+      "id": 211,
+      "roomId": 8,
+      "seatNumber": "S001",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 1
+    },
+    {
+      "id": 212,
+      "roomId": 8,
+      "seatNumber": "S002",
+      "isAccessible": true,
+      "rowNumber": 1,
+      "columnNumber": 2
+    },
+    {
+      "id": 213,
+      "roomId": 8,
+      "seatNumber": "S003",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 3
+    },
+    {
+      "id": 214,
+      "roomId": 8,
+      "seatNumber": "S004",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 4
+    },
+    {
+      "id": 215,
+      "roomId": 8,
+      "seatNumber": "S005",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 5
+    },
+    {
+      "id": 216,
+      "roomId": 8,
+      "seatNumber": "S006",
+      "isAccessible": false,
+      "rowNumber": 1,
+      "columnNumber": 6
+    },
+    {
+      "id": 217,
+      "roomId": 8,
+      "seatNumber": "S007",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 1
+    },
+    {
+      "id": 218,
+      "roomId": 8,
+      "seatNumber": "S008",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 2
+    },
+    {
+      "id": 219,
+      "roomId": 8,
+      "seatNumber": "S009",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 3
+    },
+    {
+      "id": 220,
+      "roomId": 8,
+      "seatNumber": "S010",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 4
+    },
+    {
+      "id": 221,
+      "roomId": 8,
+      "seatNumber": "S011",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 5
+    },
+    {
+      "id": 222,
+      "roomId": 8,
+      "seatNumber": "S012",
+      "isAccessible": false,
+      "rowNumber": 2,
+      "columnNumber": 6
+    },
+    {
+      "id": 223,
+      "roomId": 8,
+      "seatNumber": "S013",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 1
+    },
+    {
+      "id": 224,
+      "roomId": 8,
+      "seatNumber": "S014",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 2
+    },
+    {
+      "id": 225,
+      "roomId": 8,
+      "seatNumber": "S015",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 3
+    },
+    {
+      "id": 226,
+      "roomId": 8,
+      "seatNumber": "S016",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 4
+    },
+    {
+      "id": 227,
+      "roomId": 8,
+      "seatNumber": "S017",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 5
+    },
+    {
+      "id": 228,
+      "roomId": 8,
+      "seatNumber": "S018",
+      "isAccessible": false,
+      "rowNumber": 3,
+      "columnNumber": 6
+    },
+    {
+      "id": 229,
+      "roomId": 8,
+      "seatNumber": "S019",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 1
+    },
+    {
+      "id": 230,
+      "roomId": 8,
+      "seatNumber": "S020",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 2
+    },
+    {
+      "id": 231,
+      "roomId": 8,
+      "seatNumber": "S021",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 3
+    },
+    {
+      "id": 232,
+      "roomId": 8,
+      "seatNumber": "S022",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 4
+    },
+    {
+      "id": 233,
+      "roomId": 8,
+      "seatNumber": "S023",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 5
+    },
+    {
+      "id": 234,
+      "roomId": 8,
+      "seatNumber": "S024",
+      "isAccessible": false,
+      "rowNumber": 4,
+      "columnNumber": 6
+    },
+    {
+      "id": 235,
+      "roomId": 8,
+      "seatNumber": "S025",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 1
+    },
+    {
+      "id": 236,
+      "roomId": 8,
+      "seatNumber": "S026",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 2
+    },
+    {
+      "id": 237,
+      "roomId": 8,
+      "seatNumber": "S027",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 3
+    },
+    {
+      "id": 238,
+      "roomId": 8,
+      "seatNumber": "S028",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 4
+    },
+    {
+      "id": 239,
+      "roomId": 8,
+      "seatNumber": "S029",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 5
+    },
+    {
+      "id": 240,
+      "roomId": 8,
+      "seatNumber": "S030",
+      "isAccessible": false,
+      "rowNumber": 5,
+      "columnNumber": 6
+    }
+  ],
+  "faculty": [
+    {
+      "id": 1,
+      "userId": 2,
+      "employeeCode": "CSE-F1",
+      "name": "Sanika Pawar",
+      "email": "cse.faculty1@example.test",
+      "departmentId": 1,
+      "username": "cse.faculty1"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "employeeCode": "CSE-F2",
+      "name": "Abhishek Shinde",
+      "email": "cse.faculty2@example.test",
+      "departmentId": 1,
+      "username": "cse.faculty2"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "employeeCode": "CSE-F3",
+      "name": "Prajakta More",
+      "email": "cse.faculty3@example.test",
+      "departmentId": 1,
+      "username": "cse.faculty3"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "employeeCode": "CSE-F4",
+      "name": "Saurabh Jadhav",
+      "email": "cse.faculty4@example.test",
+      "departmentId": 1,
+      "username": "cse.faculty4"
+    },
+    {
+      "id": 9,
+      "userId": 10,
+      "employeeCode": "ENTC-F1",
+      "name": "Anushka More",
+      "email": "entc.faculty1@example.test",
+      "departmentId": 3,
+      "username": "entc.faculty1"
+    },
+    {
+      "id": 10,
+      "userId": 11,
+      "employeeCode": "ENTC-F2",
+      "name": "Pratik Jadhav",
+      "email": "entc.faculty2@example.test",
+      "departmentId": 3,
+      "username": "entc.faculty2"
+    },
+    {
+      "id": 11,
+      "userId": 12,
+      "employeeCode": "ENTC-F3",
+      "name": "Gauri Kadam",
+      "email": "entc.faculty3@example.test",
+      "departmentId": 3,
+      "username": "entc.faculty3"
+    },
+    {
+      "id": 12,
+      "userId": 13,
+      "employeeCode": "ENTC-F4",
+      "name": "Rohit Nair",
+      "email": "entc.faculty4@example.test",
+      "departmentId": 3,
+      "username": "entc.faculty4"
+    },
+    {
+      "id": 5,
+      "userId": 6,
+      "employeeCode": "IT-F1",
+      "name": "Rutuja Shinde",
+      "email": "it.faculty1@example.test",
+      "departmentId": 2,
+      "username": "it.faculty1"
+    },
+    {
+      "id": 6,
+      "userId": 7,
+      "employeeCode": "IT-F2",
+      "name": "Tejas More",
+      "email": "it.faculty2@example.test",
+      "departmentId": 2,
+      "username": "it.faculty2"
+    },
+    {
+      "id": 7,
+      "userId": 8,
+      "employeeCode": "IT-F3",
+      "name": "Mitali Jadhav",
+      "email": "it.faculty3@example.test",
+      "departmentId": 2,
+      "username": "it.faculty3"
+    },
+    {
+      "id": 8,
+      "userId": 9,
+      "employeeCode": "IT-F4",
+      "name": "Shreyas Kadam",
+      "email": "it.faculty4@example.test",
+      "departmentId": 2,
+      "username": "it.faculty4"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "rollNumber": "CSE26Y1A001",
+      "name": "Atharva Kulkarni",
+      "email": "cse26y1a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 2,
+      "rollNumber": "CSE26Y1A002",
+      "name": "Shruti Joshi",
+      "email": "cse26y1a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 3,
+      "rollNumber": "CSE26Y1A003",
+      "name": "Omkar Patil",
+      "email": "cse26y1a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 4,
+      "rollNumber": "CSE26Y1A004",
+      "name": "Sayali Pawar",
+      "email": "cse26y1a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 5,
+      "rollNumber": "CSE26Y1A005",
+      "name": "Siddharth Shinde",
+      "email": "cse26y1a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 6,
+      "rollNumber": "CSE26Y1A006",
+      "name": "Pooja More",
+      "email": "cse26y1a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 7,
+      "rollNumber": "CSE26Y1A007",
+      "name": "Harsh Jadhav",
+      "email": "cse26y1a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 8,
+      "rollNumber": "CSE26Y1A008",
+      "name": "Sakshi Kadam",
+      "email": "cse26y1a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 9,
+      "rollNumber": "CSE26Y1A009",
+      "name": "Akash Nair",
+      "email": "cse26y1a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 10,
+      "rollNumber": "CSE26Y1A010",
+      "name": "Vaishnavi Iyer",
+      "email": "cse26y1a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 11,
+      "rollNumber": "CSE26Y1B001",
+      "name": "Niraj Kulkarni",
+      "email": "cse26y1b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 12,
+      "rollNumber": "CSE26Y1B002",
+      "name": "Sanika Joshi",
+      "email": "cse26y1b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 13,
+      "rollNumber": "CSE26Y1B003",
+      "name": "Abhishek Patil",
+      "email": "cse26y1b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 14,
+      "rollNumber": "CSE26Y1B004",
+      "name": "Prajakta Pawar",
+      "email": "cse26y1b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 15,
+      "rollNumber": "CSE26Y1B005",
+      "name": "Saurabh Shinde",
+      "email": "cse26y1b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 16,
+      "rollNumber": "CSE26Y1B006",
+      "name": "Rutuja More",
+      "email": "cse26y1b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 17,
+      "rollNumber": "CSE26Y1B007",
+      "name": "Tejas Jadhav",
+      "email": "cse26y1b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 18,
+      "rollNumber": "CSE26Y1B008",
+      "name": "Mitali Kadam",
+      "email": "cse26y1b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 19,
+      "rollNumber": "CSE26Y1B009",
+      "name": "Shreyas Nair",
+      "email": "cse26y1b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 20,
+      "rollNumber": "CSE26Y1B010",
+      "name": "Anushka Iyer",
+      "email": "cse26y1b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 21,
+      "rollNumber": "CSE26Y2A001",
+      "name": "Pratik Kulkarni",
+      "email": "cse26y2a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 22,
+      "rollNumber": "CSE26Y2A002",
+      "name": "Gauri Joshi",
+      "email": "cse26y2a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 23,
+      "rollNumber": "CSE26Y2A003",
+      "name": "Rohit Patil",
+      "email": "cse26y2a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 24,
+      "rollNumber": "CSE26Y2A004",
+      "name": "Swarali Pawar",
+      "email": "cse26y2a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 25,
+      "rollNumber": "CSE26Y2A005",
+      "name": "Atharva More",
+      "email": "cse26y2a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 26,
+      "rollNumber": "CSE26Y2A006",
+      "name": "Shruti Jadhav",
+      "email": "cse26y2a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 27,
+      "rollNumber": "CSE26Y2A007",
+      "name": "Omkar Kadam",
+      "email": "cse26y2a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 28,
+      "rollNumber": "CSE26Y2A008",
+      "name": "Sayali Nair",
+      "email": "cse26y2a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 29,
+      "rollNumber": "CSE26Y2A009",
+      "name": "Siddharth Iyer",
+      "email": "cse26y2a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 30,
+      "rollNumber": "CSE26Y2A010",
+      "name": "Pooja Shah",
+      "email": "cse26y2a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 31,
+      "rollNumber": "CSE26Y2B001",
+      "name": "Harsh Joshi",
+      "email": "cse26y2b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 32,
+      "rollNumber": "CSE26Y2B002",
+      "name": "Sakshi Patil",
+      "email": "cse26y2b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 33,
+      "rollNumber": "CSE26Y2B003",
+      "name": "Akash Pawar",
+      "email": "cse26y2b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 34,
+      "rollNumber": "CSE26Y2B004",
+      "name": "Vaishnavi Shinde",
+      "email": "cse26y2b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 35,
+      "rollNumber": "CSE26Y2B005",
+      "name": "Niraj More",
+      "email": "cse26y2b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 36,
+      "rollNumber": "CSE26Y2B006",
+      "name": "Sanika Jadhav",
+      "email": "cse26y2b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 37,
+      "rollNumber": "CSE26Y2B007",
+      "name": "Abhishek Kadam",
+      "email": "cse26y2b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 38,
+      "rollNumber": "CSE26Y2B008",
+      "name": "Prajakta Nair",
+      "email": "cse26y2b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 39,
+      "rollNumber": "CSE26Y2B009",
+      "name": "Saurabh Iyer",
+      "email": "cse26y2b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 40,
+      "rollNumber": "CSE26Y2B010",
+      "name": "Rutuja Shah",
+      "email": "cse26y2b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 41,
+      "rollNumber": "CSE26Y3A001",
+      "name": "Tejas Joshi",
+      "email": "cse26y3a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 42,
+      "rollNumber": "CSE26Y3A002",
+      "name": "Mitali Patil",
+      "email": "cse26y3a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 43,
+      "rollNumber": "CSE26Y3A003",
+      "name": "Shreyas Pawar",
+      "email": "cse26y3a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 44,
+      "rollNumber": "CSE26Y3A004",
+      "name": "Anushka Shinde",
+      "email": "cse26y3a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 45,
+      "rollNumber": "CSE26Y3A005",
+      "name": "Pratik More",
+      "email": "cse26y3a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 46,
+      "rollNumber": "CSE26Y3A006",
+      "name": "Gauri Jadhav",
+      "email": "cse26y3a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 47,
+      "rollNumber": "CSE26Y3A007",
+      "name": "Rohit Kadam",
+      "email": "cse26y3a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 48,
+      "rollNumber": "CSE26Y3A008",
+      "name": "Swarali Nair",
+      "email": "cse26y3a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 49,
+      "rollNumber": "CSE26Y3A009",
+      "name": "Atharva Shah",
+      "email": "cse26y3a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 50,
+      "rollNumber": "CSE26Y3A010",
+      "name": "Shruti Rao",
+      "email": "cse26y3a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 51,
+      "rollNumber": "CSE26Y3B001",
+      "name": "Omkar Patil",
+      "email": "cse26y3b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 52,
+      "rollNumber": "CSE26Y3B002",
+      "name": "Sayali Pawar",
+      "email": "cse26y3b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 53,
+      "rollNumber": "CSE26Y3B003",
+      "name": "Siddharth Shinde",
+      "email": "cse26y3b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 54,
+      "rollNumber": "CSE26Y3B004",
+      "name": "Pooja More",
+      "email": "cse26y3b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 55,
+      "rollNumber": "CSE26Y3B005",
+      "name": "Harsh Jadhav",
+      "email": "cse26y3b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 56,
+      "rollNumber": "CSE26Y3B006",
+      "name": "Sakshi Kadam",
+      "email": "cse26y3b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 57,
+      "rollNumber": "CSE26Y3B007",
+      "name": "Akash Nair",
+      "email": "cse26y3b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 58,
+      "rollNumber": "CSE26Y3B008",
+      "name": "Vaishnavi Iyer",
+      "email": "cse26y3b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 59,
+      "rollNumber": "CSE26Y3B009",
+      "name": "Niraj Shah",
+      "email": "cse26y3b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 60,
+      "rollNumber": "CSE26Y3B010",
+      "name": "Sanika Rao",
+      "email": "cse26y3b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 61,
+      "rollNumber": "CSE26Y4A001",
+      "name": "Abhishek Patil",
+      "email": "cse26y4a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 62,
+      "rollNumber": "CSE26Y4A002",
+      "name": "Prajakta Pawar",
+      "email": "cse26y4a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 63,
+      "rollNumber": "CSE26Y4A003",
+      "name": "Saurabh Shinde",
+      "email": "cse26y4a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 64,
+      "rollNumber": "CSE26Y4A004",
+      "name": "Rutuja More",
+      "email": "cse26y4a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 65,
+      "rollNumber": "CSE26Y4A005",
+      "name": "Tejas Jadhav",
+      "email": "cse26y4a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 66,
+      "rollNumber": "CSE26Y4A006",
+      "name": "Mitali Kadam",
+      "email": "cse26y4a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 67,
+      "rollNumber": "CSE26Y4A007",
+      "name": "Shreyas Nair",
+      "email": "cse26y4a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 68,
+      "rollNumber": "CSE26Y4A008",
+      "name": "Anushka Iyer",
+      "email": "cse26y4a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 69,
+      "rollNumber": "CSE26Y4A009",
+      "name": "Pratik Shah",
+      "email": "cse26y4a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 70,
+      "rollNumber": "CSE26Y4A010",
+      "name": "Gauri Rao",
+      "email": "cse26y4a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 71,
+      "rollNumber": "CSE26Y4B001",
+      "name": "Rohit Patil",
+      "email": "cse26y4b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 72,
+      "rollNumber": "CSE26Y4B002",
+      "name": "Swarali Pawar",
+      "email": "cse26y4b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 73,
+      "rollNumber": "CSE26Y4B003",
+      "name": "Atharva More",
+      "email": "cse26y4b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 74,
+      "rollNumber": "CSE26Y4B004",
+      "name": "Shruti Jadhav",
+      "email": "cse26y4b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 75,
+      "rollNumber": "CSE26Y4B005",
+      "name": "Omkar Kadam",
+      "email": "cse26y4b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 76,
+      "rollNumber": "CSE26Y4B006",
+      "name": "Sayali Nair",
+      "email": "cse26y4b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 77,
+      "rollNumber": "CSE26Y4B007",
+      "name": "Siddharth Iyer",
+      "email": "cse26y4b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 78,
+      "rollNumber": "CSE26Y4B008",
+      "name": "Pooja Shah",
+      "email": "cse26y4b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 79,
+      "rollNumber": "CSE26Y4B009",
+      "name": "Harsh Rao",
+      "email": "cse26y4b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 80,
+      "rollNumber": "CSE26Y4B010",
+      "name": "Sakshi Bhat",
+      "email": "cse26y4b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 161,
+      "rollNumber": "ENTC26Y1A001",
+      "name": "Tejas Jadhav",
+      "email": "entc26y1a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 162,
+      "rollNumber": "ENTC26Y1A002",
+      "name": "Mitali Kadam",
+      "email": "entc26y1a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 163,
+      "rollNumber": "ENTC26Y1A003",
+      "name": "Shreyas Nair",
+      "email": "entc26y1a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 164,
+      "rollNumber": "ENTC26Y1A004",
+      "name": "Anushka Iyer",
+      "email": "entc26y1a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 165,
+      "rollNumber": "ENTC26Y1A005",
+      "name": "Pratik Shah",
+      "email": "entc26y1a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 166,
+      "rollNumber": "ENTC26Y1A006",
+      "name": "Gauri Rao",
+      "email": "entc26y1a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 167,
+      "rollNumber": "ENTC26Y1A007",
+      "name": "Rohit Bhat",
+      "email": "entc26y1a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 168,
+      "rollNumber": "ENTC26Y1A008",
+      "name": "Swarali Singh",
+      "email": "entc26y1a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 169,
+      "rollNumber": "ENTC26Y1A009",
+      "name": "Atharva Deshpande",
+      "email": "entc26y1a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 170,
+      "rollNumber": "ENTC26Y1A010",
+      "name": "Shruti Kulkarni",
+      "email": "entc26y1a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 171,
+      "rollNumber": "ENTC26Y1B001",
+      "name": "Omkar Kadam",
+      "email": "entc26y1b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 172,
+      "rollNumber": "ENTC26Y1B002",
+      "name": "Sayali Nair",
+      "email": "entc26y1b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 173,
+      "rollNumber": "ENTC26Y1B003",
+      "name": "Siddharth Iyer",
+      "email": "entc26y1b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 174,
+      "rollNumber": "ENTC26Y1B004",
+      "name": "Pooja Shah",
+      "email": "entc26y1b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 175,
+      "rollNumber": "ENTC26Y1B005",
+      "name": "Harsh Rao",
+      "email": "entc26y1b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 176,
+      "rollNumber": "ENTC26Y1B006",
+      "name": "Sakshi Bhat",
+      "email": "entc26y1b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 177,
+      "rollNumber": "ENTC26Y1B007",
+      "name": "Akash Singh",
+      "email": "entc26y1b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 178,
+      "rollNumber": "ENTC26Y1B008",
+      "name": "Vaishnavi Verma",
+      "email": "entc26y1b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 179,
+      "rollNumber": "ENTC26Y1B009",
+      "name": "Niraj Deshpande",
+      "email": "entc26y1b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 180,
+      "rollNumber": "ENTC26Y1B010",
+      "name": "Sanika Kulkarni",
+      "email": "entc26y1b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 181,
+      "rollNumber": "ENTC26Y2A001",
+      "name": "Abhishek Kadam",
+      "email": "entc26y2a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 182,
+      "rollNumber": "ENTC26Y2A002",
+      "name": "Prajakta Nair",
+      "email": "entc26y2a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 183,
+      "rollNumber": "ENTC26Y2A003",
+      "name": "Saurabh Iyer",
+      "email": "entc26y2a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 184,
+      "rollNumber": "ENTC26Y2A004",
+      "name": "Rutuja Shah",
+      "email": "entc26y2a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 185,
+      "rollNumber": "ENTC26Y2A005",
+      "name": "Tejas Rao",
+      "email": "entc26y2a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 186,
+      "rollNumber": "ENTC26Y2A006",
+      "name": "Mitali Bhat",
+      "email": "entc26y2a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 187,
+      "rollNumber": "ENTC26Y2A007",
+      "name": "Shreyas Singh",
+      "email": "entc26y2a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 188,
+      "rollNumber": "ENTC26Y2A008",
+      "name": "Anushka Verma",
+      "email": "entc26y2a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 189,
+      "rollNumber": "ENTC26Y2A009",
+      "name": "Pratik Deshpande",
+      "email": "entc26y2a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 190,
+      "rollNumber": "ENTC26Y2A010",
+      "name": "Gauri Kulkarni",
+      "email": "entc26y2a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 191,
+      "rollNumber": "ENTC26Y2B001",
+      "name": "Rohit Kadam",
+      "email": "entc26y2b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 192,
+      "rollNumber": "ENTC26Y2B002",
+      "name": "Swarali Nair",
+      "email": "entc26y2b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 193,
+      "rollNumber": "ENTC26Y2B003",
+      "name": "Atharva Shah",
+      "email": "entc26y2b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 194,
+      "rollNumber": "ENTC26Y2B004",
+      "name": "Shruti Rao",
+      "email": "entc26y2b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 195,
+      "rollNumber": "ENTC26Y2B005",
+      "name": "Omkar Bhat",
+      "email": "entc26y2b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 196,
+      "rollNumber": "ENTC26Y2B006",
+      "name": "Sayali Singh",
+      "email": "entc26y2b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 197,
+      "rollNumber": "ENTC26Y2B007",
+      "name": "Siddharth Verma",
+      "email": "entc26y2b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 198,
+      "rollNumber": "ENTC26Y2B008",
+      "name": "Pooja Deshpande",
+      "email": "entc26y2b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 199,
+      "rollNumber": "ENTC26Y2B009",
+      "name": "Harsh Kulkarni",
+      "email": "entc26y2b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 200,
+      "rollNumber": "ENTC26Y2B010",
+      "name": "Sakshi Joshi",
+      "email": "entc26y2b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 201,
+      "rollNumber": "ENTC26Y3A001",
+      "name": "Akash Nair",
+      "email": "entc26y3a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 202,
+      "rollNumber": "ENTC26Y3A002",
+      "name": "Vaishnavi Iyer",
+      "email": "entc26y3a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 203,
+      "rollNumber": "ENTC26Y3A003",
+      "name": "Niraj Shah",
+      "email": "entc26y3a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 204,
+      "rollNumber": "ENTC26Y3A004",
+      "name": "Sanika Rao",
+      "email": "entc26y3a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 205,
+      "rollNumber": "ENTC26Y3A005",
+      "name": "Abhishek Bhat",
+      "email": "entc26y3a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 206,
+      "rollNumber": "ENTC26Y3A006",
+      "name": "Prajakta Singh",
+      "email": "entc26y3a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 207,
+      "rollNumber": "ENTC26Y3A007",
+      "name": "Saurabh Verma",
+      "email": "entc26y3a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 208,
+      "rollNumber": "ENTC26Y3A008",
+      "name": "Rutuja Deshpande",
+      "email": "entc26y3a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 209,
+      "rollNumber": "ENTC26Y3A009",
+      "name": "Tejas Kulkarni",
+      "email": "entc26y3a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 210,
+      "rollNumber": "ENTC26Y3A010",
+      "name": "Mitali Joshi",
+      "email": "entc26y3a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 211,
+      "rollNumber": "ENTC26Y3B001",
+      "name": "Shreyas Nair",
+      "email": "entc26y3b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 212,
+      "rollNumber": "ENTC26Y3B002",
+      "name": "Anushka Iyer",
+      "email": "entc26y3b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 213,
+      "rollNumber": "ENTC26Y3B003",
+      "name": "Pratik Shah",
+      "email": "entc26y3b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 214,
+      "rollNumber": "ENTC26Y3B004",
+      "name": "Gauri Rao",
+      "email": "entc26y3b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 215,
+      "rollNumber": "ENTC26Y3B005",
+      "name": "Rohit Bhat",
+      "email": "entc26y3b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 216,
+      "rollNumber": "ENTC26Y3B006",
+      "name": "Swarali Singh",
+      "email": "entc26y3b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 217,
+      "rollNumber": "ENTC26Y3B007",
+      "name": "Atharva Deshpande",
+      "email": "entc26y3b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 218,
+      "rollNumber": "ENTC26Y3B008",
+      "name": "Shruti Kulkarni",
+      "email": "entc26y3b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 219,
+      "rollNumber": "ENTC26Y3B009",
+      "name": "Omkar Joshi",
+      "email": "entc26y3b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 220,
+      "rollNumber": "ENTC26Y3B010",
+      "name": "Sayali Patil",
+      "email": "entc26y3b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 221,
+      "rollNumber": "ENTC26Y4A001",
+      "name": "Siddharth Iyer",
+      "email": "entc26y4a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 222,
+      "rollNumber": "ENTC26Y4A002",
+      "name": "Pooja Shah",
+      "email": "entc26y4a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 223,
+      "rollNumber": "ENTC26Y4A003",
+      "name": "Harsh Rao",
+      "email": "entc26y4a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 224,
+      "rollNumber": "ENTC26Y4A004",
+      "name": "Sakshi Bhat",
+      "email": "entc26y4a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 225,
+      "rollNumber": "ENTC26Y4A005",
+      "name": "Akash Singh",
+      "email": "entc26y4a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 226,
+      "rollNumber": "ENTC26Y4A006",
+      "name": "Vaishnavi Verma",
+      "email": "entc26y4a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 227,
+      "rollNumber": "ENTC26Y4A007",
+      "name": "Niraj Deshpande",
+      "email": "entc26y4a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 228,
+      "rollNumber": "ENTC26Y4A008",
+      "name": "Sanika Kulkarni",
+      "email": "entc26y4a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 229,
+      "rollNumber": "ENTC26Y4A009",
+      "name": "Abhishek Joshi",
+      "email": "entc26y4a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 230,
+      "rollNumber": "ENTC26Y4A010",
+      "name": "Prajakta Patil",
+      "email": "entc26y4a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 231,
+      "rollNumber": "ENTC26Y4B001",
+      "name": "Saurabh Iyer",
+      "email": "entc26y4b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 232,
+      "rollNumber": "ENTC26Y4B002",
+      "name": "Rutuja Shah",
+      "email": "entc26y4b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 233,
+      "rollNumber": "ENTC26Y4B003",
+      "name": "Tejas Rao",
+      "email": "entc26y4b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 234,
+      "rollNumber": "ENTC26Y4B004",
+      "name": "Mitali Bhat",
+      "email": "entc26y4b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 235,
+      "rollNumber": "ENTC26Y4B005",
+      "name": "Shreyas Singh",
+      "email": "entc26y4b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 236,
+      "rollNumber": "ENTC26Y4B006",
+      "name": "Anushka Verma",
+      "email": "entc26y4b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 237,
+      "rollNumber": "ENTC26Y4B007",
+      "name": "Pratik Deshpande",
+      "email": "entc26y4b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 238,
+      "rollNumber": "ENTC26Y4B008",
+      "name": "Gauri Kulkarni",
+      "email": "entc26y4b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 239,
+      "rollNumber": "ENTC26Y4B009",
+      "name": "Rohit Joshi",
+      "email": "entc26y4b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 240,
+      "rollNumber": "ENTC26Y4B010",
+      "name": "Swarali Patil",
+      "email": "entc26y4b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 81,
+      "rollNumber": "IT26Y1A001",
+      "name": "Akash Pawar",
+      "email": "it26y1a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 82,
+      "rollNumber": "IT26Y1A002",
+      "name": "Vaishnavi Shinde",
+      "email": "it26y1a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 83,
+      "rollNumber": "IT26Y1A003",
+      "name": "Niraj More",
+      "email": "it26y1a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 84,
+      "rollNumber": "IT26Y1A004",
+      "name": "Sanika Jadhav",
+      "email": "it26y1a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 85,
+      "rollNumber": "IT26Y1A005",
+      "name": "Abhishek Kadam",
+      "email": "it26y1a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 86,
+      "rollNumber": "IT26Y1A006",
+      "name": "Prajakta Nair",
+      "email": "it26y1a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 87,
+      "rollNumber": "IT26Y1A007",
+      "name": "Saurabh Iyer",
+      "email": "it26y1a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 88,
+      "rollNumber": "IT26Y1A008",
+      "name": "Rutuja Shah",
+      "email": "it26y1a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 89,
+      "rollNumber": "IT26Y1A009",
+      "name": "Tejas Rao",
+      "email": "it26y1a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 90,
+      "rollNumber": "IT26Y1A010",
+      "name": "Mitali Bhat",
+      "email": "it26y1a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 91,
+      "rollNumber": "IT26Y1B001",
+      "name": "Shreyas Pawar",
+      "email": "it26y1b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 92,
+      "rollNumber": "IT26Y1B002",
+      "name": "Anushka Shinde",
+      "email": "it26y1b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 93,
+      "rollNumber": "IT26Y1B003",
+      "name": "Pratik More",
+      "email": "it26y1b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 94,
+      "rollNumber": "IT26Y1B004",
+      "name": "Gauri Jadhav",
+      "email": "it26y1b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 95,
+      "rollNumber": "IT26Y1B005",
+      "name": "Rohit Kadam",
+      "email": "it26y1b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 96,
+      "rollNumber": "IT26Y1B006",
+      "name": "Swarali Nair",
+      "email": "it26y1b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 97,
+      "rollNumber": "IT26Y1B007",
+      "name": "Atharva Shah",
+      "email": "it26y1b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 98,
+      "rollNumber": "IT26Y1B008",
+      "name": "Shruti Rao",
+      "email": "it26y1b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 99,
+      "rollNumber": "IT26Y1B009",
+      "name": "Omkar Bhat",
+      "email": "it26y1b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 100,
+      "rollNumber": "IT26Y1B010",
+      "name": "Sayali Singh",
+      "email": "it26y1b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 101,
+      "rollNumber": "IT26Y2A001",
+      "name": "Siddharth Shinde",
+      "email": "it26y2a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 102,
+      "rollNumber": "IT26Y2A002",
+      "name": "Pooja More",
+      "email": "it26y2a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 103,
+      "rollNumber": "IT26Y2A003",
+      "name": "Harsh Jadhav",
+      "email": "it26y2a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 104,
+      "rollNumber": "IT26Y2A004",
+      "name": "Sakshi Kadam",
+      "email": "it26y2a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 105,
+      "rollNumber": "IT26Y2A005",
+      "name": "Akash Nair",
+      "email": "it26y2a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 106,
+      "rollNumber": "IT26Y2A006",
+      "name": "Vaishnavi Iyer",
+      "email": "it26y2a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 107,
+      "rollNumber": "IT26Y2A007",
+      "name": "Niraj Shah",
+      "email": "it26y2a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 108,
+      "rollNumber": "IT26Y2A008",
+      "name": "Sanika Rao",
+      "email": "it26y2a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 109,
+      "rollNumber": "IT26Y2A009",
+      "name": "Abhishek Bhat",
+      "email": "it26y2a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 110,
+      "rollNumber": "IT26Y2A010",
+      "name": "Prajakta Singh",
+      "email": "it26y2a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 111,
+      "rollNumber": "IT26Y2B001",
+      "name": "Saurabh Shinde",
+      "email": "it26y2b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 112,
+      "rollNumber": "IT26Y2B002",
+      "name": "Rutuja More",
+      "email": "it26y2b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 113,
+      "rollNumber": "IT26Y2B003",
+      "name": "Tejas Jadhav",
+      "email": "it26y2b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 114,
+      "rollNumber": "IT26Y2B004",
+      "name": "Mitali Kadam",
+      "email": "it26y2b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 115,
+      "rollNumber": "IT26Y2B005",
+      "name": "Shreyas Nair",
+      "email": "it26y2b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 116,
+      "rollNumber": "IT26Y2B006",
+      "name": "Anushka Iyer",
+      "email": "it26y2b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 117,
+      "rollNumber": "IT26Y2B007",
+      "name": "Pratik Shah",
+      "email": "it26y2b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 118,
+      "rollNumber": "IT26Y2B008",
+      "name": "Gauri Rao",
+      "email": "it26y2b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 119,
+      "rollNumber": "IT26Y2B009",
+      "name": "Rohit Bhat",
+      "email": "it26y2b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 120,
+      "rollNumber": "IT26Y2B010",
+      "name": "Swarali Singh",
+      "email": "it26y2b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 121,
+      "rollNumber": "IT26Y3A001",
+      "name": "Atharva More",
+      "email": "it26y3a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 122,
+      "rollNumber": "IT26Y3A002",
+      "name": "Shruti Jadhav",
+      "email": "it26y3a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 123,
+      "rollNumber": "IT26Y3A003",
+      "name": "Omkar Kadam",
+      "email": "it26y3a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 124,
+      "rollNumber": "IT26Y3A004",
+      "name": "Sayali Nair",
+      "email": "it26y3a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 125,
+      "rollNumber": "IT26Y3A005",
+      "name": "Siddharth Iyer",
+      "email": "it26y3a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 126,
+      "rollNumber": "IT26Y3A006",
+      "name": "Pooja Shah",
+      "email": "it26y3a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 127,
+      "rollNumber": "IT26Y3A007",
+      "name": "Harsh Rao",
+      "email": "it26y3a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 128,
+      "rollNumber": "IT26Y3A008",
+      "name": "Sakshi Bhat",
+      "email": "it26y3a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 129,
+      "rollNumber": "IT26Y3A009",
+      "name": "Akash Singh",
+      "email": "it26y3a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 130,
+      "rollNumber": "IT26Y3A010",
+      "name": "Vaishnavi Verma",
+      "email": "it26y3a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 131,
+      "rollNumber": "IT26Y3B001",
+      "name": "Niraj More",
+      "email": "it26y3b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 132,
+      "rollNumber": "IT26Y3B002",
+      "name": "Sanika Jadhav",
+      "email": "it26y3b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 133,
+      "rollNumber": "IT26Y3B003",
+      "name": "Abhishek Kadam",
+      "email": "it26y3b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 134,
+      "rollNumber": "IT26Y3B004",
+      "name": "Prajakta Nair",
+      "email": "it26y3b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 135,
+      "rollNumber": "IT26Y3B005",
+      "name": "Saurabh Iyer",
+      "email": "it26y3b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 136,
+      "rollNumber": "IT26Y3B006",
+      "name": "Rutuja Shah",
+      "email": "it26y3b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 137,
+      "rollNumber": "IT26Y3B007",
+      "name": "Tejas Rao",
+      "email": "it26y3b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 138,
+      "rollNumber": "IT26Y3B008",
+      "name": "Mitali Bhat",
+      "email": "it26y3b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 139,
+      "rollNumber": "IT26Y3B009",
+      "name": "Shreyas Singh",
+      "email": "it26y3b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 140,
+      "rollNumber": "IT26Y3B010",
+      "name": "Anushka Verma",
+      "email": "it26y3b010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 141,
+      "rollNumber": "IT26Y4A001",
+      "name": "Pratik More",
+      "email": "it26y4a001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 142,
+      "rollNumber": "IT26Y4A002",
+      "name": "Gauri Jadhav",
+      "email": "it26y4a002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 143,
+      "rollNumber": "IT26Y4A003",
+      "name": "Rohit Kadam",
+      "email": "it26y4a003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 144,
+      "rollNumber": "IT26Y4A004",
+      "name": "Swarali Nair",
+      "email": "it26y4a004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 145,
+      "rollNumber": "IT26Y4A005",
+      "name": "Atharva Shah",
+      "email": "it26y4a005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 146,
+      "rollNumber": "IT26Y4A006",
+      "name": "Shruti Rao",
+      "email": "it26y4a006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 147,
+      "rollNumber": "IT26Y4A007",
+      "name": "Omkar Bhat",
+      "email": "it26y4a007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 148,
+      "rollNumber": "IT26Y4A008",
+      "name": "Sayali Singh",
+      "email": "it26y4a008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 149,
+      "rollNumber": "IT26Y4A009",
+      "name": "Siddharth Verma",
+      "email": "it26y4a009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 150,
+      "rollNumber": "IT26Y4A010",
+      "name": "Pooja Deshpande",
+      "email": "it26y4a010@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 151,
+      "rollNumber": "IT26Y4B001",
+      "name": "Harsh Jadhav",
+      "email": "it26y4b001@example.test",
+      "requiresAccessible": true
+    },
+    {
+      "id": 152,
+      "rollNumber": "IT26Y4B002",
+      "name": "Sakshi Kadam",
+      "email": "it26y4b002@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 153,
+      "rollNumber": "IT26Y4B003",
+      "name": "Akash Nair",
+      "email": "it26y4b003@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 154,
+      "rollNumber": "IT26Y4B004",
+      "name": "Vaishnavi Iyer",
+      "email": "it26y4b004@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 155,
+      "rollNumber": "IT26Y4B005",
+      "name": "Niraj Shah",
+      "email": "it26y4b005@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 156,
+      "rollNumber": "IT26Y4B006",
+      "name": "Sanika Rao",
+      "email": "it26y4b006@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 157,
+      "rollNumber": "IT26Y4B007",
+      "name": "Abhishek Bhat",
+      "email": "it26y4b007@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 158,
+      "rollNumber": "IT26Y4B008",
+      "name": "Prajakta Singh",
+      "email": "it26y4b008@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 159,
+      "rollNumber": "IT26Y4B009",
+      "name": "Saurabh Verma",
+      "email": "it26y4b009@example.test",
+      "requiresAccessible": false
+    },
+    {
+      "id": 160,
+      "rollNumber": "IT26Y4B010",
+      "name": "Rutuja Deshpande",
+      "email": "it26y4b010@example.test",
+      "requiresAccessible": false
+    }
+  ],
+  "placements": [
+    {
+      "studentId": 1,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 2,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 3,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 4,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 5,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 6,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 7,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 8,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 9,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 10,
+      "academicYearId": 1,
+      "divisionId": 1,
+      "semester": 1
+    },
+    {
+      "studentId": 11,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 12,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 13,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 14,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 15,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 16,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 17,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 18,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 19,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 20,
+      "academicYearId": 1,
+      "divisionId": 2,
+      "semester": 1
+    },
+    {
+      "studentId": 21,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 22,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 23,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 24,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 25,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 26,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 27,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 28,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 29,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 30,
+      "academicYearId": 1,
+      "divisionId": 3,
+      "semester": 3
+    },
+    {
+      "studentId": 31,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 32,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 33,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 34,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 35,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 36,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 37,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 38,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 39,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 40,
+      "academicYearId": 1,
+      "divisionId": 4,
+      "semester": 3
+    },
+    {
+      "studentId": 41,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 42,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 43,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 44,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 45,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 46,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 47,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 48,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 49,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 50,
+      "academicYearId": 1,
+      "divisionId": 5,
+      "semester": 5
+    },
+    {
+      "studentId": 51,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 52,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 53,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 54,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 55,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 56,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 57,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 58,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 59,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 60,
+      "academicYearId": 1,
+      "divisionId": 6,
+      "semester": 5
+    },
+    {
+      "studentId": 61,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 62,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 63,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 64,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 65,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 66,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 67,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 68,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 69,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 70,
+      "academicYearId": 1,
+      "divisionId": 7,
+      "semester": 7
+    },
+    {
+      "studentId": 71,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 72,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 73,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 74,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 75,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 76,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 77,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 78,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 79,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 80,
+      "academicYearId": 1,
+      "divisionId": 8,
+      "semester": 7
+    },
+    {
+      "studentId": 161,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 162,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 163,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 164,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 165,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 166,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 167,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 168,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 169,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 170,
+      "academicYearId": 1,
+      "divisionId": 17,
+      "semester": 1
+    },
+    {
+      "studentId": 171,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 172,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 173,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 174,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 175,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 176,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 177,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 178,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 179,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 180,
+      "academicYearId": 1,
+      "divisionId": 18,
+      "semester": 1
+    },
+    {
+      "studentId": 181,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 182,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 183,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 184,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 185,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 186,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 187,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 188,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 189,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 190,
+      "academicYearId": 1,
+      "divisionId": 19,
+      "semester": 3
+    },
+    {
+      "studentId": 191,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 192,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 193,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 194,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 195,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 196,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 197,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 198,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 199,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 200,
+      "academicYearId": 1,
+      "divisionId": 20,
+      "semester": 3
+    },
+    {
+      "studentId": 201,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 202,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 203,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 204,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 205,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 206,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 207,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 208,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 209,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 210,
+      "academicYearId": 1,
+      "divisionId": 21,
+      "semester": 5
+    },
+    {
+      "studentId": 211,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 212,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 213,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 214,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 215,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 216,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 217,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 218,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 219,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 220,
+      "academicYearId": 1,
+      "divisionId": 22,
+      "semester": 5
+    },
+    {
+      "studentId": 221,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 222,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 223,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 224,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 225,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 226,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 227,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 228,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 229,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 230,
+      "academicYearId": 1,
+      "divisionId": 23,
+      "semester": 7
+    },
+    {
+      "studentId": 231,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 232,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 233,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 234,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 235,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 236,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 237,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 238,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 239,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 240,
+      "academicYearId": 1,
+      "divisionId": 24,
+      "semester": 7
+    },
+    {
+      "studentId": 81,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 82,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 83,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 84,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 85,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 86,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 87,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 88,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 89,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 90,
+      "academicYearId": 1,
+      "divisionId": 9,
+      "semester": 1
+    },
+    {
+      "studentId": 91,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 92,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 93,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 94,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 95,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 96,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 97,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 98,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 99,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 100,
+      "academicYearId": 1,
+      "divisionId": 10,
+      "semester": 1
+    },
+    {
+      "studentId": 101,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 102,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 103,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 104,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 105,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 106,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 107,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 108,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 109,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 110,
+      "academicYearId": 1,
+      "divisionId": 11,
+      "semester": 3
+    },
+    {
+      "studentId": 111,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 112,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 113,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 114,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 115,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 116,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 117,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 118,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 119,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 120,
+      "academicYearId": 1,
+      "divisionId": 12,
+      "semester": 3
+    },
+    {
+      "studentId": 121,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 122,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 123,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 124,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 125,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 126,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 127,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 128,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 129,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 130,
+      "academicYearId": 1,
+      "divisionId": 13,
+      "semester": 5
+    },
+    {
+      "studentId": 131,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 132,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 133,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 134,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 135,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 136,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 137,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 138,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 139,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 140,
+      "academicYearId": 1,
+      "divisionId": 14,
+      "semester": 5
+    },
+    {
+      "studentId": 141,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 142,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 143,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 144,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 145,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 146,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 147,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 148,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 149,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 150,
+      "academicYearId": 1,
+      "divisionId": 15,
+      "semester": 7
+    },
+    {
+      "studentId": 151,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 152,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 153,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 154,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 155,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 156,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 157,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 158,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 159,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    },
+    {
+      "studentId": 160,
+      "academicYearId": 1,
+      "divisionId": 16,
+      "semester": 7
+    }
+  ],
+  "offerings": [
+    {
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 25,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 26,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "courseId": 16,
+      "academicYearId": 1
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 2,
+      "studentId": 1,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 3,
+      "studentId": 2,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 4,
+      "studentId": 2,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 5,
+      "studentId": 3,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 6,
+      "studentId": 3,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 7,
+      "studentId": 4,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 8,
+      "studentId": 4,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 9,
+      "studentId": 5,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 10,
+      "studentId": 5,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 11,
+      "studentId": 6,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 12,
+      "studentId": 6,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 13,
+      "studentId": 7,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 14,
+      "studentId": 7,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 15,
+      "studentId": 8,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 16,
+      "studentId": 8,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 17,
+      "studentId": 9,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 18,
+      "studentId": 9,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 19,
+      "studentId": 10,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 20,
+      "studentId": 10,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 21,
+      "studentId": 11,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 22,
+      "studentId": 11,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 23,
+      "studentId": 12,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 24,
+      "studentId": 12,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 25,
+      "studentId": 13,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 26,
+      "studentId": 13,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 27,
+      "studentId": 14,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 28,
+      "studentId": 14,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 29,
+      "studentId": 15,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 30,
+      "studentId": 15,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 31,
+      "studentId": 16,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 32,
+      "studentId": 16,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 33,
+      "studentId": 17,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 34,
+      "studentId": 17,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 35,
+      "studentId": 18,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 36,
+      "studentId": 18,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 37,
+      "studentId": 19,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 38,
+      "studentId": 19,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 39,
+      "studentId": 20,
+      "courseId": 1,
+      "academicYearId": 1
+    },
+    {
+      "id": 40,
+      "studentId": 20,
+      "courseId": 2,
+      "academicYearId": 1
+    },
+    {
+      "id": 41,
+      "studentId": 21,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 42,
+      "studentId": 21,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 43,
+      "studentId": 22,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 44,
+      "studentId": 22,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 45,
+      "studentId": 23,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 46,
+      "studentId": 23,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 47,
+      "studentId": 24,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 48,
+      "studentId": 24,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 49,
+      "studentId": 25,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 50,
+      "studentId": 25,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 51,
+      "studentId": 26,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 52,
+      "studentId": 26,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 53,
+      "studentId": 27,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 54,
+      "studentId": 27,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 55,
+      "studentId": 28,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 56,
+      "studentId": 28,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 57,
+      "studentId": 29,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 58,
+      "studentId": 29,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 59,
+      "studentId": 30,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 60,
+      "studentId": 30,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 61,
+      "studentId": 31,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 62,
+      "studentId": 31,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 63,
+      "studentId": 32,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 64,
+      "studentId": 32,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 65,
+      "studentId": 33,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 66,
+      "studentId": 33,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 67,
+      "studentId": 34,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 68,
+      "studentId": 34,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 69,
+      "studentId": 35,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 70,
+      "studentId": 35,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 71,
+      "studentId": 36,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 72,
+      "studentId": 36,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 73,
+      "studentId": 37,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 74,
+      "studentId": 37,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 75,
+      "studentId": 38,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 76,
+      "studentId": 38,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 77,
+      "studentId": 39,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 78,
+      "studentId": 39,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 79,
+      "studentId": 40,
+      "courseId": 3,
+      "academicYearId": 1
+    },
+    {
+      "id": 80,
+      "studentId": 40,
+      "courseId": 4,
+      "academicYearId": 1
+    },
+    {
+      "id": 81,
+      "studentId": 41,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 82,
+      "studentId": 41,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 83,
+      "studentId": 42,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 84,
+      "studentId": 42,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 85,
+      "studentId": 43,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 86,
+      "studentId": 43,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 87,
+      "studentId": 44,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 88,
+      "studentId": 44,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 89,
+      "studentId": 45,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 90,
+      "studentId": 45,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 91,
+      "studentId": 46,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 92,
+      "studentId": 46,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 93,
+      "studentId": 47,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 94,
+      "studentId": 47,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 95,
+      "studentId": 48,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 96,
+      "studentId": 48,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 97,
+      "studentId": 49,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 98,
+      "studentId": 49,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 99,
+      "studentId": 50,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 100,
+      "studentId": 50,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 101,
+      "studentId": 51,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 102,
+      "studentId": 51,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 103,
+      "studentId": 52,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 104,
+      "studentId": 52,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 105,
+      "studentId": 53,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 106,
+      "studentId": 53,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 107,
+      "studentId": 54,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 108,
+      "studentId": 54,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 109,
+      "studentId": 55,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 110,
+      "studentId": 55,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 111,
+      "studentId": 56,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 112,
+      "studentId": 56,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 113,
+      "studentId": 57,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 114,
+      "studentId": 57,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 115,
+      "studentId": 58,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 116,
+      "studentId": 58,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 117,
+      "studentId": 59,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 118,
+      "studentId": 59,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 119,
+      "studentId": 60,
+      "courseId": 5,
+      "academicYearId": 1
+    },
+    {
+      "id": 120,
+      "studentId": 60,
+      "courseId": 6,
+      "academicYearId": 1
+    },
+    {
+      "id": 121,
+      "studentId": 61,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 122,
+      "studentId": 61,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 123,
+      "studentId": 62,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 124,
+      "studentId": 62,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 125,
+      "studentId": 63,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 126,
+      "studentId": 63,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 127,
+      "studentId": 64,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 128,
+      "studentId": 64,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 129,
+      "studentId": 65,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 130,
+      "studentId": 65,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 131,
+      "studentId": 66,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 132,
+      "studentId": 66,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 133,
+      "studentId": 67,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 134,
+      "studentId": 67,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 135,
+      "studentId": 68,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 136,
+      "studentId": 68,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 137,
+      "studentId": 69,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 138,
+      "studentId": 69,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 139,
+      "studentId": 70,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 140,
+      "studentId": 70,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 141,
+      "studentId": 71,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 142,
+      "studentId": 71,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 143,
+      "studentId": 72,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 144,
+      "studentId": 72,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 145,
+      "studentId": 73,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 146,
+      "studentId": 73,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 147,
+      "studentId": 74,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 148,
+      "studentId": 74,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 149,
+      "studentId": 75,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 150,
+      "studentId": 75,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 151,
+      "studentId": 76,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 152,
+      "studentId": 76,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 153,
+      "studentId": 77,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 154,
+      "studentId": 77,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 155,
+      "studentId": 78,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 156,
+      "studentId": 78,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 157,
+      "studentId": 79,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 158,
+      "studentId": 79,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 159,
+      "studentId": 80,
+      "courseId": 7,
+      "academicYearId": 1
+    },
+    {
+      "id": 160,
+      "studentId": 80,
+      "courseId": 8,
+      "academicYearId": 1
+    },
+    {
+      "id": 161,
+      "studentId": 81,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 162,
+      "studentId": 81,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 163,
+      "studentId": 82,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 164,
+      "studentId": 82,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 165,
+      "studentId": 83,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 166,
+      "studentId": 83,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 167,
+      "studentId": 84,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 168,
+      "studentId": 84,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 169,
+      "studentId": 85,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 170,
+      "studentId": 85,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 171,
+      "studentId": 86,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 172,
+      "studentId": 86,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 173,
+      "studentId": 87,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 174,
+      "studentId": 87,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 175,
+      "studentId": 88,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 176,
+      "studentId": 88,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 177,
+      "studentId": 89,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 178,
+      "studentId": 89,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 179,
+      "studentId": 90,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 180,
+      "studentId": 90,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 181,
+      "studentId": 91,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 182,
+      "studentId": 91,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 183,
+      "studentId": 92,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 184,
+      "studentId": 92,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 185,
+      "studentId": 93,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 186,
+      "studentId": 93,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 187,
+      "studentId": 94,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 188,
+      "studentId": 94,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 189,
+      "studentId": 95,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 190,
+      "studentId": 95,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 191,
+      "studentId": 96,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 192,
+      "studentId": 96,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 193,
+      "studentId": 97,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 194,
+      "studentId": 97,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 195,
+      "studentId": 98,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 196,
+      "studentId": 98,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 197,
+      "studentId": 99,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 198,
+      "studentId": 99,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 199,
+      "studentId": 100,
+      "courseId": 9,
+      "academicYearId": 1
+    },
+    {
+      "id": 200,
+      "studentId": 100,
+      "courseId": 10,
+      "academicYearId": 1
+    },
+    {
+      "id": 201,
+      "studentId": 101,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 202,
+      "studentId": 101,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 203,
+      "studentId": 102,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 204,
+      "studentId": 102,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 205,
+      "studentId": 103,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 206,
+      "studentId": 103,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 207,
+      "studentId": 104,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 208,
+      "studentId": 104,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 209,
+      "studentId": 105,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 210,
+      "studentId": 105,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 211,
+      "studentId": 106,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 212,
+      "studentId": 106,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 213,
+      "studentId": 107,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 214,
+      "studentId": 107,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 215,
+      "studentId": 108,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 216,
+      "studentId": 108,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 217,
+      "studentId": 109,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 218,
+      "studentId": 109,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 219,
+      "studentId": 110,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 220,
+      "studentId": 110,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 221,
+      "studentId": 111,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 222,
+      "studentId": 111,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 223,
+      "studentId": 112,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 224,
+      "studentId": 112,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 225,
+      "studentId": 113,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 226,
+      "studentId": 113,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 227,
+      "studentId": 114,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 228,
+      "studentId": 114,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 229,
+      "studentId": 115,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 230,
+      "studentId": 115,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 231,
+      "studentId": 116,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 232,
+      "studentId": 116,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 233,
+      "studentId": 117,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 234,
+      "studentId": 117,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 235,
+      "studentId": 118,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 236,
+      "studentId": 118,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 237,
+      "studentId": 119,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 238,
+      "studentId": 119,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 239,
+      "studentId": 120,
+      "courseId": 11,
+      "academicYearId": 1
+    },
+    {
+      "id": 240,
+      "studentId": 120,
+      "courseId": 12,
+      "academicYearId": 1
+    },
+    {
+      "id": 241,
+      "studentId": 121,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 242,
+      "studentId": 121,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 243,
+      "studentId": 122,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 244,
+      "studentId": 122,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 245,
+      "studentId": 123,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 246,
+      "studentId": 123,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 247,
+      "studentId": 124,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 248,
+      "studentId": 124,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 249,
+      "studentId": 125,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 250,
+      "studentId": 125,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 251,
+      "studentId": 126,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 252,
+      "studentId": 126,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 253,
+      "studentId": 127,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 254,
+      "studentId": 127,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 255,
+      "studentId": 128,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 256,
+      "studentId": 128,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 257,
+      "studentId": 129,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 258,
+      "studentId": 129,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 259,
+      "studentId": 130,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 260,
+      "studentId": 130,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 261,
+      "studentId": 131,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 262,
+      "studentId": 131,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 263,
+      "studentId": 132,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 264,
+      "studentId": 132,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 265,
+      "studentId": 133,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 266,
+      "studentId": 133,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 267,
+      "studentId": 134,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 268,
+      "studentId": 134,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 269,
+      "studentId": 135,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 270,
+      "studentId": 135,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 271,
+      "studentId": 136,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 272,
+      "studentId": 136,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 273,
+      "studentId": 137,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 274,
+      "studentId": 137,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 275,
+      "studentId": 138,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 276,
+      "studentId": 138,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 277,
+      "studentId": 139,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 278,
+      "studentId": 139,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 279,
+      "studentId": 140,
+      "courseId": 13,
+      "academicYearId": 1
+    },
+    {
+      "id": 280,
+      "studentId": 140,
+      "courseId": 14,
+      "academicYearId": 1
+    },
+    {
+      "id": 281,
+      "studentId": 141,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 282,
+      "studentId": 141,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 283,
+      "studentId": 142,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 284,
+      "studentId": 142,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 285,
+      "studentId": 143,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 286,
+      "studentId": 143,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 287,
+      "studentId": 144,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 288,
+      "studentId": 144,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 289,
+      "studentId": 145,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 290,
+      "studentId": 145,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 291,
+      "studentId": 146,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 292,
+      "studentId": 146,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 293,
+      "studentId": 147,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 294,
+      "studentId": 147,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 295,
+      "studentId": 148,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 296,
+      "studentId": 148,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 297,
+      "studentId": 149,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 298,
+      "studentId": 149,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 299,
+      "studentId": 150,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 300,
+      "studentId": 150,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 301,
+      "studentId": 151,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 302,
+      "studentId": 151,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 303,
+      "studentId": 152,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 304,
+      "studentId": 152,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 305,
+      "studentId": 153,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 306,
+      "studentId": 153,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 307,
+      "studentId": 154,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 308,
+      "studentId": 154,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 309,
+      "studentId": 155,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 310,
+      "studentId": 155,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 311,
+      "studentId": 156,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 312,
+      "studentId": 156,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 313,
+      "studentId": 157,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 314,
+      "studentId": 157,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 315,
+      "studentId": 158,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 316,
+      "studentId": 158,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 317,
+      "studentId": 159,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 318,
+      "studentId": 159,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 319,
+      "studentId": 160,
+      "courseId": 15,
+      "academicYearId": 1
+    },
+    {
+      "id": 320,
+      "studentId": 160,
+      "courseId": 16,
+      "academicYearId": 1
+    },
+    {
+      "id": 321,
+      "studentId": 161,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 322,
+      "studentId": 161,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 323,
+      "studentId": 162,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 324,
+      "studentId": 162,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 325,
+      "studentId": 163,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 326,
+      "studentId": 163,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 327,
+      "studentId": 164,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 328,
+      "studentId": 164,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 329,
+      "studentId": 165,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 330,
+      "studentId": 165,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 331,
+      "studentId": 166,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 332,
+      "studentId": 166,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 333,
+      "studentId": 167,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 334,
+      "studentId": 167,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 335,
+      "studentId": 168,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 336,
+      "studentId": 168,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 337,
+      "studentId": 169,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 338,
+      "studentId": 169,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 339,
+      "studentId": 170,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 340,
+      "studentId": 170,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 341,
+      "studentId": 171,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 342,
+      "studentId": 171,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 343,
+      "studentId": 172,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 344,
+      "studentId": 172,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 345,
+      "studentId": 173,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 346,
+      "studentId": 173,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 347,
+      "studentId": 174,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 348,
+      "studentId": 174,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 349,
+      "studentId": 175,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 350,
+      "studentId": 175,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 351,
+      "studentId": 176,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 352,
+      "studentId": 176,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 353,
+      "studentId": 177,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 354,
+      "studentId": 177,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 355,
+      "studentId": 178,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 356,
+      "studentId": 178,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 357,
+      "studentId": 179,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 358,
+      "studentId": 179,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 359,
+      "studentId": 180,
+      "courseId": 17,
+      "academicYearId": 1
+    },
+    {
+      "id": 360,
+      "studentId": 180,
+      "courseId": 18,
+      "academicYearId": 1
+    },
+    {
+      "id": 361,
+      "studentId": 181,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 362,
+      "studentId": 181,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 363,
+      "studentId": 182,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 364,
+      "studentId": 182,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 365,
+      "studentId": 183,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 366,
+      "studentId": 183,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 367,
+      "studentId": 184,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 368,
+      "studentId": 184,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 369,
+      "studentId": 185,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 370,
+      "studentId": 185,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 371,
+      "studentId": 186,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 372,
+      "studentId": 186,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 373,
+      "studentId": 187,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 374,
+      "studentId": 187,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 375,
+      "studentId": 188,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 376,
+      "studentId": 188,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 377,
+      "studentId": 189,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 378,
+      "studentId": 189,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 379,
+      "studentId": 190,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 380,
+      "studentId": 190,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 381,
+      "studentId": 191,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 382,
+      "studentId": 191,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 383,
+      "studentId": 192,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 384,
+      "studentId": 192,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 385,
+      "studentId": 193,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 386,
+      "studentId": 193,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 387,
+      "studentId": 194,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 388,
+      "studentId": 194,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 389,
+      "studentId": 195,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 390,
+      "studentId": 195,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 391,
+      "studentId": 196,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 392,
+      "studentId": 196,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 393,
+      "studentId": 197,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 394,
+      "studentId": 197,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 395,
+      "studentId": 198,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 396,
+      "studentId": 198,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 397,
+      "studentId": 199,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 398,
+      "studentId": 199,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 399,
+      "studentId": 200,
+      "courseId": 19,
+      "academicYearId": 1
+    },
+    {
+      "id": 400,
+      "studentId": 200,
+      "courseId": 20,
+      "academicYearId": 1
+    },
+    {
+      "id": 401,
+      "studentId": 201,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 402,
+      "studentId": 201,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 403,
+      "studentId": 202,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 404,
+      "studentId": 202,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 405,
+      "studentId": 203,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 406,
+      "studentId": 203,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 407,
+      "studentId": 204,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 408,
+      "studentId": 204,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 409,
+      "studentId": 205,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 410,
+      "studentId": 205,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 411,
+      "studentId": 206,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 412,
+      "studentId": 206,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 413,
+      "studentId": 207,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 414,
+      "studentId": 207,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 415,
+      "studentId": 208,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 416,
+      "studentId": 208,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 417,
+      "studentId": 209,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 418,
+      "studentId": 209,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 419,
+      "studentId": 210,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 420,
+      "studentId": 210,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 421,
+      "studentId": 211,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 422,
+      "studentId": 211,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 423,
+      "studentId": 212,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 424,
+      "studentId": 212,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 425,
+      "studentId": 213,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 426,
+      "studentId": 213,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 427,
+      "studentId": 214,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 428,
+      "studentId": 214,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 429,
+      "studentId": 215,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 430,
+      "studentId": 215,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 431,
+      "studentId": 216,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 432,
+      "studentId": 216,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 433,
+      "studentId": 217,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 434,
+      "studentId": 217,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 435,
+      "studentId": 218,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 436,
+      "studentId": 218,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 437,
+      "studentId": 219,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 438,
+      "studentId": 219,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 439,
+      "studentId": 220,
+      "courseId": 21,
+      "academicYearId": 1
+    },
+    {
+      "id": 440,
+      "studentId": 220,
+      "courseId": 22,
+      "academicYearId": 1
+    },
+    {
+      "id": 441,
+      "studentId": 221,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 442,
+      "studentId": 221,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 443,
+      "studentId": 222,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 444,
+      "studentId": 222,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 445,
+      "studentId": 223,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 446,
+      "studentId": 223,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 447,
+      "studentId": 224,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 448,
+      "studentId": 224,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 449,
+      "studentId": 225,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 450,
+      "studentId": 225,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 451,
+      "studentId": 226,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 452,
+      "studentId": 226,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 453,
+      "studentId": 227,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 454,
+      "studentId": 227,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 455,
+      "studentId": 228,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 456,
+      "studentId": 228,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 457,
+      "studentId": 229,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 458,
+      "studentId": 229,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 459,
+      "studentId": 230,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 460,
+      "studentId": 230,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 461,
+      "studentId": 231,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 462,
+      "studentId": 231,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 463,
+      "studentId": 232,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 464,
+      "studentId": 232,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 465,
+      "studentId": 233,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 466,
+      "studentId": 233,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 467,
+      "studentId": 234,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 468,
+      "studentId": 234,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 469,
+      "studentId": 235,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 470,
+      "studentId": 235,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 471,
+      "studentId": 236,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 472,
+      "studentId": 236,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 473,
+      "studentId": 237,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 474,
+      "studentId": 237,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 475,
+      "studentId": 238,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 476,
+      "studentId": 238,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 477,
+      "studentId": 239,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 478,
+      "studentId": 239,
+      "courseId": 24,
+      "academicYearId": 1
+    },
+    {
+      "id": 479,
+      "studentId": 240,
+      "courseId": 23,
+      "academicYearId": 1
+    },
+    {
+      "id": 480,
+      "studentId": 240,
+      "courseId": 24,
+      "academicYearId": 1
+    }
+  ],
+  "exams": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "academicYearId": 1,
+      "examDate": "2026-10-12",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "courseId": 2,
+      "academicYearId": 1,
+      "examDate": "2026-10-12",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "DRAFT",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "courseId": 3,
+      "academicYearId": 1,
+      "examDate": "2026-10-13",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "courseId": 4,
+      "academicYearId": 1,
+      "examDate": "2026-10-13",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "courseId": 5,
+      "academicYearId": 1,
+      "examDate": "2026-10-14",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "courseId": 6,
+      "academicYearId": 1,
+      "examDate": "2026-10-14",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 7,
+      "courseId": 7,
+      "academicYearId": 1,
+      "examDate": "2026-10-15",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 8,
+      "courseId": 8,
+      "academicYearId": 1,
+      "examDate": "2026-10-15",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 9,
+      "courseId": 9,
+      "academicYearId": 1,
+      "examDate": "2026-10-16",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 10,
+      "courseId": 10,
+      "academicYearId": 1,
+      "examDate": "2026-10-16",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 11,
+      "courseId": 11,
+      "academicYearId": 1,
+      "examDate": "2026-10-17",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 12,
+      "courseId": 12,
+      "academicYearId": 1,
+      "examDate": "2026-10-17",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 13,
+      "courseId": 13,
+      "academicYearId": 1,
+      "examDate": "2026-10-18",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 14,
+      "courseId": 14,
+      "academicYearId": 1,
+      "examDate": "2026-10-18",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 15,
+      "courseId": 15,
+      "academicYearId": 1,
+      "examDate": "2026-10-19",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 16,
+      "courseId": 16,
+      "academicYearId": 1,
+      "examDate": "2026-10-19",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 17,
+      "courseId": 17,
+      "academicYearId": 1,
+      "examDate": "2026-10-20",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 18,
+      "courseId": 18,
+      "academicYearId": 1,
+      "examDate": "2026-10-20",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 19,
+      "courseId": 19,
+      "academicYearId": 1,
+      "examDate": "2026-10-21",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 20,
+      "courseId": 20,
+      "academicYearId": 1,
+      "examDate": "2026-10-21",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 21,
+      "courseId": 21,
+      "academicYearId": 1,
+      "examDate": "2026-10-22",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 22,
+      "courseId": 22,
+      "academicYearId": 1,
+      "examDate": "2026-10-22",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 23,
+      "courseId": 23,
+      "academicYearId": 1,
+      "examDate": "2026-10-23",
+      "startTime": "09:00:00",
+      "endTime": "10:30:00",
+      "spacingRequired": false,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 24,
+      "courseId": 24,
+      "academicYearId": 1,
+      "examDate": "2026-10-23",
+      "startTime": "11:00:00",
+      "endTime": "12:30:00",
+      "spacingRequired": true,
+      "status": "SCHEDULED",
+      "roomIds": [
+        1,
+        2
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "Admin@123",
+      "role": "ADMIN",
+      "name": "System Admin",
+      "email": "admin@example.test"
+    },
+    {
+      "id": 2,
+      "username": "cse.faculty1",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Sanika Pawar",
+      "email": "cse.faculty1@example.test"
+    },
+    {
+      "id": 3,
+      "username": "cse.faculty2",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Abhishek Shinde",
+      "email": "cse.faculty2@example.test"
+    },
+    {
+      "id": 4,
+      "username": "cse.faculty3",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Prajakta More",
+      "email": "cse.faculty3@example.test"
+    },
+    {
+      "id": 5,
+      "username": "cse.faculty4",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Saurabh Jadhav",
+      "email": "cse.faculty4@example.test"
+    },
+    {
+      "id": 10,
+      "username": "entc.faculty1",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Anushka More",
+      "email": "entc.faculty1@example.test"
+    },
+    {
+      "id": 11,
+      "username": "entc.faculty2",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Pratik Jadhav",
+      "email": "entc.faculty2@example.test"
+    },
+    {
+      "id": 12,
+      "username": "entc.faculty3",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Gauri Kadam",
+      "email": "entc.faculty3@example.test"
+    },
+    {
+      "id": 13,
+      "username": "entc.faculty4",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Rohit Nair",
+      "email": "entc.faculty4@example.test"
+    },
+    {
+      "id": 6,
+      "username": "it.faculty1",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Rutuja Shinde",
+      "email": "it.faculty1@example.test"
+    },
+    {
+      "id": 7,
+      "username": "it.faculty2",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Tejas More",
+      "email": "it.faculty2@example.test"
+    },
+    {
+      "id": 8,
+      "username": "it.faculty3",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Mitali Jadhav",
+      "email": "it.faculty3@example.test"
+    },
+    {
+      "id": 9,
+      "username": "it.faculty4",
+      "password": "Faculty@123",
+      "role": "FACULTY",
+      "name": "Shreyas Kadam",
+      "email": "it.faculty4@example.test"
+    }
+  ],
+  "assignments": [],
+  "history": [],
+  "revision": 0,
+  "schemaVersion": 1
+}

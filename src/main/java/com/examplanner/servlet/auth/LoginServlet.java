@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
                     + ",\"name\":" + JsonUtil.quote(user.getDisplayName()) + "}";
             JsonUtil.send(response, 200, json);
         } catch (SQLException e) {
+            log("Login database connection failed", e);
             JsonUtil.send(response, 500, JsonUtil.message("error", "Database error"));
         }
     }

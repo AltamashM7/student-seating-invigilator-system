@@ -9,6 +9,7 @@
 | AUTH-05 | Logged-out user opens admin API | 401 access error |
 | AUTH-06 | Weak password during registration | 400 validation error |
 | AUTH-07 | Duplicate username/email | 409 duplicate error |
-| AUTH-08 | Reset with matching username/email | Password changes |
+| AUTH-08 | Administrator resets with matching username/email | Password changes; new login works and old password fails |
 | AUTH-09 | Reset with wrong email | Password does not change |
 | AUTH-10 | Logout | Session is invalidated |
+| AUTH-11 | Public/unauthenticated password reset | 403, no password change |

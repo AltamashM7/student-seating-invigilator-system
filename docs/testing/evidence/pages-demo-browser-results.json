@@ -1,0 +1,18 @@
+{
+  "testedOn": "2026-10-13",
+  "scope": "Separate JavaScript team training demo served below /demo/",
+  "checks": [
+    "Public student portal and published seating lookup load without staff login",
+    "Simulated administrator login opens the current dashboard with 240 students and 24 divisions",
+    "New room is saved and survives page refresh",
+    "Sample CSV reports 12 new students, 12 additional enrollments, zero invalid rows",
+    "Repeated sample import reports 24 duplicates and zero invalid rows",
+    "Manual move shows review mapping and persists a manual badge",
+    "Regeneration preview shows preservation count; confirmed regeneration retains the manual destination",
+    "Manual seat survives navigation and refresh",
+    "Reset returns to the original public portal and published schedule"
+  ],
+  "result": "PASS",
+  "capturedConsoleErrors": [],
+  "backendKpiBoundary": "These are training-demo checks, not Java/MySQL backend verification."
+}

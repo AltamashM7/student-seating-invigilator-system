@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Seating Arrangements | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261013-s7r2"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261013-s7r2">
+  <link rel="stylesheet" href="../../demo.css?v=1">
+</head>
+<body data-shell="admin">
+  <a class="skip-link" href="#main">Skip to content</a><header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside><main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Seating Arrangements</div>
+<div class="page-heading"><div><h1 id="pageTitle">Seating Arrangements</h1><p>Allocate seats, manage accommodation requirements and record manual changes.</p></div></div>
+<p id="message" role="status" hidden></p>
+<p id="operationProgress" class="helper-text" role="status" hidden></p>
+<section class="panel">
+  <label>Examination<select id="examId"></select></label>
+  <p id="summary" class="helper-text"></p><p id="accommodationSummary" class="helper-text"></p>
+  <div class="toolbar"><button id="generateButton" type="button">Generate seating</button><button id="openOverride" type="button" class="secondary">Manual seating changes</button><button id="openAccommodation" type="button" class="secondary">Accommodation requirements</button><a href="exams.html">Manage exams</a></div>
+  <p class="helper-text">Accessible seating requirements take priority. Regeneration preserves manual assignments by default.</p>
+  <details><summary>Advanced regeneration options</summary><div class="toolbar form-actions"><label class="check-label"><input id="replaceManual" type="checkbox">Replace manual assignments too</label><button id="clearButton" type="button" class="danger">Clear seating</button></div></details>
+</section>
+<details class="editor" id="accommodationEditor"><summary>Accommodation requirements</summary><div class="editor-body">
+  <p class="helper-text">Record only the seating requirement. This applies to the student's active examinations across academic years. Generated plans are updated together; ungenerated plans remain ungenerated.</p>
+  <form id="accommodationForm" class="grid-form">
+    <label>Student<select id="accommodationStudentId" required></select></label>
+    <label class="check-label"><input id="requiresAccessible" type="checkbox">Accessible seating required</label>
+    <label class="full">Reason<input id="accommodationReason" maxlength="250" required autocomplete="off"></label>
+    <p class="helper-text full">Other students' manual assignments are preserved. An incompatible manual seat for this student is released for accessible allocation. Insufficient accessible capacity leaves the requirement and all seating unchanged.</p>
+    <button id="accommodationButton" type="submit">Review accommodation change</button>
+  </form>
+</div></details>
+<details class="editor" id="manualEditor"><summary>Manual seating changes</summary><div class="editor-body">
+  <form id="overrideForm" class="grid-form">
+    <label>Student<select id="studentId" required></select></label>
+    <label>Action<select id="action"><option value="reassign">Move to empty seat</option><option value="swap">Swap occupied seats</option></select></label>
+    <label>Target seat<select id="seatId" required></select></label>
+    <label>Reason<input id="reason" maxlength="250" required autocomplete="off"></label>
+    <p id="overrideHelp" class="helper-text full"></p><p id="selectionSummary" class="helper-text full" role="status"></p>
+    <button id="overrideButton" type="submit">Review manual change</button>
+  </form>
+</div></details>
+<section class="panel">
+  <div class="list-toolbar"><label class="search-field">Find a student or seat<input id="seatSearch" type="search" placeholder="Search roll number, name or seat…" autocomplete="off"></label><label>Room<select id="chartRoom"><option value="">All rooms</option></select></label></div>
+  <p id="seatSearchCount" class="helper-text" role="status"></p>
+  <p class="helper-text">Click an occupied seat to select a student, then click the destination. Choose another source student from the manual-change form.</p>
+  <div class="legend"><span>Assigned</span><span class="accessible-key">Accessible seat</span><span class="spacing-key">Reserved for spacing</span><span class="manual-key">Manual assignment</span><span class="requirement-key">Accommodation required</span></div>
+</section>
+<div id="charts"></div>
+<details class="editor" id="historyEditor"><summary>Change history</summary><div class="editor-body"><p class="helper-text">Actor, reason and previous/new seats are retained. Shows the latest 200 events.</p><label>Search history<input id="historySearch" type="search" placeholder="Search student, action or reason…" autocomplete="off"></label><div class="table-wrap"><table><thead><tr><th>When</th><th>By</th><th>Student</th><th>Action</th><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody id="history"></tbody></table></div><div class="list-meta"><span id="historyCount" role="status"></span><div class="pager"><button id="historyPrevious" type="button" class="secondary">Previous</button><button id="historyNext" type="button" class="secondary">Next</button></div></div></div></details>
+<dialog id="operationDialog" aria-labelledby="operationTitle">
+  <form id="confirmationForm">
+    <h2 id="operationTitle"></h2><div id="operationDetails"></div>
+    <label>Reason<input id="operationReason" maxlength="250" required autocomplete="off"></label>
+    <label id="replacementAcknowledgement" class="check-label" hidden><input id="confirmReplacement" type="checkbox">I confirm that manual assignments will be replaced.</label>
+    <div class="toolbar form-actions"><button id="confirmOperation" type="submit">Confirm</button><button id="cancelOperation" type="button" class="secondary">Cancel</button></div>
+  </form>
+</dialog>
+  </main></div>
+  <script src="../../assets/js/api.js?v=20261013-s7r2"></script><script src="../../engine.js?v=1"></script><script src="../../runtime.js?v=1"></script><script src="../../assets/js/app-ui.js?v=20261013-s7r2"></script>
+  <script src="../../assets/js/guard.js?v=20261013-s7r2"></script><script src="../../assets/js/seating.js?v=20261013-s7r2"></script>
+</body>
+</html>

@@ -1,42 +1,17 @@
 package com.examplanner.servlet;
-
 import com.examplanner.dao.ExamDao;
-import com.examplanner.model.Exam;
-import com.examplanner.util.JsonUtil;
+import com.examplanner.config.DbConnection;
+import com.examplanner.util.*;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.http.*;
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
-
-
-
+import java.sql.*;
+import java.util.*;
 @WebServlet("/api/timetable")
 public class TimetableServlet extends HttpServlet {
-    private final ExamDao examDao = new ExamDao();
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        try {
-            List<Exam> exams = examDao.findAll(true);
-            StringBuilder json = new StringBuilder("{\"exams\":[");
-            for (int i = 0; i < exams.size(); i++) {
-                Exam exam = exams.get(i);
-                if (i > 0) json.append(',');
-                json.append("{\"courseCode\":").append(JsonUtil.quote(exam.getCourseCode()))
-                        .append(",\"courseName\":").append(JsonUtil.quote(exam.getCourseName()))
-                        .append(",\"examDate\":").append(JsonUtil.quote(exam.getExamDate()))
-                        .append(",\"startTime\":").append(JsonUtil.quote(exam.getStartTime()))
-                        .append(",\"endTime\":").append(JsonUtil.quote(exam.getEndTime()))
-                        .append(",\"status\":").append(JsonUtil.quote(exam.getStatus()))
-                        .append(",\"rooms\":").append(JsonUtil.quote(exam.getRooms())).append('}');
-            }
-            JsonUtil.send(response, 200, json.append("]}").toString());
-        } catch (SQLException e) {
-            JsonUtil.send(response, 500, JsonUtil.message("error", "Database error"));
-        }
-    }
+ protected void doGet(HttpServletRequest r,HttpServletResponse s) throws IOException {
+  try(Connection c=DbConnection.getConnection()) { int year=r.getParameter("academicYearId")==null?0:Input.id(r,"academicYearId"); JsonUtil.send(s,200,JsonUtil.json(Map.of("exams",new ExamDao().list(true,year),"years",Sql.rows(c,"SELECT id,label,is_current AS isCurrent FROM academic_years ORDER BY start_year DESC")))); }
+  catch(IllegalArgumentException e) { JsonUtil.send(s,400,JsonUtil.message("error",e.getMessage())); }
+  catch(SQLException e) { log("Timetable read failed",e); JsonUtil.send(s,500,JsonUtil.message("error","Database error")); }
+ }
 }

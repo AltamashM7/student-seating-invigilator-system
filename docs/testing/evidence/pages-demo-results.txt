@@ -1,0 +1,30 @@
+PASS 240 fictional students and independent copied state
+PASS 480 valid unique assignments, accommodation and spacing in all 24 exams
+PASS published-only timetable and student lookup
+PASS admin/faculty simulated login; wrong credentials rejected
+PASS demo role guards block unauthenticated and faculty mutations
+PASS dashboard counts placements rather than enrollment rows
+PASS CSV adds 12 students and 12 extra enrollments; repeat is 24 duplicates
+PASS CSV reports physical line errors and rolls back each invalid row
+PASS reserved and inaccessible targets rejected without data changes
+PASS valid manual move saves marker and audit
+PASS regeneration preview is read-only and preserves manual pins
+PASS stale reviewed operations rejected with unchanged data
+PASS full replacement requires acknowledgement and releases manual pins
+PASS swap validates both affected students
+PASS accommodation failure in one exam leaves global flag and all plans unchanged
+PASS accommodation changes update two active generated plans atomically
+PASS enrollments and student profile protect existing published/generated seating
+PASS room CRUD and automatic seat coordinates including partial row
+PASS course CRUD, semester validation and year offering
+PASS student CRUD and compatible enrollment
+PASS exam creation and room conflicts
+PASS tag before generation does not generate a plan; priority applies at allocation
+PASS referenced rooms and used exam structure protected
+PASS schedule/complete workflow and completed regeneration protection
+PASS clear draft seating retains history
+PASS academic-year CRUD, empty counts and independent course offerings
+PASS department/division CRUD with linked safeguards
+PASS faculty account CRUD and independent admin account creation
+PASS serialization retains data; fresh reset restores the seed independently
+RESULT 29 team demo checks passed

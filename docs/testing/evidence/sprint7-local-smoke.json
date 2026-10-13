@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-13",
+  "baseUrl": "http://127.0.0.1:33080/exam-seating",
+  "studentPortalHttp": 200,
+  "adminLoginHttp": 200,
+  "seatingUiHttp": 200,
+  "previewExam": "CSE102",
+  "previewAssignments": 20,
+  "reviewRevisionCharacters": 64,
+  "normalDemoStudentsBeforeAndAfter": 241,
+  "normalDemoAssignmentsBeforeAndAfter": 480,
+  "temporaryTestDatabaseRemoved": true,
+  "repeatableTestLauncher": "PASS",
+  "githubChanged": false
+}

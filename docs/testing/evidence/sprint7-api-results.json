@@ -1,0 +1,135 @@
+{
+  "baseUrl": "http://127.0.0.1:33090/exam-seating",
+  "checks": [
+    {
+      "name": "unauthenticated seating request rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "faculty cannot mutate admin seating",
+      "status": "PASS"
+    },
+    {
+      "name": "tag before allocation saves flag without generating any examination",
+      "status": "PASS"
+    },
+    {
+      "name": "generation preview makes no saved assignments",
+      "status": "PASS"
+    },
+    {
+      "name": "manual API rejects enrolled student without an assignment",
+      "status": "PASS"
+    },
+    {
+      "name": "published generated examination remains eligible for recorded seating operations",
+      "status": "PASS"
+    },
+    {
+      "name": "priority allocation reserves qualifying accessible seats",
+      "status": "PASS"
+    },
+    {
+      "name": "accommodation move into an inaccessible seat rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid swap protects both students and leaves plan unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "manual target outside examination rooms rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "occupied move, empty swap and no-op rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "valid reassign marks changed seat manual",
+      "status": "PASS"
+    },
+    {
+      "name": "valid swap changes and pins both assignments",
+      "status": "PASS"
+    },
+    {
+      "name": "stale manual request rejected before applying changes",
+      "status": "PASS"
+    },
+    {
+      "name": "regeneration preview and save preserve manual assignments",
+      "status": "PASS"
+    },
+    {
+      "name": "swap history records both sides, actor, time and reason",
+      "status": "PASS"
+    },
+    {
+      "name": "manual replacement requires server confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed full replacement clears all manual pins",
+      "status": "PASS"
+    },
+    {
+      "name": "stale regeneration preview cannot overwrite a newer manual change",
+      "status": "PASS"
+    },
+    {
+      "name": "tagging regenerates both active generated examinations",
+      "status": "PASS"
+    },
+    {
+      "name": "incompatible pin released only for tagged student",
+      "status": "PASS"
+    },
+    {
+      "name": "accommodation change is audited",
+      "status": "PASS"
+    },
+    {
+      "name": "accommodation preview detects changes in another affected examination",
+      "status": "PASS"
+    },
+    {
+      "name": "removing accommodation requirement rebalances ordinary seats",
+      "status": "PASS"
+    },
+    {
+      "name": "insufficient accessible capacity rolls back tag and every affected plan",
+      "status": "PASS"
+    },
+    {
+      "name": "accessible seat needs accessible room entry",
+      "status": "PASS"
+    },
+    {
+      "name": "cancelled examination excluded from accommodation regeneration",
+      "status": "PASS"
+    },
+    {
+      "name": "spacing priority respects usable accessible capacity",
+      "status": "PASS"
+    },
+    {
+      "name": "spacing remains enforced in manual operations",
+      "status": "PASS"
+    },
+    {
+      "name": "blank audit reason rejected with no seating changes",
+      "status": "PASS"
+    },
+    {
+      "name": "completed examinations reject generation, manual edits and tagging",
+      "status": "PASS"
+    },
+    {
+      "name": "clearing cancelled seating retains history",
+      "status": "PASS"
+    }
+  ],
+  "passed": 32,
+  "failed": 0
+}

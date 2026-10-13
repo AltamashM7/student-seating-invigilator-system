@@ -1,0 +1,15 @@
+{
+  "students": 240,
+  "courseEnrollments": 480,
+  "divisions": 24,
+  "exams": 24,
+  "scheduledExams": 23,
+  "draftExams": 1,
+  "assignments": 480,
+  "accessibleAssignments": 48,
+  "allAccessibleNeedsMet": true,
+  "uniqueSeatsPerExam": true,
+  "uniqueStudentsPerExam": true,
+  "allStudentsAssigned": true,
+  "spacingSatisfied": true
+}

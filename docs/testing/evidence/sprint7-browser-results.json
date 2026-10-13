@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-13",
+  "baseUrl": "http://127.0.0.1:33090/exam-seating",
+  "assetVersion": "20261013-s7r2",
+  "checks": [
+    {
+      "name": "Accommodation preview and save, qualifying seat and student requirement badge",
+      "status": "PASS"
+    },
+    {
+      "name": "Chart source/destination selection and reviewed manual move",
+      "status": "PASS"
+    },
+    {
+      "name": "Saved manual badge and preservation during standard regeneration",
+      "status": "PASS"
+    },
+    {
+      "name": "Proposed replacement counts and old/new seat table",
+      "status": "PASS"
+    },
+    {
+      "name": "Unacknowledged replacement cannot submit; acknowledged replacement removes manual badges",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancellation retains plan and resets replacement mode",
+      "status": "PASS"
+    },
+    {
+      "name": "Selector search hides and updates after switching to smaller roster",
+      "status": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "screenshot": "sprint7-regeneration-preview.png"
+}

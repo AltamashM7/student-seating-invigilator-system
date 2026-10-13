@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#203646"><title>Administrator Accounts | Exam Planner</title>
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
+  <link rel="stylesheet" href="../../demo.css?v=1">
+</head>
+<body data-shell="admin" data-resource="" data-student-page="">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header data-app-header></header>
+  <div class="workspace"><aside data-app-nav></aside>
+  <main id="main" class="content" tabindex="-1">
+<div class="breadcrumbs">Administration / Administrator Accounts</div><div class="page-heading"><div><h1 id="pageTitle">Administrator Accounts</h1><p>Create administrator accounts and reset account passwords.</p></div></div>
+<p class="helper-text">Faculty profiles and login accounts are managed in <a href="faculty.html">Faculty</a>.</p>
+<details class="editor" open><summary>Create an administrator</summary><div class="editor-body"><form id="userForm" class="grid-form"><label>Name<input id="name" autocomplete="name" required maxlength="100"></label><label>Email<input id="email" type="email" autocomplete="email" required></label><label>Username<input id="username" autocomplete="off" spellcheck="false" required maxlength="50"></label><label>Initial password<input id="password" type="password" autocomplete="new-password" required minlength="8"></label><p class="helper-text full">Use 8 or more characters with uppercase, lowercase and a number.</p><p id="message" class="full" role="status" hidden></p><button type="submit">Create account</button></form></div></details>
+<details class="editor" id="resetAccount"><summary>Reset an account password</summary><div class="editor-body"><p class="helper-text">Match the existing account username and registered email. This action requires an administrator.</p><form id="adminResetForm" class="grid-form"><label>Account username<input id="resetUsername" autocomplete="off" required></label><label>Registered email<input id="resetEmail" type="email" autocomplete="off" required></label><label>New password<input id="newPassword" type="password" autocomplete="new-password" required minlength="8"></label><button type="submit">Reset account password</button><p id="resetMessage" class="full" role="status" hidden></p></form></div></details>
+  </main>
+  </div>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../engine.js?v=1"></script><script src="../../runtime.js?v=1"></script><script src="../../assets/js/app-ui.js?v=20261013-s7r2"></script>
+  <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/accounts.js?v=20261004-ui3"></script>
+</body>
+</html>

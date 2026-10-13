@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-04",
+  "method": "Actual browser observations from the UI-refresh session before the usage interruption, summarized from session context.",
+  "checks": [
+    {
+      "name": "Default student portal",
+      "status": "PASS",
+      "observed": "Student hero at application root; staff login targets login.html; 23 published exams, six preview cards; desktop body fits viewport."
+    },
+    {
+      "name": "Published seat lookup",
+      "status": "PASS",
+      "observed": "CSE26Y1A001 shows Atharva Kulkarni, CSE101, R101 / S001; draft CSE102 excluded."
+    },
+    {
+      "name": "Upcoming exam search",
+      "status": "PASS",
+      "observed": "CSE201 search narrows preview to one card."
+    },
+    {
+      "name": "Management lists",
+      "status": "PASS",
+      "observed": "Students displays 25 of 240 with collapsed editor and active navigation; exact-roll search narrows to Shruti Joshi; CSE/year-2 filter returns 20."
+    },
+    {
+      "name": "Course CRUD",
+      "status": "PASS",
+      "observed": "Third-year course defaults to semester 5; course creation succeeded and editor closed."
+    },
+    {
+      "name": "Evaluator CSV preview",
+      "status": "PASS",
+      "observed": "24 rows, nine columns and first six rows displayed."
+    },
+    {
+      "name": "Evaluator CSV import",
+      "status": "PASS",
+      "observed": "Browser reports 12 new students, 12 additional enrollments, zero duplicates and zero invalid rows."
+    },
+    {
+      "name": "Seating eligibility",
+      "status": "PASS",
+      "observed": "CSE102 assigns 20 of 20 in odd columns. Accommodation student correctly has no empty eligible accessible target."
+    },
+    {
+      "name": "Manual seating move",
+      "status": "PASS",
+      "observed": "Regular student CSE26Y1A002 moved to R102 / S011; manual marker and actor/reason/roll history visible."
+    },
+    {
+      "name": "Seat search",
+      "status": "PASS",
+      "observed": "One matching seat and 59 dimmed seats; all 60 physical buttons retained."
+    },
+    {
+      "name": "Mobile layout and navigation",
+      "status": "PASS",
+      "observed": "390 x 844 viewport: body width 375; seat chart scrolls internally; navigation menu expands, links work and menu closes."
+    },
+    {
+      "name": "Mobile exam creation",
+      "status": "PASS",
+      "observed": "Eight room checkbox options; R103 selected with capacity feedback; searchable course selector works; CSE103 draft exam saved."
+    },
+    {
+      "name": "Logout",
+      "status": "PASS",
+      "observed": "Returns to student home."
+    }
+  ],
+  "screenshots": [
+    "student-home-desktop.jpg",
+    "evaluator-import-ui.jpg"
+  ],
+  "finalDeployment": "WAR build and deployment succeeded after resumption.",
+  "finalVisualRecheck": "NOT COMPLETED: browser security policy blocked reconnecting; no alternate browser surface attempted.",
+  "lastEditsCheckedInSource": [
+    "Selector help text and wrapping",
+    "Password accessible label",
+    "Preserve selected student after chart reload",
+    "Versioned asset URLs"
+  ],
+  "cleanDemoRestored": true
+}

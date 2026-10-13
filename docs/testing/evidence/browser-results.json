@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-04",
+  "checks": [
+    {
+      "departmentYearRows": 12,
+      "divisionRows": 24,
+      "page": "Dashboard",
+      "summary": "240Students3Departments24Divisions24Course offerings8Rooms"
+    },
+    {
+      "fieldCount": 2,
+      "notice": "",
+      "page": "Academic Years",
+      "rows": 1
+    },
+    {
+      "fieldCount": 2,
+      "notice": "",
+      "page": "Departments",
+      "rows": 3
+    },
+    {
+      "fieldCount": 3,
+      "notice": "",
+      "page": "Divisions",
+      "rows": 24
+    },
+    {
+      "fieldCount": 6,
+      "notice": "",
+      "page": "Students",
+      "rows": 240
+    },
+    {
+      "fieldCount": 2,
+      "notice": "",
+      "page": "Course Enrollments",
+      "rows": 480
+    },
+    {
+      "fieldCount": 6,
+      "notice": "",
+      "page": "Faculty",
+      "rows": 12
+    },
+    {
+      "fieldCount": 4,
+      "notice": "",
+      "page": "Rooms",
+      "rows": 8
+    },
+    {
+      "fieldCount": 5,
+      "notice": "",
+      "page": "Courses",
+      "rows": 24
+    },
+    {
+      "history": "2026-10-04 18:29:47.0adminREASSIGNR101 / S003R102 / S011Evaluator demonstration: manual placement verification",
+      "manualCount": 1,
+      "message": "Manual change saved and recorded.",
+      "page": "Manual override"
+    },
+    {
+      "bodyWidth": 375,
+      "gridScroll": 700,
+      "gridWidth": 301,
+      "mainWidth": 375,
+      "page": "Mobile seating",
+      "viewport": 390
+    },
+    {
+      "message": "1 published seating results.",
+      "page": "Student search",
+      "result": "CSE101 - Programming Fundamentals2026-10-1209:00:00 - 10:30:00R101S001",
+      "rows": 1
+    },
+    {
+      "page": "Course creation",
+      "result": "UI301 Applied Data Analysis; Third year; Semester 5; offered in 2026-27; Saved successfully."
+    },
+    {
+      "page": "Regeneration",
+      "message": "20 students assigned.",
+      "manualPreserved": true,
+      "observedHistoryAction": "REGENERATE",
+      "reason": "Generate or regenerate while preserving manual assignments"
+    },
+    {
+      "page": "Timetable list",
+      "publishedRows": 23,
+      "draftsExcluded": true
+    },
+    {
+      "page": "Timetable calendar",
+      "dateGroups": 12,
+      "listHidden": true
+    },
+    {
+      "examRows": 24,
+      "page": "Exam scheduling",
+      "selects": [
+        {
+          "id": "academicYearId",
+          "multiple": false,
+          "options": 1
+        },
+        {
+          "id": "courseId",
+          "multiple": false,
+          "options": 24
+        },
+        {
+          "id": "status",
+          "multiple": false,
+          "options": 2
+        },
+        {
+          "id": "roomIds",
+          "multiple": true,
+          "options": 8
+        }
+      ]
+    },
+    {
+      "bodyWidth": 1009,
+      "divisionRows": 24,
+      "page": "Desktop dashboard",
+      "sidebarWidth": 220,
+      "viewport": 1024,
+      "yearCountRows": 12
+    }
+  ],
+  "consoleErrors": [],
+  "responsiveWidths": [
+    390,
+    1024
+  ]
+}

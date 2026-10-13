@@ -1,0 +1,399 @@
+{
+  "baseUrl": "http://127.0.0.1:33080/exam-seating",
+  "checks": [
+    {
+      "name": "AUTH: logged-out admin API rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: logged-out seating API rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: public password reset rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: invalid password rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: missing username rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: admin login succeeds",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: faculty login succeeds",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: faculty admin access rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: faculty seating mutation access rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: admin cannot bypass faculty-role filter",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: weak account password rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: duplicate username rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: authorized admin account registration",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: reset requires matching account email",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: reset password policy enforced",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: administrator password reset succeeds",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: old password no longer works after reset",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: replacement password logs in",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: 240 students",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: 480 multi-course enrollments",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: 24 divisions, all counts correct",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: year counts do not double-count enrollments",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: every department and study year appears",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: 12 faculty and 26 courses",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: refreshed fictional names exclude the requested surname",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: two workshop offerings available for demonstration import",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: academic year create",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: academic year update",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: academic year delete",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: current year deletion prevented",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: department create",
+      "status": "PASS"
+    },
+    {
+      "name": "DATA: empty department appears with zero counts",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: department update",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: division create",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: division update",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: division and department delete",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: incompatible year/semester rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: course and annual offering create",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: course update",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: room create",
+      "status": "PASS"
+    },
+    {
+      "name": "ROOM: capacity generates 5 seats",
+      "status": "PASS"
+    },
+    {
+      "name": "ROOM: capacity increase generates 8 seats",
+      "status": "PASS"
+    },
+    {
+      "name": "ROOM: capacity decrease removes excess seats",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: faculty create",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: faculty update without password change",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: faculty and associated account delete",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: student and annual placement create",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: student update",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: course enrollment create",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: enrollment update",
+      "status": "PASS"
+    },
+    {
+      "name": "CRUD: enrollment and student delete",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: invalid header rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: 120 valid rows imported (100%; 5.34s)",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: 120 duplicate enrollments detected",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: existing students gain 120 second-course enrollments",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: physical line numbers retained through blank lines",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: unknown department reported",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: evaluator file imports 12 students and 12 additional enrollments",
+      "status": "PASS"
+    },
+    {
+      "name": "CSV: evaluator file reimport identifies 24 duplicates",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: invalid interval rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: nonconflicting draft created",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: overlapping room rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: shared-student conflict rejected across different rooms",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: touching time boundary accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: draft inputs updated",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: draft to scheduled",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: scheduled to draft rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: scheduled to completed",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: completed transition rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: cancellation",
+      "status": "PASS"
+    },
+    {
+      "name": "EXAM: cancelled deletion",
+      "status": "PASS"
+    },
+    {
+      "name": "SEATING: completed allocation rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "SEATING: capacity failure leaves no partial rows",
+      "status": "PASS"
+    },
+    {
+      "name": "SEATING: 20 students assigned",
+      "status": "PASS"
+    },
+    {
+      "name": "SEATING: duplicate student and seat prevention",
+      "status": "PASS"
+    },
+    {
+      "name": "ACCOMMODATION: all flagged students get accessible seats",
+      "status": "PASS"
+    },
+    {
+      "name": "YEAR: another academic year cannot bypass active accessibility protection",
+      "status": "PASS"
+    },
+    {
+      "name": "YEAR: promotion retains both annual placements",
+      "status": "PASS"
+    },
+    {
+      "name": "OVERRIDE: invalid accommodation move rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "OVERRIDE: swap protects both students accommodation",
+      "status": "PASS"
+    },
+    {
+      "name": "OVERRIDE: valid move to empty seat",
+      "status": "PASS"
+    },
+    {
+      "name": "OVERRIDE: occupied-seat reassignment rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "OVERRIDE: valid occupied-seat swap",
+      "status": "PASS"
+    },
+    {
+      "name": "REGENERATION: manual assignments preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "AUDIT: manual changes contain actor, time and reason",
+      "status": "PASS"
+    },
+    {
+      "name": "REGENERATION: explicit full replacement clears manual flags",
+      "status": "PASS"
+    },
+    {
+      "name": "SPACING: only odd columns occupied",
+      "status": "PASS"
+    },
+    {
+      "name": "SPACING: manual move to blocked column rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "PUBLIC: publish exam",
+      "status": "PASS"
+    },
+    {
+      "name": "PUBLIC: roll-number search returns published seat",
+      "status": "PASS"
+    },
+    {
+      "name": "PUBLIC: draft seating excluded",
+      "status": "PASS"
+    },
+    {
+      "name": "PUBLIC: timetable excludes drafts and cancelled exams",
+      "status": "PASS"
+    },
+    {
+      "name": "CLEAR: draft seating cleared and history retained",
+      "status": "PASS"
+    },
+    {
+      "name": "CLEAR: subsequent regeneration works",
+      "status": "PASS"
+    },
+    {
+      "name": "ENROLLMENT: published course enrollment changes protected",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: logout invalidates session",
+      "status": "PASS"
+    },
+    {
+      "name": "CONCURRENCY: competing exam saves produce one winner",
+      "status": "PASS"
+    },
+    {
+      "name": "AUTH: exam endpoint remains protected",
+      "status": "PASS"
+    }
+  ],
+  "passed": 98,
+  "failed": 0
+}

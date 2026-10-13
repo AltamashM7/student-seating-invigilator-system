@@ -1,0 +1,35 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.examplanner:exam-seating >--------------------
+[INFO] Building exam-seating 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ exam-seating ---
+[INFO] skip non existing resourceDirectory C:\Users\user\Documents\ChatGPT\student seating management system\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ exam-seating ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ exam-seating ---
+[INFO] skip non existing resourceDirectory C:\Users\user\Documents\ChatGPT\student seating management system\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ exam-seating ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ exam-seating ---
+[INFO] 
+[INFO] --- war:3.4.0:war (default-war) @ exam-seating ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [exam-seating] in [C:\Users\user\Documents\ChatGPT\student seating management system\target\exam-seating]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\user\Documents\ChatGPT\student seating management system\src\main\webapp]
+[INFO] Building war: C:\Users\user\Documents\ChatGPT\student seating management system\target\exam-seating.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.907 s
+[INFO] Finished at: 2026-10-04T18:29:16+05:30
+[INFO] ------------------------------------------------------------------------
+WAR copied; the running demo Tomcat will redeploy it.
+Demo: http://127.0.0.1:33080/exam-seating/ (allow a few seconds to deploy)

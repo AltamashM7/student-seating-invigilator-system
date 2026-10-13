@@ -1,0 +1,2 @@
+15 JavaScript files, 10 Python files parsed; 21 HTML files / 137 local references checked.
+PASS: no syntax errors or missing static references.

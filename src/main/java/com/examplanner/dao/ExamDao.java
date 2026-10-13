@@ -1,245 +1,65 @@
 package com.examplanner.dao;
-
 import com.examplanner.config.DbConnection;
-import com.examplanner.model.Exam;
-
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
+import com.examplanner.util.*;
+import jakarta.servlet.http.HttpServletRequest;
+import java.sql.*;
+import java.time.*;
+import java.util.*;
 
 public class ExamDao {
-    public List<Exam> findAll(boolean publicOnly) throws SQLException {
-        List<Exam> exams = new ArrayList<>();
-        String sql = """
-                SELECT e.id, e.course_id, c.course_code, c.course_name, e.exam_date, e.start_time, e.end_time, e.status,
-                       COALESCE(GROUP_CONCAT(r.room_number ORDER BY r.room_number SEPARATOR ', '), '') AS rooms
-                FROM examinations e
-                JOIN courses c ON c.id = e.course_id
-                LEFT JOIN examination_rooms er ON er.examination_id = e.id
-                LEFT JOIN rooms r ON r.id = er.room_id
-                %s
-                GROUP BY e.id, e.course_id, c.course_code, c.course_name, e.exam_date, e.start_time, e.end_time, e.status
-                ORDER BY e.exam_date, e.start_time, c.course_code
-                """.formatted(publicOnly ? "WHERE e.status IN ('SCHEDULED', 'COMPLETED')" : "");
-        try (Connection connection = DbConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql);
-             ResultSet rs = statement.executeQuery()) {
-            while (rs.next()) {
-                exams.add(new Exam(
-                        rs.getInt("id"), rs.getInt("course_id"), rs.getString("course_code"), rs.getString("course_name"),
-                        rs.getDate("exam_date").toString(), rs.getTime("start_time").toString(), rs.getTime("end_time").toString(),
-                        rs.getString("status"), rs.getString("rooms")
-                ));
-            }
-        }
-        return exams;
-    }
-
-    public List<String> findConflicts(Integer excludeExamId, int courseId, LocalDate date,
-                                      LocalTime start, LocalTime end, List<Integer> roomIds) throws SQLException {
-        List<String> conflicts = new ArrayList<>();
-        try (Connection connection = DbConnection.getConnection()) {
-            conflicts.addAll(findRoomConflicts(connection, excludeExamId, date, start, end, roomIds));
-            conflicts.addAll(findStudentConflicts(connection, excludeExamId, courseId, date, start, end));
-        }
-        return conflicts;
-    }
-
-    public int create(int courseId, LocalDate date, LocalTime start, LocalTime end,
-                      String status, List<Integer> roomIds) throws SQLException {
-        try (Connection connection = DbConnection.getConnection()) {
-            connection.setAutoCommit(false);
-            try {
-                int examId;
-                try (PreparedStatement statement = connection.prepareStatement(
-                        "INSERT INTO examinations(course_id, exam_date, start_time, end_time, status) VALUES (?, ?, ?, ?, ?)",
-                        Statement.RETURN_GENERATED_KEYS)) {
-                    setExamValues(statement, courseId, date, start, end, status);
-                    statement.executeUpdate();
-                    try (ResultSet keys = statement.getGeneratedKeys()) {
-                        keys.next();
-                        examId = keys.getInt(1);
-                    }
-                }
-                insertRooms(connection, examId, roomIds);
-                connection.commit();
-                return examId;
-            } catch (SQLException e) {
-                connection.rollback();
-                throw e;
-            } finally {
-                connection.setAutoCommit(true);
-            }
+    public List<Map<String,Object>> list(boolean publicOnly,int year) throws SQLException {
+        try(Connection c=DbConnection.getConnection()) {
+            List<Map<String,Object>> exams=Sql.rows(c,"SELECT e.id,e.course_id AS courseId,c.course_code AS courseCode,c.course_name AS courseName,e.academic_year_id AS academicYearId,y.label AS academicYear,e.exam_date AS examDate,e.start_time AS startTime,e.end_time AS endTime,e.status,e.spacing_required AS spacingRequired FROM examinations e JOIN courses c ON c.id=e.course_id JOIN academic_years y ON y.id=e.academic_year_id WHERE (?=0 OR e.academic_year_id=?) "+(publicOnly?"AND e.status IN ('SCHEDULED','COMPLETED') ":"")+"ORDER BY e.exam_date,e.start_time,c.course_code",year,year);
+            for(Map<String,Object> e:exams) { List<Map<String,Object>> rooms=Sql.rows(c,"SELECT r.id,r.room_number AS roomNumber,r.capacity FROM examination_rooms er JOIN rooms r ON r.id=er.room_id WHERE er.examination_id=? ORDER BY r.room_number",e.get("id")); e.put("rooms",rooms); }
+            return exams;
         }
     }
-
-    public boolean updateDraft(int id, int courseId, LocalDate date, LocalTime start, LocalTime end,
-                               String status, List<Integer> roomIds) throws SQLException {
-        try (Connection connection = DbConnection.getConnection()) {
-            connection.setAutoCommit(false);
-            try {
-                String current = getStatus(connection, id);
-                if (current == null) return false;
-                if (!"DRAFT".equals(current)) throw new IllegalStateException("Only draft exams can be edited");
-
-                try (PreparedStatement statement = connection.prepareStatement(
-                        "UPDATE examinations SET course_id = ?, exam_date = ?, start_time = ?, end_time = ?, status = ? WHERE id = ?")) {
-                    setExamValues(statement, courseId, date, start, end, status);
-                    statement.setInt(6, id);
-                    statement.executeUpdate();
-                }
-                try (PreparedStatement delete = connection.prepareStatement("DELETE FROM examination_rooms WHERE examination_id = ?")) {
-                    delete.setInt(1, id);
-                    delete.executeUpdate();
-                }
-                insertRooms(connection, id, roomIds);
-                connection.commit();
-                return true;
-            } catch (SQLException | RuntimeException e) {
-                connection.rollback();
-                throw e;
-            } finally {
-                connection.setAutoCommit(true);
+    public int save(HttpServletRequest r) throws SQLException {
+        String action=Input.text(r,"action",20);
+        if(!Set.of("create","update","status","delete").contains(action)) throw new IllegalArgumentException("Unknown exam action");
+        int id="create".equals(action)?0:Input.id(r,"id");
+        return Sql.write(c -> {
+            if("delete".equals(action)) {
+                Map<String,Object> old=Sql.one(c,"SELECT status FROM examinations WHERE id=?",id);
+                if(!Set.of("DRAFT","CANCELLED").contains(old.get("status"))) throw new IllegalArgumentException("Only draft or cancelled exams can be deleted");
+                if(!Sql.rows(c,"SELECT id FROM seating_history WHERE examination_id=?",id).isEmpty()) throw new IllegalArgumentException("Exam has seating history; cancel and retain its audit record");
+                Sql.update(c,"DELETE FROM examinations WHERE id=?",id); return id;
             }
-        }
-    }
-
-    public boolean changeStatus(int id, String nextStatus) throws SQLException {
-        try (Connection connection = DbConnection.getConnection()) {
-            String current = getStatus(connection, id);
-            if (current == null) return false;
-            if (!allowedTransition(current, nextStatus)) {
-                throw new IllegalStateException("Invalid state transition from " + current + " to " + nextStatus);
+            if("status".equals(action)) {
+                Map<String,Object> old=Sql.one(c,"SELECT * FROM examinations WHERE id=?",id);
+                String next=Input.text(r,"status",20),current=old.get("status").toString();
+                if(!allowedTransition(current,next)) throw new IllegalArgumentException("Invalid state transition from "+current+" to "+next);
+                if("SCHEDULED".equals(next)) validateConflicts(c,id,Sql.number(old,"course_id"),Sql.number(old,"academic_year_id"),old.get("exam_date"),old.get("start_time"),old.get("end_time"),roomIds(c,id));
+                Sql.update(c,"UPDATE examinations SET status=? WHERE id=?",next,id); return id;
             }
-            try (PreparedStatement statement = connection.prepareStatement("UPDATE examinations SET status = ? WHERE id = ?")) {
-                statement.setString(1, nextStatus);
-                statement.setInt(2, id);
-                return statement.executeUpdate() > 0;
+            int course=Input.id(r,"courseId"),year=Input.id(r,"academicYearId");
+            LocalDate date; LocalTime start,end;
+            try { date=LocalDate.parse(Input.text(r,"examDate",10)); start=LocalTime.parse(Input.text(r,"startTime",8)); end=LocalTime.parse(Input.text(r,"endTime",8)); }
+            catch(java.time.format.DateTimeParseException e) { throw new IllegalArgumentException("Invalid date or time"); }
+            String status=Input.text(r,"status",20);
+            if(!end.isAfter(start)||!Set.of("DRAFT","SCHEDULED").contains(status)) throw new IllegalArgumentException("End time must be later than start time; select draft or scheduled");
+            Sql.one(c,"SELECT course_id FROM course_offerings WHERE course_id=? AND academic_year_id=?",course,year);
+            List<Integer> rooms=new ArrayList<>(); String[] values=r.getParameterValues("roomId");
+            if(values!=null) for(String value:values) { try { int room=Integer.parseInt(value); if(room<1||rooms.contains(room)) throw new NumberFormatException(); Sql.one(c,"SELECT id FROM rooms WHERE id=?",room); rooms.add(room); } catch(NumberFormatException e) { throw new IllegalArgumentException("Invalid or duplicate room id"); } }
+            if(rooms.isEmpty()) throw new IllegalArgumentException("Select at least one room");
+            if(id>0) {
+                Map<String,Object> old=Sql.one(c,"SELECT status FROM examinations WHERE id=?",id);
+                if(!"DRAFT".equals(old.get("status"))) throw new IllegalArgumentException("Only draft exams can be edited");
+                if(!Sql.rows(c,"SELECT id FROM seating_history WHERE examination_id=?",id).isEmpty()) throw new IllegalArgumentException("Exam has seating history; retain it and create a new exam if its inputs change");
             }
-        }
+            validateConflicts(c,id,course,year,date,start,end,rooms);
+            Object[] args={course,year,date.toString(),start.toString(),end.toString(),status,Input.flag(r,"spacingRequired")};
+            int saved;
+            if(id==0) saved=Sql.insert(c,"INSERT INTO examinations(course_id,academic_year_id,exam_date,start_time,end_time,status,spacing_required) VALUES (?,?,?,?,?,?,?)",args);
+            else { Object[] update=Arrays.copyOf(args,8); update[7]=id; Sql.update(c,"UPDATE examinations SET course_id=?,academic_year_id=?,exam_date=?,start_time=?,end_time=?,status=?,spacing_required=? WHERE id=?",update); Sql.update(c,"DELETE FROM examination_rooms WHERE examination_id=?",id); saved=id; }
+            for(int room:rooms) Sql.update(c,"INSERT INTO examination_rooms VALUES (?,?)",saved,room);
+            return saved;
+        });
     }
-
-    public boolean deleteDraft(int id) throws SQLException {
-        try (Connection connection = DbConnection.getConnection()) {
-            String current = getStatus(connection, id);
-            if (current == null) return false;
-            if (!"DRAFT".equals(current) && !"CANCELLED".equals(current)) {
-                throw new IllegalStateException("Only draft or cancelled exams can be deleted");
-            }
-            try (PreparedStatement statement = connection.prepareStatement("DELETE FROM examinations WHERE id = ?")) {
-                statement.setInt(1, id);
-                return statement.executeUpdate() > 0;
-            }
-        }
+    private List<Integer> roomIds(Connection c,int exam) throws SQLException { List<Integer> ids=new ArrayList<>(); for(Map<String,Object> r:Sql.rows(c,"SELECT room_id FROM examination_rooms WHERE examination_id=?",exam)) ids.add(Sql.number(r,"room_id")); return ids; }
+    private void validateConflicts(Connection c,int exclude,int course,int year,Object date,Object start,Object end,List<Integer> rooms) throws SQLException {
+        for(int room:rooms) if(!Sql.rows(c,"SELECT e.id FROM examinations e JOIN examination_rooms er ON er.examination_id=e.id WHERE e.id<>? AND er.room_id=? AND e.exam_date=? AND e.status<>'CANCELLED' AND e.start_time<? AND e.end_time>?",exclude,room,date.toString(),end.toString(),start.toString()).isEmpty()) throw new IllegalArgumentException("Timetable conflict: selected room overlaps another exam");
+        if(!Sql.rows(c,"SELECT DISTINCT e.id FROM examinations e JOIN course_enrollments existing ON existing.course_id=e.course_id AND existing.academic_year_id=e.academic_year_id JOIN course_enrollments incoming ON incoming.student_id=existing.student_id AND incoming.course_id=? AND incoming.academic_year_id=? WHERE e.id<>? AND e.exam_date=? AND e.status<>'CANCELLED' AND e.start_time<? AND e.end_time>?",course,year,exclude,date.toString(),end.toString(),start.toString()).isEmpty()) throw new IllegalArgumentException("Timetable conflict: shared student overlaps another exam");
     }
-
-    private List<String> findRoomConflicts(Connection connection, Integer excludeExamId, LocalDate date,
-                                           LocalTime start, LocalTime end, List<Integer> roomIds) throws SQLException {
-        List<String> result = new ArrayList<>();
-        if (roomIds.isEmpty()) return result;
-        String placeholders = String.join(",", java.util.Collections.nCopies(roomIds.size(), "?"));
-        String sql = """
-                SELECT DISTINCT c.course_code, r.room_number
-                FROM examinations e
-                JOIN courses c ON c.id = e.course_id
-                JOIN examination_rooms er ON er.examination_id = e.id
-                JOIN rooms r ON r.id = er.room_id
-                WHERE e.exam_date = ? AND e.status <> 'CANCELLED'
-                  AND e.start_time < ? AND e.end_time > ?
-                  AND er.room_id IN (%s)
-                """.formatted(placeholders);
-        if (excludeExamId != null) sql += " AND e.id <> ?";
-
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            int index = 1;
-            statement.setDate(index++, Date.valueOf(date));
-            statement.setTime(index++, Time.valueOf(end));
-            statement.setTime(index++, Time.valueOf(start));
-            for (Integer roomId : roomIds) statement.setInt(index++, roomId);
-            if (excludeExamId != null) statement.setInt(index, excludeExamId);
-            try (ResultSet rs = statement.executeQuery()) {
-                while (rs.next()) {
-                    result.add("Room " + rs.getString("room_number") + " overlaps with " + rs.getString("course_code"));
-                }
-            }
-        }
-        return result;
-    }
-
-    private List<String> findStudentConflicts(Connection connection, Integer excludeExamId, int courseId,
-                                              LocalDate date, LocalTime start, LocalTime end) throws SQLException {
-        List<String> result = new ArrayList<>();
-        String sql = """
-                SELECT DISTINCT e.id, c.course_code
-                FROM examinations e
-                JOIN courses c ON c.id = e.course_id
-                JOIN course_enrollments existing_enrollment ON existing_enrollment.course_id = e.course_id
-                JOIN course_enrollments new_enrollment
-                  ON new_enrollment.student_id = existing_enrollment.student_id
-                 AND new_enrollment.course_id = ?
-                WHERE e.exam_date = ? AND e.status <> 'CANCELLED'
-                  AND e.start_time < ? AND e.end_time > ?
-                """;
-        if (excludeExamId != null) sql += " AND e.id <> ?";
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, courseId);
-            statement.setDate(2, Date.valueOf(date));
-            statement.setTime(3, Time.valueOf(end));
-            statement.setTime(4, Time.valueOf(start));
-            if (excludeExamId != null) statement.setInt(5, excludeExamId);
-            try (ResultSet rs = statement.executeQuery()) {
-                while (rs.next()) {
-                    result.add("Student enrollment overlaps with " + rs.getString("course_code"));
-                }
-            }
-        }
-        return result;
-    }
-
-    private void insertRooms(Connection connection, int examId, List<Integer> roomIds) throws SQLException {
-        try (PreparedStatement statement = connection.prepareStatement(
-                "INSERT INTO examination_rooms(examination_id, room_id) VALUES (?, ?)")) {
-            for (Integer roomId : roomIds) {
-                statement.setInt(1, examId);
-                statement.setInt(2, roomId);
-                statement.addBatch();
-            }
-            statement.executeBatch();
-        }
-    }
-
-    private void setExamValues(PreparedStatement statement, int courseId, LocalDate date,
-                               LocalTime start, LocalTime end, String status) throws SQLException {
-        statement.setInt(1, courseId);
-        statement.setDate(2, Date.valueOf(date));
-        statement.setTime(3, Time.valueOf(start));
-        statement.setTime(4, Time.valueOf(end));
-        statement.setString(5, status);
-    }
-
-    private String getStatus(Connection connection, int id) throws SQLException {
-        try (PreparedStatement statement = connection.prepareStatement("SELECT status FROM examinations WHERE id = ?")) {
-            statement.setInt(1, id);
-            try (ResultSet rs = statement.executeQuery()) {
-                return rs.next() ? rs.getString("status") : null;
-            }
-        }
-    }
-
-    private boolean allowedTransition(String current, String next) {
-        if (current.equals(next)) return true;
-        return switch (current) {
-            case "DRAFT" -> next.equals("SCHEDULED") || next.equals("CANCELLED");
-            case "SCHEDULED" -> next.equals("COMPLETED") || next.equals("CANCELLED");
-            default -> false;
-        };
-    }
+    public boolean allowedTransition(String current,String next) { if(current.equals(next)) return true; return switch(current) { case "DRAFT" -> Set.of("SCHEDULED","CANCELLED").contains(next); case "SCHEDULED" -> Set.of("COMPLETED","CANCELLED").contains(next); default -> false; }; }
 }

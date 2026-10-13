@@ -7,7 +7,7 @@ Authentication uses the `users` table and an HTTP session.
 - Successful login stores user id, username and role in `HttpSession`.
 - Admin and faculty API paths are checked by `AuthFilter`.
 - Registration is restricted to an already logged-in administrator.
-- Reset password checks username and registered email before replacing the stored hash.
+- Reset password requires an ADMIN session and matching username/email before replacing the stored hash. Unauthenticated recovery is rejected.
 - Session timeout is 30 minutes.
 
-Student login is not required in the supplied functional-requirement table. Student-facing timetable pages are therefore read-only/public for the S1-S4 build.
+Student login is not required in the supplied functional-requirement table. Timetable and exact-roll published seating lookup are public/read-only. The baseline SHA-256 hashing is retained for this academic implementation; production password-storage/security hardening is outside this delivery.

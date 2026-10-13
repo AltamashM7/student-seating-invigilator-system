@@ -1,9 +1,7 @@
 target/
-.classpath
-.project
-.settings/
+.local-runtime/
+handoff/*.zip
+__pycache__/
+*.log
 .idea/
 .vscode/
-*.iml
-*.log
-.DS_Store

@@ -10,7 +10,7 @@
 1. The seeded administrator logs in.
 2. An administrator creates additional admin or faculty accounts.
 3. Faculty receives a username and initial password.
-4. The user logs in and can use reset-password when the registered username/email match.
+4. The user logs in. Password recovery is performed by a logged-in administrator, with matching username/email and password-policy validation. Public recovery directs users to the administrator.
 
 ## Validation
 - Username, name, role and email are required.
