@@ -1,5 +1,7 @@
 /* Shared navigation, list controls and small form helpers. No framework required. */
 const AppUI = (() => {
+    // Pages hosts may redirect .html links to extensionless URLs.
+    const pagePath = /\.html$|\/$/.test(location.pathname) ? location.pathname : location.pathname + '.html';
     const root = new URL('../../', document.currentScript.src);
     const url = path => new URL(path, root).href;
     const params = new URLSearchParams(location.search);
@@ -22,7 +24,7 @@ const AppUI = (() => {
         const staff = isAdmin || isFaculty;
         const home = staff ? `pages/${isAdmin ? 'admin' : 'faculty'}/dashboard.html` : '';
         header.className = 'app-header';
-        header.innerHTML = `<div class="header-start">${staff ? '<button type="button" class="icon-button menu-button" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="appNavigation">☰</button>' : ''}<a class="brand" href="${url(home)}"><span class="brand-symbol" aria-hidden="true">EP</span><span>Exam Planner<small>${staff ? 'Staff workspace' : 'Student portal'}</small></span></a></div><nav class="header-links" aria-label="${staff ? 'Account' : 'Student navigation'}">${staff ? `<a href="${url('')}" class="quiet-link">Student view</a><span data-user-name class="account-name"></span><button type="button" id="logoutButton" class="secondary">Log out</button>` : `<a href="${url('')}" ${document.body.dataset.studentPage === 'home' ? 'aria-current="page"' : ''}>Home</a><a href="${url('pages/timetable.html')}" ${location.pathname.endsWith('/timetable.html') ? 'aria-current="page"' : ''}>Timetable</a><a href="${url('login.html')}" class="button secondary">Staff login</a>`}</nav>`;
+        header.innerHTML = `<div class="header-start">${staff ? '<button type="button" class="icon-button menu-button" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="appNavigation">☰</button>' : ''}<a class="brand" href="${url(home)}"><span class="brand-symbol" aria-hidden="true">EP</span><span>Exam Planner<small>${staff ? 'Staff workspace' : 'Student portal'}</small></span></a></div><nav class="header-links" aria-label="${staff ? 'Account' : 'Student navigation'}">${staff ? `<a href="${url('')}" class="quiet-link">Student view</a><span data-user-name class="account-name"></span><button type="button" id="logoutButton" class="secondary">Log out</button>` : `<a href="${url('')}" ${document.body.dataset.studentPage === 'home' ? 'aria-current="page"' : ''}>Home</a><a href="${url('pages/timetable.html')}" ${pagePath.endsWith('/timetable.html') ? 'aria-current="page"' : ''}>Timetable</a><a href="${url('login.html')}" class="button secondary">Staff login</a>`}</nav>`;
         if (staff) {
             document.getElementById('logoutButton').addEventListener('click', () => logout());
             const navigation = document.querySelector('[data-app-nav]');
@@ -30,7 +32,7 @@ const AppUI = (() => {
             navigation.className = 'app-navigation';
             navigation.setAttribute('aria-label', isAdmin ? 'Administration' : 'Faculty navigation');
             const groups = isAdmin ? adminGroups : [['Faculty', [['dashboard.html', 'Dashboard']]]];
-            navigation.innerHTML = groups.map(([title, links]) => `<section class="nav-group"><h2>${title}</h2>${links.map(([path, label]) => `<a href="${url(`pages/${isAdmin ? 'admin' : 'faculty'}/${path}`)}" ${location.pathname.endsWith('/' + path) ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</section>`).join('') + `<section class="nav-group"><h2>Public pages</h2><a href="${url('pages/timetable.html')}">Timetable</a></section>`;
+            navigation.innerHTML = groups.map(([title, links]) => `<section class="nav-group"><h2>${title}</h2>${links.map(([path, label]) => `<a href="${url(`pages/${isAdmin ? 'admin' : 'faculty'}/${path}`)}" ${pagePath.endsWith('/' + path) ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</section>`).join('') + `<section class="nav-group"><h2>Public pages</h2><a href="${url('pages/timetable.html')}">Timetable</a></section>`;
             const toggle = document.getElementById('menuToggle');
             const close = () => { document.body.classList.remove('navigation-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation'); };
             toggle.addEventListener('click', () => {

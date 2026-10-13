@@ -88,7 +88,7 @@
   function init() {
     const bar = document.createElement('aside');
     bar.className = 'demo-bar';bar.setAttribute('aria-label', 'Team demo controls');
-    bar.innerHTML = `<div><span id="demoStorageStatus">Sample data saved in this browser</span></div><nav aria-label="Demo help"><a href="${new URL('guide.html', root).href}">Demo guide</a><button id="demoReset" type="button" class="secondary">Reset sample data</button></nav>`;
+    bar.innerHTML = `<div><span id="demoStorageStatus">Sample data saved in this browser</span></div><nav aria-label="Guide and sample data"><a href="${new URL('guide.html', root).href}">User guide</a><button id="demoReset" type="button" class="secondary">Reset sample data</button></nav>`;
     document.body.prepend(bar);
     document.getElementById('demoReset').addEventListener('click', async event => {
       if (!confirm('Restore the original sample records and demo accounts in this browser? Your practice changes will be removed.')) return;
@@ -96,7 +96,7 @@
       try { await ready; await serialized(() => write(fresh().exportState())); session(null);location.href = root.href; }
       catch (error) { showStatus(error.message); event.target.disabled = false; }
     });
-    if (location.pathname.endsWith('/login.html')) {
+    if (/\/login(?:\.html)?\/?$/.test(location.pathname)) {
       const credentials = document.createElement('div');credentials.className = 'demo-credentials';
       credentials.innerHTML = '<h2>Demo accounts</h2><p><strong>Administrator:</strong> <code>admin</code> / <code>Admin@123</code><br><strong>Faculty:</strong> <code>cse.faculty1</code> / <code>Faculty@123</code></p><p class="helper-text">Use fictional records and demo passwords. Account changes apply only in this browser.</p>';
       document.getElementById('loginForm').before(credentials);
