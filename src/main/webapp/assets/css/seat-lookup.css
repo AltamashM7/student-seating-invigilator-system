@@ -1,0 +1,33 @@
+/* Small presentation refinements for the student Seat Lookup page only. */
+body[data-student-page="seating"] .finder #searchButton {
+    width: 100%;
+}
+body[data-student-page="seating"] .result-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 24px 0 18px;
+}
+body[data-student-page="seating"] .result-header h2 {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+body[data-student-page="seating"] #printResults {
+    flex-shrink: 0;
+}
+body[data-student-page="seating"] .seat-result {
+    border-top: 3px solid var(--accent);
+}
+body[data-student-page="seating"] .location-pair > div {
+    min-width: 0;
+}
+body[data-student-page="seating"] .location-pair strong {
+    display: block;
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 480px) {
+    body[data-student-page="seating"] #printResults { width: 100%; }
+    body[data-student-page="seating"] .seat-result { padding: 20px; }
+    body[data-student-page="seating"] .location-pair { gap: 10px; }
+}
