@@ -160,6 +160,17 @@ button.seat.target-seat {outline:3px dashed #6d6244;outline-offset:2px;}
 .password-control button {position:absolute;right:6px;top:5px;min-height:32px;padding:3px 9px;font-size:12px;}
 .auth-links {font-size:13px;flex-wrap:wrap;gap:12px;}
 .print-only {display:none;}
+.status-ready,.status-accepted,.status-sent {background:#e2eee8;color:#345448;}
+.status-pending,.status-warning,.status-needs_attention,.status-queued {background:#f2eddf;color:#756035;}
+.status-declined,.status-error,.status-failed {background:#f5e8e5;color:#8c443d;}
+.status-disabled,.status-cancelled {background:#eceff1;color:#596975;}
+#planningDialog,#dutyResponseDialog {width:min(800px,calc(100vw - 32px));max-height:85vh;overflow:auto;padding:24px;border:1px solid var(--line);border-radius:10px;color:var(--ink);background:white;}
+#planningDialog::backdrop,#dutyResponseDialog::backdrop {background:rgba(23,40,50,.48);}
+#planningDialog label,#dutyResponseDialog label {margin:16px 0;}
+.planning-actions {display:flex;gap:8px;flex-wrap:wrap;}
+.planning-actions button {min-height:34px;padding:5px 10px;font-size:12px;}
+.notification-unread {border-left:3px solid var(--accent);}
+.report-note {max-width:65ch;}
 @media(max-width:1050px) {.account-name {display:none;} .content {padding:24px;} .header-links {gap:14px;} .exam-preview {grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:800px) {.workspace {grid-template-columns:minmax(0,1fr);} .app-navigation {display:none;height:auto;position:static;border-bottom:1px solid var(--line);} .navigation-open .app-navigation {display:block;} .menu-button {display:inline-flex;padding:8px 12px;font-size:18px;} .app-header {padding:0 16px;height:70px;} .content {padding:20px 16px;} .public-content {padding:28px 18px;} .hero {grid-template-columns:1fr;gap:24px;} .hero h1 {max-width:600px;} .hero-copy p {max-width:600px;} .grid-form {grid-template-columns:1fr;} .page-heading {flex-direction:column;gap:12px;} .import-steps {grid-template-columns:1fr;} .brand small {display:none;} .quiet-link {display:none;} .header-links {gap:12px;} .header-links a {font-size:12px;} .brand {font-size:14px;gap:8px;} .brand-symbol {width:32px;height:32px;} .header-links .button {padding:7px 10px;min-height:36px;} }
 @media(max-width:480px) {.header-links a[href$="timetable.html"] {display:none;} .exam-preview {grid-template-columns:1fr;} .list-toolbar {gap:10px;} .list-toolbar label {flex:1;} .list-meta {align-items:flex-start;} .panel {padding:17px;} .finder {padding:22px;} .auth-links {flex-direction:column;} }

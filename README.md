@@ -9,10 +9,12 @@ This is the separate interactive familiarization copy hosted on Cloudflare Pages
 - Public seat lookup example: `CSE26Y1A001`
 - Open User guide for practice steps. Reset sample data restores the original 240 fictional students, 480 enrollments, 24 exams and 480 seat assignments.
 
+The current copy includes the completed planning modules: faculty availability, teaching/course conflicts, workload-balanced invigilation, manual reassignment, duty acceptance/decline, readiness/conflict views, reports and notifications. Four report types download as PDF or CSV. Actual SMTP delivery remains in the Java application.
+
 All accounts and data changes in this copy are simulated and stored in the current browser. Use fictional records and demo passwords. Clearing browser storage removes practice changes. Members do not share their practice data.
 
-`engine.js` implements the training rules and data operations; `runtime.js` connects the existing page controllers to browser storage and simulated sessions. `guide.html` and `demo.css` contain the training help and controls. The remaining UI files are generated from the real webapp by `python scripts/build-pages-demo.py`.
+`engine.js` implements the earlier academic/seating operations and `planning-engine.js` adds the remaining planning/reporting operations; `runtime.js` connects the existing page controllers to browser storage and simulated sessions. `guide.html` and `demo.css` contain the training help and controls. The remaining UI files are generated from the real webapp by `python scripts/build-pages-demo.py`.
 
-Preview: `python -m http.server 33081 --bind 127.0.0.1`, then open `/demo/`. Check the simulator with `node scripts/test-pages-demo.mjs`.
+Preview: `python -m http.server 33081 --bind 127.0.0.1`, then open `/demo/`. The remaining modules are supplied for manual evaluation; historical simulator tests do not establish verification of these additions.
 
 Rebuild and publish using `wrangler pages deploy demo --project-name exam-seating-planner --branch main` from the repository root. Wrangler uses the existing Cloudflare account login; no token is stored in the project. The production branch for the Pages project is `main`. The existing GitHub Pages copy can also be updated by publishing this directory to the root of `gh-pages`. No Java, SQL, credentials for real services, compiled files or member ZIPs belong in the Pages output.

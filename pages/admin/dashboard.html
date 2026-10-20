@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#203646"><title>Dashboard | Exam Planner</title>
-  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261004-ui3">
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261004-ui3"><link rel="stylesheet" href="../../assets/css/ui.css?v=20261018-full1">
   <link rel="stylesheet" href="../../demo.css?v=1">
 </head>
 <body data-shell="admin" data-resource="dashboard" data-student-page="">
@@ -17,10 +17,11 @@
 <nav class="quick-links" aria-label="Quick actions"><a href="students.html?new=1">Add a student</a><a href="exams.html?new=1">Create an exam</a><a href="seating.html">Review seating</a><a href="import-students.html">Import a CSV</a></nav>
 <section class="panel"><div class="panel-heading"><h2>Student counts</h2><span class="muted">Student counts by academic-year placement</span></div><label class="search-field">Search department or division<input id="dashboardSearch" type="search" placeholder="Search CSE, SY or division A…" autocomplete="off"></label><p class="helper-text" id="countSummary" role="status"></p><h3>By department and study year</h3><div class="table-wrap"><table><thead><tr><th scope="col">Department / study year</th><th scope="col">Students</th></tr></thead><tbody id="yearCounts"></tbody></table></div>
 <details class="editor" open><summary>Division breakdown</summary><div class="editor-body table-wrap"><table><thead><tr><th>Department</th><th>Study year</th><th>Division</th><th>Students</th></tr></thead><tbody id="divisionCounts"></tbody></table></div></details></section>
+<section class="panel"><div class="panel-heading"><h2>Examination planning</h2><a href="conflicts.html">Conflicts and readiness</a></div><p id="operationsMessage" role="status" hidden></p><div class="cards" id="operationSummary"></div><nav class="quick-links"><a href="invigilation.html">Invigilation duties</a><a href="availability.html">Faculty availability</a><a href="reports.html">Download reports</a><a href="notifications.html">Notifications</a></nav><div class="table-wrap"><table><thead><tr><th>Exam</th><th>Date</th><th>Status</th><th>Readiness</th><th>Action</th></tr></thead><tbody id="examReadiness"></tbody></table></div><details class="editor"><summary>Faculty workload</summary><div class="editor-body table-wrap"><table><thead><tr><th>Employee code</th><th>Faculty</th><th>Duties</th><th>Minutes</th><th>Pending confirmations</th></tr></thead><tbody id="facultyWorkload"></tbody></table></div></details></section>
   </main>
   </div>
-  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../engine.js?v=1"></script><script src="../../runtime.js?v=3"></script><script src="../../assets/js/app-ui.js?v=20261013-guide4"></script>
+  <script src="../../assets/js/api.js?v=20261004-ui3"></script><script src="../../engine.js?v=1"></script><script src="../../planning-engine.js?v=20261018-full1"></script><script src="../../runtime.js?v=20261018-full1"></script><script src="../../assets/js/app-ui.js?v=20261018-full1"></script>
   <script src="../../assets/js/guard.js?v=20261004-ui3"></script>
-  <script src="../../assets/js/admin.js?v=20261004-ui3"></script>
+  <script src="../../assets/js/admin.js?v=20261018-full1"></script>
 </body>
 </html>

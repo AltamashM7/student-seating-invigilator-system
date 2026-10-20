@@ -9129,5 +9129,195 @@
   "assignments": [],
   "history": [],
   "revision": 0,
-  "schemaVersion": 1
+  "schemaVersion": 1,
+  "dutyRules": {
+    "restMinutes": 30,
+    "studentsPerInvigilator": 30,
+    "avoidOwnDepartment": false
+  },
+  "dutySettings": [
+    {
+      "facultyId": 1,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 2,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 3,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 4,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 9,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 10,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 11,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 12,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 5,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 6,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 7,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    },
+    {
+      "facultyId": 8,
+      "available": true,
+      "maxDaily": 2,
+      "maxTotal": 20
+    }
+  ],
+  "courseConflicts": [
+    {
+      "facultyId": 1,
+      "courseId": 1
+    },
+    {
+      "facultyId": 1,
+      "courseId": 2
+    },
+    {
+      "facultyId": 1,
+      "courseId": 25
+    },
+    {
+      "facultyId": 1,
+      "courseId": 26
+    },
+    {
+      "facultyId": 2,
+      "courseId": 3
+    },
+    {
+      "facultyId": 2,
+      "courseId": 4
+    },
+    {
+      "facultyId": 3,
+      "courseId": 5
+    },
+    {
+      "facultyId": 3,
+      "courseId": 6
+    },
+    {
+      "facultyId": 4,
+      "courseId": 7
+    },
+    {
+      "facultyId": 4,
+      "courseId": 8
+    },
+    {
+      "facultyId": 9,
+      "courseId": 17
+    },
+    {
+      "facultyId": 9,
+      "courseId": 18
+    },
+    {
+      "facultyId": 10,
+      "courseId": 19
+    },
+    {
+      "facultyId": 10,
+      "courseId": 20
+    },
+    {
+      "facultyId": 11,
+      "courseId": 21
+    },
+    {
+      "facultyId": 11,
+      "courseId": 22
+    },
+    {
+      "facultyId": 12,
+      "courseId": 23
+    },
+    {
+      "facultyId": 12,
+      "courseId": 24
+    },
+    {
+      "facultyId": 5,
+      "courseId": 9
+    },
+    {
+      "facultyId": 5,
+      "courseId": 10
+    },
+    {
+      "facultyId": 6,
+      "courseId": 11
+    },
+    {
+      "facultyId": 6,
+      "courseId": 12
+    },
+    {
+      "facultyId": 7,
+      "courseId": 13
+    },
+    {
+      "facultyId": 7,
+      "courseId": 14
+    },
+    {
+      "facultyId": 8,
+      "courseId": 15
+    },
+    {
+      "facultyId": 8,
+      "courseId": 16
+    }
+  ],
+  "unavailability": [],
+  "duties": [],
+  "dutyHistory": [],
+  "notifications": [],
+  "dutyCounter": 0
 }

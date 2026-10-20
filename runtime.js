@@ -85,6 +85,11 @@
       return result;
     });
   };
+  window.DemoDownload = async function(url) {
+    const target = new URL(url, location.href);
+    const result = await apiRequest(url);
+    return window.DemoReportBlob(result.report, target.searchParams.get('format'));
+  };
   function init() {
     const bar = document.createElement('aside');
     bar.className = 'demo-bar';bar.setAttribute('aria-label', 'Team demo controls');
