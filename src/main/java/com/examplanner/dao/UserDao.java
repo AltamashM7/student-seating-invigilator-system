@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class UserDao {
+    public void upgradePassword(int user,String previous,String upgraded) throws SQLException {
+        try(Connection c=DbConnection.getConnection();PreparedStatement s=c.prepareStatement("UPDATE users SET password_hash=? WHERE id=? AND password_hash=?")){
+            s.setString(1,upgraded);s.setInt(2,user);s.setString(3,previous);s.executeUpdate();
+        }
+    }
     public User findByUsername(String username) throws SQLException {
         String sql = """
                 SELECT u.id, u.username, u.password_hash, u.role,

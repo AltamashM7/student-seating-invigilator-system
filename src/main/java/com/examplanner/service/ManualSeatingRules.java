@@ -37,12 +37,12 @@ public class ManualSeatingRules {
         if (occupant != null && !swap) throw new IllegalArgumentException("Target seat is occupied; choose Swap");
         if (occupant == null && swap) throw new IllegalArgumentException("Swap requires an occupied target seat");
         Map<Integer,Integer> result = new LinkedHashMap<>();
-        result.put(studentId, targetSeatId);
+        result.put(studentId, targetSeatId); //A gets B's seat
         if (occupant != null) {
             Student other = roster.get(occupant);
             if (other == null || !allocator.eligible(other, oldSeat, spaced))
                 throw new IllegalArgumentException("Swap would violate enrollment, spacing or the other student's accommodation requirement");
-            result.put(occupant, oldSeatId);
+            result.put(occupant, oldSeatId); //B gets A's seat
         }
         return result;
     }

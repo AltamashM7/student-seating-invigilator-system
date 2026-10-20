@@ -25,18 +25,19 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (ValidationUtil.isBlank(username) || ValidationUtil.isBlank(password)) {
+        if (ValidationUtil.isBlank(username) || ValidationUtil.isBlank(password) || username.length()>50 || password.length()>256) {
             JsonUtil.send(response, 400, JsonUtil.message("error", "Username and password are required"));
             return;
         }
 
         try {
             User user = userDao.findByUsername(username.trim());
-            if (user == null || !PasswordUtil.hash(password).equals(user.getPasswordHash())) {
+            if (user == null || !PasswordUtil.verify(password,user.getPasswordHash())) {
                 JsonUtil.send(response, 401, JsonUtil.message("error", "Invalid username or password"));
                 return;
             }
 
+            if(PasswordUtil.needsUpgrade(user.getPasswordHash()))userDao.upgradePassword(user.getId(),user.getPasswordHash(),PasswordUtil.hash(password));
             HttpSession oldSession = request.getSession(false);
             if (oldSession != null) {
                 oldSession.invalidate();

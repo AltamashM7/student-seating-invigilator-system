@@ -31,6 +31,10 @@ seed['users']=[{'id':1,'username':'admin','password':'Admin@123','role':'ADMIN',
 for f in seed['faculty']:
     seed['users'].append({'id':f['userId'],'username':f['username'],'password':'Faculty@123','role':'FACULTY','name':f['name'],'email':f['email']})
 seed.update(assignments=[],history=[],revision=0,schemaVersion=1)
+seed['dutyRules']={'restMinutes':30,'studentsPerInvigilator':30,'avoidOwnDepartment':False}
+seed['dutySettings']=[{'facultyId':f['id'],'available':True,'maxDaily':2,'maxTotal':20} for f in seed['faculty']]
+seed['courseConflicts']=[{'facultyId':f['id'],'courseId':c['id']} for f in seed['faculty'] for c in seed['courses'] if c['departmentId']==f['departmentId'] and c['studyYear']==int(f['employeeCode'][-1])]
+seed.update(unavailability=[],duties=[],dutyHistory=[],notifications=[],dutyCounter=0)
 assert len(seed['enrollments'])==480
 assert all(not s.get('email') or s['email'].endswith('@example.test') for s in seed['students'])
 out=root/'demo/assets/data/demo-seed.json'

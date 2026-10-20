@@ -1,7 +1,8 @@
 # Core Requirements: Exam Seating and Invigilation Planner
 
-**Scope:** accepted S1–S6 requirements plus the Sprint 7 seating refinement issue  
-**Last updated:** 13 October 2026
+**Scope:** complete functional project, including accepted seating refinements and the remaining invigilation, conflict, reporting and notification modules
+
+**Last updated:** 18 October 2026
 
 ## 1. Purpose
 
@@ -12,7 +13,7 @@ This document describes the accepted current scope. The earlier [S1–S4 scope](
 ## 2. Users
 
 - **Administrator:** manages academic records, accounts, rooms, courses, enrollments, exams and seating.
-- **Faculty:** signs in and views examination information available to faculty.
+- **Faculty:** signs in, records unavailable times, views their own duties, accepts or declines scheduled duties, reads notifications and downloads their duty list.
 - **Student/public user:** views the published timetable and searches published seating by roll number and academic year. A student account is not required.
 
 ## 3. Functional requirements
@@ -86,15 +87,50 @@ This document describes the accepted current scope. The earlier [S1–S4 scope](
 - Students can search and view the public examination timetable and print their seating details.
 - Administrative screens provide navigation, search, filters or pagination where appropriate, and clear feedback for successful or rejected actions.
 
+### FR-10. Invigilation allocation
+
+- Administrators manage faculty eligibility, unavailable intervals, teaching/course conflicts and daily/academic-year workload limits.
+- Automatic allocation covers each occupied room according to the configurable students-per-invigilator ratio, respecting availability, course conflicts, rest gaps and workload limits.
+- Allocation favors lower assigned minutes and then lower duty counts. It previews a complete plan before saving and preserves accepted/manual duties by default.
+- Each faculty member can supervise only one room in an exam. Invalid or stale plans save nothing.
+
+### FR-11. Duty reassignment and response
+
+- Administrators preview and confirm a replacement with a reason. Reassignment resets the duty to pending.
+- Faculty see only their own published duties and can accept or decline scheduled duties. A decline requires a reason and alerts administrators.
+- Duty changes and responses retain history. Completed and cancelled plans remain read-only; draft/cancelled duties can be cleared while retaining history.
+
+### FR-12. System-wide conflicts and readiness
+
+- Administrators can review room/student/faculty overlaps, missing or invalid seating, capacity, spacing, accessibility, rest gaps, workload, unavailable faculty, teaching conflicts and missing/pending/declined duties.
+- Cross-year timetable conflicts are considered. A scheduled exam is ready only when no errors or confirmation warnings remain.
+- Dashboard operational totals include exam states, seating assignments, readiness, faculty duty counts/minutes and unread notifications.
+
+### FR-13. Reports
+
+- Administrators can export room-wise seating, student-wise seating, faculty duties and examination schedules as paginated PDF or UTF-8 CSV.
+- Reports support academic-year and exam filters, with room filters for seating and schedules. Faculty exports contain only their own duties.
+- PDF uses standard Western fonts. CSV retains the complete original Unicode text.
+
+### FR-14. Notifications
+
+- Staff have an in-app notification center with read/unread controls. Duty changes/responses and exam publication/cancellation create notices.
+- Student publication/cancellation notices can be queued to their recorded email addresses without requiring student accounts.
+- A persistent SMTP outbox exposes queued, disabled, sent and failed states. Delivery/retries are explicit administrator actions and require SMTP configuration.
+
 ## 4. Data and operational requirements
 
 - The application uses Java Servlets, JDBC and MySQL, with HTML, CSS and JavaScript in the browser.
 - Admin changes that must be atomic either complete together or leave the prior data intact.
 - Invalid and conflicting requests return controlled errors. Server-side validation is authoritative.
 - Demonstration data is fictional. The evaluation dataset includes at least 50 students; the prepared demo contains 240 students across three departments, with academic-year placements, divisions, enrollments, rooms, exams and accommodation cases.
-- Invigilator duty allocation, workload balancing, notifications and report exports are outside this S1–S7 release. The separate team browser demo uses simulated accounts and browser-local data; it does not replace the Java application.
+- The separate team browser demo uses simulated accounts and browser-local data. It includes the functional planning screens and local report downloads, while actual SMTP email belongs to the Java application.
+- New features are implemented for user-led manual evaluation. Existing KPI evidence is historical; this delivery does not claim new test or KPI results.
 
 ## 5. Related specifications and evidence
+
+- [Remaining project scope and rules](full-project-scope.md)
+- [Complete project user guide](../implementation/complete-project-guide.md)
 
 - [Accepted S5–S6 scope and evaluator acceptance](s5-s6-scope.md)
 - [Sprint 7 manual overrides, accommodation and regeneration](s7-scope.md)

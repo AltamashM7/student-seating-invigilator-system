@@ -30,7 +30,9 @@ public class ExamDao {
                 String next=Input.text(r,"status",20),current=old.get("status").toString();
                 if(!allowedTransition(current,next)) throw new IllegalArgumentException("Invalid state transition from "+current+" to "+next);
                 if("SCHEDULED".equals(next)) validateConflicts(c,id,Sql.number(old,"course_id"),Sql.number(old,"academic_year_id"),old.get("exam_date"),old.get("start_time"),old.get("end_time"),roomIds(c,id));
-                Sql.update(c,"UPDATE examinations SET status=? WHERE id=?",next,id); return id;
+                Sql.update(c,"UPDATE examinations SET status=? WHERE id=?",next,id);
+                if(!current.equals(next)) NotificationDao.examStatus(c,id,next);
+                return id;
             }
             int course=Input.id(r,"courseId"),year=Input.id(r,"academicYearId");
             LocalDate date; LocalTime start,end;
@@ -53,6 +55,7 @@ public class ExamDao {
             if(id==0) saved=Sql.insert(c,"INSERT INTO examinations(course_id,academic_year_id,exam_date,start_time,end_time,status,spacing_required) VALUES (?,?,?,?,?,?,?)",args);
             else { Object[] update=Arrays.copyOf(args,8); update[7]=id; Sql.update(c,"UPDATE examinations SET course_id=?,academic_year_id=?,exam_date=?,start_time=?,end_time=?,status=?,spacing_required=? WHERE id=?",update); Sql.update(c,"DELETE FROM examination_rooms WHERE examination_id=?",id); saved=id; }
             for(int room:rooms) Sql.update(c,"INSERT INTO examination_rooms VALUES (?,?)",saved,room);
+            if("SCHEDULED".equals(status)) NotificationDao.examStatus(c,saved,status);
             return saved;
         });
     }

@@ -31,7 +31,7 @@ async function refresh() {
     academicYearId = snapshot.selectedYearId;
     node('academicYear').innerHTML = snapshot.years.map(y=>`<option value="${y.id}">${esc(y.label)}${y.isCurrent?' (current)':''}</option>`).join('');
     node('academicYear').value = academicYearId;
-    if (resource==='dashboard') { renderDashboard(); return; }
+    if (resource==='dashboard') { renderDashboard(); await renderOperations(); return; }
     if (node('departmentFilter')) {
         const selected=node('departmentFilter').value;
         node('departmentFilter').innerHTML='<option value="">All departments</option>'+snapshot.departments.map(d=>`<option value="${d.id}">${esc(d.code)}</option>`).join('');
@@ -48,6 +48,15 @@ function renderDashboard() {
     node('yearCounts').innerHTML=years.map(r=>`<tr><td>${esc(r.department)} / ${AppUI.studyYear(r.studyYear)}</td><td>${r.studentCount}</td></tr>`).join('')||'<tr><td colspan="2">No matching department-year groups.</td></tr>';
     node('divisionCounts').innerHTML=divisions.map(r=>`<tr><td>${esc(r.department)}</td><td>${AppUI.studyYear(r.studyYear)}</td><td>${esc(r.division)}</td><td>${r.studentCount}</td></tr>`).join('')||'<tr><td colspan="4">No matching divisions.</td></tr>';
     node('countSummary').textContent=`${years.length} department-year groups · ${divisions.length} divisions`;
+}
+async function renderOperations() {
+    try {
+        const data=await apiRequest(AppUI.url(`api/admin/statistics?academicYearId=${academicYearId}`));
+        node('operationSummary').innerHTML=[['Scheduled exams',data.totals.scheduled||0],['Seating assignments',data.seatingAssignments],['Ready exams',data.readiness.filter(e=>e.readiness==='READY').length],['Planning errors',data.errors],['Warnings',data.warnings],['Unread notices',data.unreadNotifications]].map(([title,value])=>`<article class="card"><p>${esc(title)}</p><h2>${value}</h2></article>`).join('');
+        node('facultyWorkload').innerHTML=data.workload.map(f=>`<tr><td>${esc(f.employeeCode)}</td><td>${esc(f.name)}</td><td>${f.duties}</td><td>${f.minutes}</td><td>${f.pending}</td></tr>`).join('')||'<tr><td colspan="5">No faculty records.</td></tr>';
+        node('examReadiness').innerHTML=data.readiness.map(e=>`<tr><td>${esc(e.courseCode)}</td><td>${esc(AppUI.date(e.examDate))}</td><td>${AppUI.badge(e.status)}</td><td>${AppUI.badge(e.readiness)}</td><td><a href="conflicts.html?academicYearId=${academicYearId}&examId=${e.id}">Review</a></td></tr>`).join('')||'<tr><td colspan="5">No examinations.</td></tr>';
+        AppUI.message(node('operationsMessage'),'');
+    } catch(error) {AppUI.message(node('operationsMessage'),error.message);}
 }
 function renderFields() {
     editingId=0;

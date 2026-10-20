@@ -1,5 +1,10 @@
 # KPI verification
 
+## Remaining project implementation - 18 October 2026
+
+Invigilation, reassignment/response, conflict overview, reports, notifications and final integration were added after the verification results below. Website testing and KPI verification for these changes are intentionally left to the user. Do not treat the historical S1-S7 results as verification of the new modules.
+
+
 ## Sprint 7 reviewed implementation — 13 October 2026
 
 Scope: the user's quoted manual-override/accommodation/regeneration issue, documented in `docs/requirements/s7-scope.md`. The earlier master plan assigns this work a different sprint number; invigilator allocation is not part of this issue.

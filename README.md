@@ -1,109 +1,116 @@
 # Exam Seating and Invigilation Planner
 
-Evaluation release covering S1-S6 plus the user's Sprint 7 seating refinement issue: academic administration, CSV enrollment, exam scheduling, accessible-seat priority, accommodation tagging, reviewed manual overrides and regeneration.
+A college examination-management application built with Java Servlets, JDBC, MySQL and plain HTML/CSS/JavaScript. It includes the accepted seating refinements and the remaining functional work from the ten-sprint master plan.
 
-Sprint 7 adds accommodation changes across active generated exam plans, a seat-change preview, explicit manual-replacement acknowledgement and rejection of stale reviewed operations. Scope and workflow are documented in `docs/requirements/s7-scope.md`. The earlier master plan labels the same seating work S6; this release follows the user's quoted S7 issue.
+## Features
+
+- Academic years, departments, FY/SY/TY/BE divisions, student placements, courses, enrollments, faculty and rooms.
+- CSV import with previews, duplicate detection and row errors.
+- Exam scheduling, state changes, room/student clash prevention and a public timetable.
+- Student seating lookup, deterministic allocation, accessible-seat priority, spacing, manual moves/swaps, accommodation updates and regeneration previews.
+- Faculty availability, teaching/course exclusions, rest gaps, workload limits and invigilator allocation with least-loaded selection and bounded backtracking.
+- Duty previews, manual reassignment, faculty accept/decline, retained history and readiness/conflict views.
+- Room-wise seating, student-wise seating, faculty duties and exam schedules in PDF or CSV.
+- In-app notifications, a configurable SMTP email outbox and operational dashboard totals.
+- Salted PBKDF2 passwords with legacy login upgrades, role restrictions and same-origin write safeguards.
 
 ## Stack
-- Java 17
-- Core Java Servlets
-- JDBC
-- MySQL
-- HTML5, CSS and vanilla JavaScript
-- Apache Tomcat 10.1+
 
-## Database setup
+Java 17+, Core Java Servlets, JDBC, MySQL 8, HTML5/CSS/vanilla JavaScript, Maven and Apache Tomcat 10.1+. Algorithms and the simple PDF writer use the JDK; no scheduling framework or external email API is used.
+
+## Run on this Windows laptop
+
+Open PowerShell in the project folder:
+
+```powershell
+.\scripts\start-local-demo.ps1 -Offline
+```
+
+The script starts the isolated local services, applies the remaining database migration when needed, retains existing records and packages with tests skipped. Remove `-Offline` on a machine that needs Maven dependency downloads. Pass `-MysqlHome`, `-TomcatHome` or `-JavaHome` if the installed locations differ.
+
+Open **http://127.0.0.1:33080/exam-seating/**.
+
+- Administrator: `admin` / `Admin@123`
+- Faculty example: `cse.faculty1` / `Faculty@123`
+
+These are fictional demonstration accounts; locally changed credentials remain changed. The student portal is the default page, with **Staff login** in the corner. Try roll number `CSE26Y1A001` in academic year `2026-27` for published seating.
+
+The disposable MySQL server uses loopback port 33307. Existing host services on ports 3306/8080 are not replaced. Data/logs remain in `.local-runtime/`.
+
+## Set up another installation
+
+Fresh database:
+
 ```bash
 mysql -u root -p < database/schema.sql
 mysql -u root -p < database/seed.sql
+# Optional fictional demonstration data:
+mysql -u root -p < database/demo-data.sql
 ```
 
-The default admin account is:
-- username: `admin`
-- password: `Admin@123`
+Existing S1-S7 database: back it up, stop the old application and apply **only**:
 
-Change it after the first login.
-
-## Database connection
-The application reads these environment variables when present:
-- `DB_URL`
-- `DB_USER`
-- `DB_PASSWORD`
-
-Defaults are suitable for a local MySQL installation using database `exam_seating`, user `root`, and an empty password.
-
-## Build
 ```bash
-mvn clean package
+mysql -u root -p < database/migrations/002_complete_project.sql
 ```
 
-Deploy `target/exam-seating.war` to Tomcat and open:
+On Windows PowerShell, use `Get-Content -Raw database/migrations/002_complete_project.sql | mysql -u root -p`. The isolated startup script applies this upgrade automatically. For an original S1-S4 database, apply migration 001 before 002. Do not reload the fresh schema over existing records.
 
-`http://localhost:8080/exam-seating/`
+Configure `DB_URL`, `DB_USER` and `DB_PASSWORD` for the Tomcat process. The default database is `exam_seating` on local MySQL. Use a dedicated account and password for deployment.
 
-## Isolated Windows demo
-
-Install Java 17+, Maven, MySQL 8 and Tomcat 10.1. Override the installed paths as necessary:
-
-```powershell
-.\scripts\start-local-demo.ps1 -MysqlHome 'C:\Program Files\MySQL\MySQL Server 8.0' -TomcatHome 'C:\Tools\apache-tomcat-10.1.60' -JavaHome 'C:\Program Files\Java\jdk-25'
-python scripts/prepare-demo.py --confirm-demo
+```bash
+mvn -Dmaven.test.skip=true clean package
 ```
 
-Open **http://127.0.0.1:33080/exam-seating/**. Admin: `admin` / `Admin@123`. Faculty example: `cse.faculty1` / `Faculty@123`. These are fictional demonstration accounts. MySQL binds to loopback port 33307, with an empty root password, for the disposable demo only. Existing host services on port 3306/8080 are unchanged.
+Deploy `target/exam-seating.war` to Tomcat. The normal installation URL is `http://localhost:8080/exam-seating/`.
 
-The student portal is the default landing page. **Staff login** in the corner opens `login.html`. Try `CSE26Y1A001` (Atharva Kulkarni) to find published seating. Students can search upcoming exams and the timetable, and print seating results. Staff pages provide grouped responsive navigation, searchable/paged lists, department/year filters, clear save feedback and collapsible editing/advanced controls. The palette uses navy, slate and muted teal.
+## Invigilation workflow
 
-Data/logs are stored in `.local-runtime/`. The script refuses an unrelated server on its ports. Maven uses the cache under `.local-runtime/m2`; `-Offline` avoids dependency downloads when this cache is ready. Other machines populate the cache through normal Maven downloads. Maven targets Java 17 even with a newer JDK.
+1. Create the exam and generate complete seating.
+2. In **Faculty Availability**, configure eligibility, unavailable periods, workload limits and teaching/course conflicts.
+3. In **Invigilation**, select an exam/year, review the proposed allocation, enter a reason and confirm.
+4. Publish the exam. Faculty log in to see assigned rooms and accept/decline scheduled duties.
+5. Reassign declined duties and use **Conflicts & Readiness** to review outstanding issues.
+6. Download reports or read notifications from the navigation.
 
-```powershell
-.\scripts\reset-local-demo.ps1 -ConfirmDisposable
-python scripts/prepare-demo.py --confirm-demo
-.\scripts\stop-local-demo.ps1
+Default rules: 30 minutes between duties, one invigilator per 30 seated students per occupied room, two duties per faculty per day and twenty per academic year. These are configurable project decisions. Accepted/manual duties remain in place unless replacement is explicitly acknowledged. A faculty member who declined an exam is excluded from its automatic regeneration.
+
+## Email
+
+In-app notifications work without an email server. Actual email needs `SMTP_HOST`, `SMTP_FROM`, and the provider's `SMTP_PORT`, `SMTP_MODE`, `SMTP_USERNAME` and `SMTP_PASSWORD`. STARTTLS and implicit TLS are supported. Restart Tomcat after configuration.
+
+Administrators send queued messages from **Notifications**. Disabled/failed entries can be queued again. A Sent status means SMTP accepted the message, not that inbox delivery was verified. The browser training copy never sends real email. See [deployment notes](docs/implementation/deployment.md).
+
+## Fictional data and CSV
+
+The prepared dataset contains 240 students, 26 courses, 24 divisions, 12 faculty, 8 rooms, 480 enrollments and 24 exams. Fresh demo data includes example faculty/course conflict links. Names are fictional and email addresses use `example.test`.
+
+Use **CSV Import → Download evaluator sample**, or `database/evaluator-import.csv`. The 24 rows enroll twelve new students in CSE103 and CSE104. The page previews the file before import. `database/student_import_template.csv` is the format example.
+
+To prepare a newly loaded disposable dataset's seating/publication examples, run `python scripts/prepare-demo.py --confirm-demo`. This generates seating and changes exam publication states. Do not use reset/preparation scripts on a production database.
+
+## Browser training copy
+
+```bash
+python -m http.server 33081 --bind 127.0.0.1
 ```
 
-Reset replaces only this workspace's disposable database. Prepare generates 480 assignments and publishes 23 exams, leaving CSE102 as a draft demonstration. Stop gracefully stops only these local services and retains data.
+Open `http://127.0.0.1:33081/demo/`. This separate JavaScript model stores practice changes in each browser and includes the new planning, duty response, notification and report screens. It does not replace Java/MySQL. **Reset sample data** restores the fictional records.
 
-## Evaluator CSV demonstration
+Regenerate its UI after source changes with `python scripts/build-pages-demo.py`. The complete source and updated browser copy are published in this repository. The browser version is available at **https://exam-seating-planner.pages.dev/**. Source changes require a separate deployment to update the hosted copy.
 
-The fictional dataset has 240 students, 26 courses, 24 divisions, 12 faculty, 8 rooms, 480 enrollments and 24 exams. Student/faculty names exclude the requested surname; addresses use example.test.
+## Documentation
 
-Use **CSV Import → Download evaluator sample**, or `database/evaluator-import.csv`. Its 24 rows add 12 fictional students, each enrolled in CSE103 and CSE104, workshops without published seating. The preview displays the header and first six rows. On the clean demo, import reports **12 new students, 12 additional enrollments, 0 duplicates, 0 invalid rows**. Re-import reports 24 duplicates. `database/student_import_template.csv` is the separate format example. Restore the clean demo after presenting using reset and prepare above.
+- [Complete project guide](docs/implementation/complete-project-guide.md)
+- [Deployment and SMTP](docs/implementation/deployment.md)
+- [Core requirements](docs/requirements/core-requirements.md)
+- [Remaining project scope and rules](docs/requirements/full-project-scope.md)
+- [Invigilator algorithm](docs/algorithms/invigilator-allocation.md)
+- [ER diagram](docs/diagrams/er-diagram.md)
+- [Project report](docs/evaluation/final-project-report.md)
 
-## Upgrade an existing database
+## Evaluation status
 
-Fresh database: schema, seed, optional demo-data SQL in that order. In Windows PowerShell use `Get-Content -Raw database/schema.sql | mysql --user=YOUR_USER --password`, repeating for the next files. SQL uses database name `exam_seating`.
+The remaining features were implemented on 18 October 2026 for user-led manual testing. Website tests, KPI verification, PDF rendering verification, live email delivery checks and production deployment have not been performed for these changes. Packaging with tests skipped checks compilation/package creation only.
 
-For the original S1-S4 database, back it up, stop the old application and run **only** `database/migrations/001_s1_s6_upgrade.sql` once. Do not run the full schema or fictional data over existing records. The upgrade preserves records and assigns 2026-27/division A, deriving study year from semester. Review those placements/accessibility flags. DDL is not a rollback transaction; restore the backup on failure. The migration targets the original schema, not an already upgraded database.
-
-## Team browser demo
-
-The interactive training copy is available at **https://exam-seating-planner.pages.dev/**. It uses the current interface with a separate JavaScript simulator under `demo/`. Sample changes are stored in each browser; the demo login is simulated. The real Java/Tomcat/MySQL application above remains the project implementation.
-
-Demo accounts: `admin` / `Admin@123`, or `cse.faculty1` / `Faculty@123`. Open **User guide** for practice steps. **Reset sample data** restores the original fictional records and accounts. Use fictional data and demo passwords.
-
-To preview locally, run `python -m http.server 33081 --bind 127.0.0.1` from the repository root and open `http://127.0.0.1:33081/demo/`. After changing the webapp UI, run `python scripts/build-pages-demo.py`. Run `node scripts/test-pages-demo.mjs` to check the simulator. Publish with `wrangler pages deploy demo --project-name exam-seating-planner --branch main`. The existing GitHub Pages copy uses the contents of `demo/` on the `gh-pages` branch, configured as the Pages source at `/`.
-
-## Verification
-
-For the focused Sprint 7 checks, build first, start the isolated local demo database, then run `scripts/test-algorithm.ps1` and `scripts/test-sprint7.ps1 -ConfirmDisposable`. The second command creates a separate test application/database, saves API evidence and removes its test database afterwards. It does not reset the normal demo. `docs/testing/kpi-report.md` contains the executed results.
-
-Existing ZIPs in `handoff` are the earlier S1-S6 delivery. They have not been refreshed for Sprint 7; the current release is the local repository source.
-
-```powershell
-mvn clean package
-.\scripts\test-algorithm.ps1
-# Only against freshly reset disposable data; this test changes/adds records:
-python scripts/test-integration.py --confirm-disposable
-# Restore presentation data afterwards:
-.\scripts\reset-local-demo.ps1 -ConfirmDisposable
-python scripts/prepare-demo.py --confirm-demo
-```
-
-Maven packaging alone does not invoke the pure Java algorithm runner. See [KPI evidence](docs/testing/kpi-report.md), [current rules](docs/implementation/current-rules.md), [user walkthrough](docs/implementation/user-guide.md).
-
-Recorded verification: 98 core API assertions, 32 focused Sprint 7 API assertions and 40 allocation/manual-rule checks passed. See [KPI evidence](docs/testing/kpi-report.md). The separate Pages simulator has its own functional checks; its results do not replace testing of the Java application.
-
-Original baseline: `973df5d7005961e57b31583b6b7808d411b12e6e`. The current S1-S7 source is published with the repository's existing member commits retained. The earlier twelve-member ZIP distribution was for S1-S6 and has not been regenerated for this release. Historical S1-S4 documents describe the first evaluation; current rules describe this release.
-
-Invigilator duty allocation, workload balancing, notifications and report exports belong to later sprints. Faculty administration exists. Password hashing retains the baseline SHA-256 approach and does not claim production security hardening.
+[Historical KPI evidence](docs/testing/kpi-report.md) covers earlier S1-S7 work and must not be presented as verification of the new modules. Earlier member ZIPs and setup handouts are historical deliveries and have not been regenerated.

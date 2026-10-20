@@ -1357,3 +1357,9 @@ INSERT INTO examinations(course_id,academic_year_id,exam_date,start_time,end_tim
 INSERT INTO examination_rooms SELECT @exam,id FROM rooms WHERE room_number IN ('R101','R102');
 COMMIT;
 -- 240 students, 480 enrollments, 24 divisions, 26 courses (2 CSV workshops), 24 exams, 12 faculty, 8 rooms/240 seats.
+
+-- Example invigilation setup for the fictional demonstration faculty only.
+INSERT IGNORE INTO faculty_duty_settings(faculty_id,available,max_daily,max_total) SELECT id,TRUE,2,20 FROM faculty WHERE email LIKE '%@example.test';
+INSERT IGNORE INTO faculty_course_conflicts(faculty_id,course_id)
+SELECT f.id,c.id FROM faculty f JOIN courses c ON c.department_id=f.department_id AND c.study_year=CAST(RIGHT(f.employee_code,1) AS UNSIGNED)
+WHERE f.email LIKE '%@example.test';

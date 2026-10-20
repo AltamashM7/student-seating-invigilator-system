@@ -11,7 +11,7 @@ const AppUI = (() => {
     const adminGroups = [
         ['Overview', [['dashboard.html', 'Dashboard']]],
         ['Academic records', [['years.html', 'Academic Years'], ['departments.html', 'Departments'], ['divisions.html', 'Divisions'], ['students.html', 'Students'], ['enrollments.html', 'Enrollments'], ['faculty.html', 'Faculty'], ['rooms.html', 'Rooms'], ['courses.html', 'Courses']]],
-        ['Examinations', [['exams.html', 'Exams'], ['seating.html', 'Seating'], ['import-students.html', 'CSV Import']]],
+        ['Examinations', [['exams.html', 'Exams'], ['seating.html', 'Seating'], ['invigilation.html', 'Invigilation'], ['availability.html', 'Faculty Availability'], ['conflicts.html', 'Conflicts & Readiness'], ['reports.html', 'Reports'], ['notifications.html', 'Notifications'], ['import-students.html', 'CSV Import']]],
         ['Access', [['create-user.html', 'Admin Accounts']]]
     ];
     function initShell() {
@@ -29,7 +29,7 @@ const AppUI = (() => {
             navigation.id = 'appNavigation';
             navigation.className = 'app-navigation';
             navigation.setAttribute('aria-label', isAdmin ? 'Administration' : 'Faculty navigation');
-            const groups = isAdmin ? adminGroups : [['Faculty', [['dashboard.html', 'Dashboard']]]];
+            const groups = isAdmin ? adminGroups : [['Faculty', [['dashboard.html', 'Duty Schedule'], ['availability.html', 'Availability'], ['notifications.html', 'Notifications']]]];
             navigation.innerHTML = groups.map(([title, links]) => `<section class="nav-group"><h2>${title}</h2>${links.map(([path, label]) => `<a href="${url(`pages/${isAdmin ? 'admin' : 'faculty'}/${path}`)}" ${location.pathname.endsWith('/' + path) ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</section>`).join('') + `<section class="nav-group"><h2>Public pages</h2><a href="${url('pages/timetable.html')}">Timetable</a></section>`;
             const toggle = document.getElementById('menuToggle');
             const close = () => { document.body.classList.remove('navigation-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open navigation'); };
@@ -58,7 +58,7 @@ const AppUI = (() => {
     function time(value) {
         return value ? new Intl.DateTimeFormat('en-IN', { hour: 'numeric', minute: '2-digit' }).format(new Date('2000-01-01T' + value)) : '—';
     }
-    function badge(value) { return `<span class="status-badge status-${esc(String(value).toLowerCase())}">${esc(String(value).toLowerCase().replace(/^./, c => c.toUpperCase()))}</span>`; }
+    function badge(value) { return `<span class="status-badge status-${esc(String(value).toLowerCase())}">${esc(String(value).toLowerCase().replaceAll('_',' ').replace(/^./, c => c.toUpperCase()))}</span>`; }
     function studyYear(value) { return ['FY', 'SY', 'TY', 'BE'][Number(value) - 1] || '—'; }
     function searchableSelect(select, label) {
         if (select.multiple) return;
@@ -112,6 +112,18 @@ const AppUI = (() => {
         window.addEventListener('beforeunload', event => { if (changed) {event.preventDefault(); event.returnValue = '';} });
         return () => changed = false;
     }
+    async function download(path, filename) {
+        let blob;
+        if (window.DemoDownload) blob = await window.DemoDownload(url(path));
+        else {
+            const response = await fetch(url(path));
+            if (!response.ok) { const data = await response.json().catch(() => ({})); throw new Error(data.error || 'Report download failed'); }
+            blob = await response.blob();
+        }
+        const objectUrl = URL.createObjectURL(blob), link = document.createElement('a');
+        link.href = objectUrl; link.download = filename; document.body.append(link); link.click(); link.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 30000);
+    }
     initShell();
-    return {url, params, remember, busy, message, date, time, badge, studyYear, searchableSelect, list, dirty};
+    return {url, params, remember, busy, message, date, time, badge, studyYear, searchableSelect, list, dirty, download};
 })();

@@ -93,6 +93,8 @@ public class SeatingDao {
             checkRevision(data, expectedRevision);
             if (!Set.of("DRAFT","CANCELLED").contains(exam(data).get("status")))
                 throw new IllegalArgumentException("Only draft or cancelled seating can be cleared");
+            if(!Sql.rows(c,"SELECT id FROM invigilation_assignments WHERE examination_id=?",examId).isEmpty())
+                throw new IllegalArgumentException("Clear invigilation duties before clearing this seating plan");
             for (var assignment : assignments(data).entrySet())
                 history(c, examId, assignment.getKey(), "CLEAR", assignment.getValue(), null, actor, reason);
             Sql.update(c, "DELETE FROM seating_assignments WHERE examination_id=?", examId);

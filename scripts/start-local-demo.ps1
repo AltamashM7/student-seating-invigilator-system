@@ -2,7 +2,8 @@ param(
     [string]$MysqlHome = 'C:\Program Files\MySQL\MySQL Server 8.0',
     [string]$TomcatHome = 'C:\Tools\apache-tomcat-10.1.60',
     [string]$JavaHome = 'C:\Program Files\Java\jdk-25',
-    [switch]$Offline
+    [switch]$Offline,
+    [switch]$SkipBuild
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
@@ -37,13 +38,33 @@ if (!(Test-LocalDatabase)) {
 }
 $exists = & $mysql --no-defaults --host=127.0.0.1 --port=33307 --user=root --batch --skip-column-names --execute="SELECT COUNT(*) FROM information_schema.schemata WHERE schema_name='exam_seating'"
 if ($exists -eq '0') { & (Join-Path $PSScriptRoot 'reset-local-demo.ps1') -ConfirmDisposable -MysqlHome $MysqlHome }
+$migrationTable = & $mysql --no-defaults --host=127.0.0.1 --port=33307 --user=root --batch --skip-column-names --execute="SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='exam_seating' AND table_name='schema_migrations'"
+$upgradeRequired = $true
+if ($migrationTable -eq '1') {
+    $applied = & $mysql --no-defaults --host=127.0.0.1 --port=33307 --user=root --batch --skip-column-names --execute="SELECT COUNT(*) FROM exam_seating.schema_migrations WHERE version='002_complete_project'"
+    $upgradeRequired = $applied -ne '1'
+}
+if ($upgradeRequired) {
+    $dump = Join-Path $MysqlHome 'bin\mysqldump.exe'
+    $backup = Join-Path $runtimeRoot ("before-project-upgrade-" + (Get-Date -Format 'yyyyMMdd-HHmmss') + '.sql')
+    & $dump --no-defaults --host=127.0.0.1 --port=33307 --user=root --single-transaction --no-tablespaces "--result-file=$backup" --databases exam_seating
+    if ($LASTEXITCODE -ne 0) { throw 'Database backup failed. No upgrade was applied.' }
+    $OutputEncoding = [Text.UTF8Encoding]::new($false)
+    Get-Content -LiteralPath (Join-Path $projectRoot 'database\migrations\002_complete_project.sql') -Raw | & $mysql --no-defaults --host=127.0.0.1 --port=33307 --user=root --default-character-set=utf8mb4
+    if ($LASTEXITCODE -ne 0) { throw 'Project database upgrade failed; existing records were not reset. Inspect the MySQL error before restarting.' }
+    Write-Output 'Remaining project database modules installed; existing records retained.'
+}
+if (!$SkipBuild) {
 Push-Location $projectRoot
 try {
-    $buildArgs = @("-Dmaven.repo.local=$runtimeRoot\m2",'package')
-    if ($Offline) { $buildArgs=@('-o',"-Dmaven.repo.local=$runtimeRoot\m2",'package') }
+    $buildArgs = @("-Dmaven.repo.local=$runtimeRoot\m2",'-Dmaven.test.skip=true','package')
+    if ($Offline) { $buildArgs=@('-o',"-Dmaven.repo.local=$runtimeRoot\m2",'-Dmaven.test.skip=true','package') }
     & mvn @buildArgs
     if ($LASTEXITCODE -ne 0) { throw 'Maven build failed' }
 } finally { Pop-Location }
+} elseif (!(Test-Path -LiteralPath (Join-Path $projectRoot 'target\exam-seating.war'))) {
+    throw 'Build the project before using -SkipBuild.'
+}
 foreach ($directory in @('conf','logs','temp','webapps','work')) { New-Item -ItemType Directory -Path (Join-Path $tomcatBase $directory) -Force | Out-Null }
 if (!(Test-Path -LiteralPath (Join-Path $tomcatBase 'conf\server.xml'))) {
     Copy-Item -Path (Join-Path $TomcatHome 'conf\*') -Destination (Join-Path $tomcatBase 'conf')

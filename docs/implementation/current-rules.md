@@ -1,4 +1,4 @@
-# Current S1-S6 rules
+# Current project rules
 
 ## Academic structure
 
@@ -50,4 +50,12 @@ Form-encoded POST values produce JSON responses. Admin routes require ADMIN sess
 | `/api/seating/search` | Public exact rollNumber and academicYearId lookup |
 | `/api/auth/reset-password` | Admin-assisted recovery matching username/email and password policy |
 
-Legacy room/course POST routes delegate to AcademicDao. Original unused DAOs/models are retained; new management screens use the new annual model. Invalid inputs produce controlled 400/409 errors; unexpected SQL errors are logged. Baseline session and SHA-256 password storage are retained; public unauthenticated reset has been removed. No production security audit is claimed.
+Legacy room/course POST routes delegate to AcademicDao. Original unused DAOs/models are retained; new management screens use the new annual model. Invalid inputs produce controlled 400/409 errors; unexpected SQL errors are logged. Password storage uses salted PBKDF2 with legacy hash upgrade on login; public unauthenticated reset is disabled. Sessions use HttpOnly cookies and cross-origin writes are rejected. No production security audit is claimed.
+
+## Remaining modules
+
+Faculty eligibility, unavailable intervals, course conflicts, rest gaps and workload limits are maintained in the invigilation module. Duty generation requires complete seating and preserves accepted/manual duties by default. Faculty confirm their own scheduled duties. Declines and reassignments are audited and notified. Occupancy-changing seating updates may require duty regeneration; the conflict dashboard identifies uncovered or extra slots.
+
+Reports support PDF/CSV for room seating, student seating, faculty duties and exam schedules. Staff notifications and SMTP outbox processing are separate from public student lookup. Missing SMTP configuration does not stop in-app notifications.
+
+See [full scope](../requirements/full-project-scope.md), [invigilation algorithm](../algorithms/invigilator-allocation.md), [user guide](complete-project-guide.md) and [deployment](deployment.md). No new KPI verification or website testing was performed for this implementation.
